@@ -6,7 +6,12 @@ public:
         int mini = INT_MAX;
         while(l <= h){
             int m = (l + h) >> 1;
-            // if(l == h) mini = min(mini, nums[l]);
+            // if arr already sorted ans will be arr[l]
+            if(nums[l] <= nums[h]){
+                mini = min( mini, nums[l]);
+                break;
+            }
+            
             if(nums[l] <= nums[m]) {
                 mini = min(mini, nums[l]);
                 l = m + 1;
