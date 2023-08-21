@@ -6,7 +6,7 @@ public:
         int mini = INT_MAX;
         while(l <= h){
             int m = (l + h) >> 1;
-            if(l == h) mini = min(mini, nums[l]);
+            // if(l == h) mini = min(mini, nums[l]);
             if(nums[l] <= nums[m]) {
                 mini = min(mini, nums[l]);
                 l = m + 1;
