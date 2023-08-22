@@ -2,7 +2,6 @@ class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         n = len(bloomDay)
         def canMake(days):
-            nonlocal n
             boq = 0
             flow = 0
             for d in bloomDay:
