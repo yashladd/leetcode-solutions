@@ -3,27 +3,21 @@ class Solution:
         n = len(bloomDay)
         def canMake(days):
             nonlocal n
-            bloomed = list(map(lambda x: x <= days, bloomDay))
             boq = 0
-            i = 0;
-            while i < n:
+            flow = 0
+            for d in bloomDay:
+                if d <= days:
+                    flow += 1
+                else:
+                    boq += (flow//k)
+                    flow = 0
                 if boq == m:
                     return True
-                if bloomed[i]:
-                    flow = 1
-                    while i + 1 < n and bloomed[i+1] and flow < k:
-                        i += 1
-                        flow += 1
-                    if flow == k:
-                        boq += 1
-                    i += 1
-                else:
-                    i += 1
-                   
+                    
+            boq += (flow//k)
             return boq >= m
         
-        
-        lo = 1
+        lo = min(bloomDay)
         hi = max(bloomDay)
         ans = -1
         while lo <= hi:
