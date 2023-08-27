@@ -8,16 +8,16 @@ class Solution:
     def depth(self, node):
         if not node:
             return 0
-        return 1 + max(self.depth(node.left), self.depth(node.right))
+        lh = self.depth(node.left)
+        if lh == -1: return -1
+        rh = self.depth(node.right)
+        if rh == -1: return -1
+        return -1 if abs(lh-rh) > 1 else 1 + max(lh, rh)
     
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         if not root: return True
         
-        ld = self.depth(root.left)
-        rd = self.depth(root.right)
-        
-        return abs(ld-rd) <= 1 and self.isBalanced(root.left) \
-                and self.isBalanced(root.right)
+        return self.depth(root) != -1
         
 
         
