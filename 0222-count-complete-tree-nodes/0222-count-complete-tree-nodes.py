@@ -9,13 +9,30 @@ class Solution:
         if not root:
             return 0
         
-        self.cnt = 0
-        def f(node):
-            if node:
-                self.cnt += 1
-                f(node.left)
-                f(node.right)
+        def getLeftH(node):
+            h = 0
+            while node:
+                h += 1
+                node = node.left
+            return h
+        
+        def getRightH(node):
+            h = 0
+            while node:
+                h += 1
+                node = node.right
+            return h
                 
-        f(root)
-        return self.cnt
+        def f(node):
+            if not node:
+                return 0
+            lh = getLeftH(node)
+            rh = getRightH(node)
+
+            if lh == rh:
+                return (2**lh - 1)
+            else:
+                return 1 + f(node.left) + f(node.right)
+                
+        return f(root)
         
