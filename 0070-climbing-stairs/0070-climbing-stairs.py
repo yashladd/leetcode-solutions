@@ -11,8 +11,7 @@ class Solution:
             dp[n] =  f(n-1) + f(n-2)
             return dp[n]
         
-        f(n)
-        # print(dp)
-        return dp[n]
+        
+        return f(n)
             
             
