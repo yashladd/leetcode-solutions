@@ -1,7 +1,6 @@
 class Solution:
     def numDecodings(self, s: str) -> int:
         n = len(s)
-        chrs = [str(i) for i in range(1, 27)]
         dp = [-1] * n
         def f(idx):
             if idx == n:
@@ -10,11 +9,13 @@ class Solution:
             if dp[idx] != -1:
                 return dp[idx]
             
-            res = 0
+            if s[idx] == "0":
+                dp[idx] = 0
+                return 0
             
-            if s[idx] in chrs:
-                res += f(idx+1)
-            if idx + 2 <= n and s[idx: idx+2] in chrs:
+            res = 0
+            res += f(idx+1)
+            if idx + 1 < n and (s[idx] == "1" or (s[idx] == "2" and s[idx + 1] < "7")):
                 res += f(idx + 2)
             dp[idx] = res
             return res
