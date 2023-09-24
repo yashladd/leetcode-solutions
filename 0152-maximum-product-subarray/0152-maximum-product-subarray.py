@@ -4,8 +4,8 @@ class Solution:
         curMax, curMin = 1, 1
         
         for n in nums:
-            if n == 0:
-                curMax, curMin = 1, 1
+#             if n == 0:
+#                 curMax, curMin = 1, 1
                 
             tmpCurMax = n * curMax
             curMax = max(tmpCurMax, n * curMin, n)
