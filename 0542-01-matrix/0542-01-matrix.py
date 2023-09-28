@@ -1,27 +1,19 @@
 class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
-        n, m = len(mat), len(mat[0])
-        res = copy.deepcopy(mat)
-        q = deque([])
-        vis = {}
-        for i in range(n):
-            for j in range(m):
-                if mat[i][j] == 0:
-                    q.append((i, j, 0))
-                    vis[(i, j)] = 1
-        def inb(i, j):
-            return i >= 0 and j >= 0 and i < n and j < m
-        while q:
-            z = len(q)
-            for _ in range(z):
-                i, j, t = q.popleft()
-                for dx, dy in [(0,1), (1, 0), (-1, 0), (0, -1)]:
-                    r, c = i + dx, j + dy
-                    if inb(r, c) and (r, c) not in vis and mat[r][c] == 1:
-                        res[r][c] = t + 1
-                        q.append((r, c, t + 1))
-                        vis[(r, c)] = 1
+        m, n = len(mat), len(mat[0])
 
-        return res
+        for r in range(m):
+            for c in range(n):
+                if mat[r][c] > 0:
+                    top = mat[r - 1][c] if r > 0 else math.inf
+                    left = mat[r][c - 1] if c > 0 else math.inf
+                    mat[r][c] = min(top, left) + 1
 
-        
+        for r in range(m - 1, -1, -1):
+            for c in range(n - 1, -1, -1):
+                if mat[r][c] > 0:
+                    bottom = mat[r + 1][c] if r < m - 1 else math.inf
+                    right = mat[r][c + 1] if c < n - 1 else math.inf
+                    mat[r][c] = min(mat[r][c], bottom + 1, right + 1)
+
+        return mat
