@@ -5,31 +5,22 @@ class Solution:
             intervals.append((s, e, p))
             
         intervals = sorted(intervals, key=lambda x: x[0])
-        # print(intervals)
-        
         n = len(intervals)
-        
         dp = [-1] * n
         
-        def f(i):
-            if i >= n:
+        def maximizePrice(index):
+            if index >= n:
                 return 0
-            
-            if dp[i] != -1:
-                return dp[i]
-            
-            notTake = f(i + 1)
-            
-            take = intervals[i][2]
-            
-            nextIdx = i + 1
-            while nextIdx < n and intervals[nextIdx][0] < intervals[i][1]:
+            if dp[index] != -1:
+                return dp[index]
+            notTake = maximizePrice(index + 1)
+            take = intervals[index][2]
+            nextIdx = index + 1
+            while nextIdx < n and intervals[nextIdx][0] < intervals[index][1]:
                 nextIdx += 1
-            # print(i, nextIdx)
-            take += f(nextIdx)
-            
-            dp[i] = max(take, notTake)
-            return dp[i]
+            take += maximizePrice(nextIdx)
+            dp[index] = max(take, notTake)
+            return dp[index]
         
-        return f(0)
+        return maximizePrice(0)
         
