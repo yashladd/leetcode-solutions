@@ -1,21 +1,24 @@
 class Solution:
-    def trap(self, height: List[int]) -> int:
-        n = len(height)
-        pref = [height[0]]
-        currMax = height[0]
-        for i in range(1, n):
-            currMax = max(currMax, height[i])
-            pref.append(currMax)
+    def trap(self, a: List[int]) -> int:
+        n = len(a)
+        l, r = 0, n-1
+        lmax, rmax = 0, 0
+        w = 0
+        while l < r:
+            if a[l] <= a[r]:
+                if a[l] >= lmax:
+                    lmax = a[l]
+                else:
+                    w += (lmax - a[l])
+                l += 1
+            else:
+                if a[r] >= rmax:
+                    rmax = a[r]
+                else:
+                    w += (rmax - a[r])
+                    
+                r-= 1
+                
+        return w
         
-        suff = [height[n-1]]
-        currMax = suff[-1]
-        for i in range(n-2, -1, -1):
-            currMax = max(currMax, height[i])
-            suff.append(currMax)
-        
-        water = 0
-        for l, r, h in zip(pref, suff[::-1], height):
-            water += min(l, r) - h
-            
-        return water
             
