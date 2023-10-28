@@ -22,7 +22,7 @@ class Solution:
                 mins = max(mins, t)
                 for dx, dy in [(0,1), (1,0), (-1,0), (0,-1)]:
                     row, col = r + dx, c + dy
-                    if inbound(row, col) and grid[row][col] in (1, 2)\
+                    if inbound(row, col) and grid[row][col] == 1\
                      and not vis[row][col]:
                         q.append((row, col, t + 1))
                         grid[row][col] = 2
