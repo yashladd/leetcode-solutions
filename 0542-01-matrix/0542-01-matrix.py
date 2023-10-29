@@ -4,21 +4,14 @@ class Solution:
         vis = [[0] * m for _ in range(n)]
         q = deque()
         for i in range(n):
-            vis_row = []
             for j in range(m):
                 if mat[i][j] == 0:
                     q.append((i, j, 0))
                     vis[i][j] = 1
-                    
-                vis_row.append(0)
                 
-            vis.append(vis_row)
         dist = [[0] * m for _ in range(n)]
         while q:
-            z = len(q)
-            for _ in range(z):
                 r, c, step = q.popleft()
-                # vis[r][c] = 1
                 dist[r][c] = step
                 for dx, dy in [(0,1), (1,0), (-1, 0), (0, -1)]:
                     x, y = r + dx, c + dy
@@ -28,3 +21,5 @@ class Solution:
                             vis[x][y] = 1
                         
         return dist
+    
+    
