@@ -1,19 +1,30 @@
 class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
-        m, n = len(mat), len(mat[0])
-
-        for r in range(m):
-            for c in range(n):
-                if mat[r][c] > 0:
-                    top = mat[r - 1][c] if r > 0 else math.inf
-                    left = mat[r][c - 1] if c > 0 else math.inf
-                    mat[r][c] = min(top, left) + 1
-
-        for r in range(m - 1, -1, -1):
-            for c in range(n - 1, -1, -1):
-                if mat[r][c] > 0:
-                    bottom = mat[r + 1][c] if r < m - 1 else math.inf
-                    right = mat[r][c + 1] if c < n - 1 else math.inf
-                    mat[r][c] = min(mat[r][c], bottom + 1, right + 1)
-
-        return mat
+        n, m = len(mat), len(mat[0])
+        vis = [[0] * m for _ in range(n)]
+        q = deque()
+        for i in range(n):
+            vis_row = []
+            for j in range(m):
+                if mat[i][j] == 0:
+                    q.append((i, j, 0))
+                    vis[i][j] = 1
+                    
+                vis_row.append(0)
+                
+            vis.append(vis_row)
+        dist = [[0] * m for _ in range(n)]
+        while q:
+            z = len(q)
+            for _ in range(z):
+                r, c, step = q.popleft()
+                # vis[r][c] = 1
+                dist[r][c] = step
+                for dx, dy in [(0,1), (1,0), (-1, 0), (0, -1)]:
+                    x, y = r + dx, c + dy
+                    if x >= 0 and y >= 0 and x < n and y < m:
+                        if not vis[x][y]:
+                            q.append((x, y, step + 1))
+                            vis[x][y] = 1
+                        
+        return dist
