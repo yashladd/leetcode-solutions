@@ -10,11 +10,9 @@ class Solution:
         if not root.left and not root.right:
             return root
         
-        # tmpL = root.left
-        tmpR = root.right
-        
-        root.right = self.invertTree(root.left)
-        root.left = self.invertTree(tmpR)
+        root.left, root.right = root.right, root.left
+        self.invertTree(root.left)
+        self.invertTree(root.right)
         
         return root
         
