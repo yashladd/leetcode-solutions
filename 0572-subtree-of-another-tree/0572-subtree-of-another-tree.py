@@ -11,11 +11,7 @@ class Solution:
                 if r.val == s.val:
                     if same(r, s):
                         return True
-                l = f(r.left, s)
-                if l: return True
-                r = f(r.right, s)
-                if r: return True
-            
+                return f(r.left, s) or f(r.right,s)
             return False
         
         def same(p, q):
