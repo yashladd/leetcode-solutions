@@ -19,7 +19,7 @@ class Solution:
                 t = prices[i] + f(i+2, 1)
                 nt = f(i+1, 0)
                 
-            return max(0, t, nt)
+            return max(t, nt)
         
         return f(0, 1)
                 
