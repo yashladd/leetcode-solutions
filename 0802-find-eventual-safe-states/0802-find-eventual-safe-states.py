@@ -13,10 +13,10 @@ class Solution:
             for nei in graph[node]:
                 if not v[nei]:
                     if dfs(nei):
-                        c[node] = 0
+                        # c[node] = 0
                         return True
                 elif p[nei]:
-                    c[node] = 0
+                    # c[node] = 0
                     return True
                 
             c[node] = 1
