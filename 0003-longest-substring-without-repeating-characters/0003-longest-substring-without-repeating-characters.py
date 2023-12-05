@@ -3,15 +3,15 @@ class Solution:
         n = len(s)
         l, r = 0, 0
         lon = 0
-        h = {}
+        seen = set()
         while r < n:
-            if s[r] in h:
-                l = max(h[s[r]] + 1, l)
-                
-            lon = max(lon, r - l + 1)
-            h[s[r]] = r
+            if s[r] in seen:
+                while s[r] in seen:
+                    seen.discard(s[l])
+                    l += 1
+            seen.add(s[r])
+            lon = max(lon, r-l+1)
             r += 1
-            
         return lon
             
                 
