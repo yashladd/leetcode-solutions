@@ -4,18 +4,12 @@ class Solution:
         for i, ch in enumerate(s):
             h[ch] = i
         n = len(s)
-        l, r = 0, 0 
+        size, end = 0, 0
         ans = []
-        while l < n and r < n:
-            start = l
-            r = max(r, h[s[l]])
-            l += 1
-            while  r >= l:
-                # print(l, r)
-                r = max(r, h[s[l]])
-                l += 1
-            ans.append(r-start+1)
-            l = r + 1
-            
+        for i in range(n):
+            size += 1
+            end = max(end, h[s[i]])
+            if i == end:
+                ans.append(size)
+                size = 0
         return ans
-        
