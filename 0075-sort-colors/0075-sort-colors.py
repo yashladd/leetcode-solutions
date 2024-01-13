@@ -4,15 +4,19 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         n = len(nums)
-        l, e, g = 0, 0, n-1
-        
-        while e <= g:
-            if nums[e] == 2:
-                nums[e], nums[g] = nums[g], nums[e]
-                g -= 1
-            elif nums[e] == 0:
-                nums[e], nums[l] = nums[l], nums[e]
+        l, m = 0, 0
+        h = n-1
+        while m <= h:
+            if nums[m] == 0:
+                nums[m], nums[l] = nums[l], nums[m]
                 l += 1
-                e += 1
+                m += 1
+            elif nums[m] == 2:
+                nums[m], nums[h] = nums[h], nums[m]
+                h -= 1
             else:
-                e += 1
+                m += 1
+                
+        
+                
+        
