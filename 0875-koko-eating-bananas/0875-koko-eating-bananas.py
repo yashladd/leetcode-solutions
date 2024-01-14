@@ -8,7 +8,7 @@ class Solution:
                 hrs += math.ceil(p/r)
             return hrs <= h
         
-        lo, hi = 1, sum(piles)
+        lo, hi = 1, max(piles)
         ans = hi
         while lo <= hi:
             m = (lo + hi) >> 1
