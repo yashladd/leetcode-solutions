@@ -35,7 +35,7 @@ class Solution:
                 tail.next = h2
                 tail = h2
                 h2 = h2.next
-        return dummy.next
+        # return dummy.next
             
         
         
