@@ -13,15 +13,12 @@ class Solution:
         
         while p1 and p2:
             if p1.val <= p2.val:
-                nex = p1.next
                 tail.next = p1
-                tail = p1
-                p1 = nex
+                p1 = p1.next
             else:
-                nex = p2.next
                 tail.next = p2
-                tail = p2
-                p2 = nex
+                p2 = p2.next
+            tail = tail.next
                 
         if p1:
             tail.next = p1
