@@ -8,35 +8,34 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-        s, f = head, head
-        
-        while f.next and f.next.next:
-            s, f = s.next, f.next.next
-        
-        curr = s.next
+        s = f = head
+        while f and f.next and f.next.next:
+            s = s.next
+            f = f.next.next
+            
+        h2 = s.next
         s.next = None
         
-        prev= None
-        while curr:
-            nex = curr.next
-            curr.next = prev
-            prev = curr
-            curr = nex
+        p, c = None, h2
+        while c:
+            nex = c.next
+            c.next = p
+            p = c
+            c = nex
             
-        p1 = head
-        p2 = prev
-        d = ListNode(-1, p1)
-        # tail = d
-        while p1 and p2:
-            n1 = p1.next
-            n2 = p2.next
-            p1.next = p2
-            p2.next = n1
-            p1 = n1
-            p2 = n2
+        h2 = p
+        h1 = head
+        dummy = ListNode(-1)
+        tail = dummy
+        while h1 or h2:
+            tail.next = h1
+            tail = h1
+            h1 = h1.next
+            if h2:
+                tail.next = h2
+                tail = h2
+                h2 = h2.next
+        return dummy.next
             
-        return d.next
-            
-            
-            
-            
+        
+        
