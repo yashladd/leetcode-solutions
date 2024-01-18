@@ -4,6 +4,7 @@ class Solution:
         r, c = len(board), len(board[0])
         def inb(i, j):
             return i < r and i >= 0 and j < c and j >= 0
+        vis = [[0] * c for _ in range(r)] 
         
         def dfs(i, j, match, vis):
             vis[i][j] = 1
@@ -24,7 +25,6 @@ class Solution:
         for i in range(r):
             for j in range(c):
                 if board[i][j] == word[0]:
-                    vis = [[0] * c for _ in range(r)] 
                     if dfs(i, j, 0, vis):
                         return True
                     
