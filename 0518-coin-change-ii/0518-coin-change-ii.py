@@ -1,13 +1,20 @@
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
-
-        A = [0] * (amount + 1)
-        A[0] = 1
         
-        for i in range(len(coins)):
-            for j in range(1,amount+1):
-                if coins[i] <= j:
-                    A[j] = A[j] + A[j-coins[i]]
-                    
-        return A[-1]
+        n = len(coins)
+        @cache
+        def f(i, t):
+            if i == n-1:
+                return 1 if not t % coins[n-1] else 0
+            
+            if t == 0:
+                return 1
+            
+            if t < 0:
+                return 0
+            
+            return f(i, t - coins[i]) + f(i+1, t)
+        
+        
+        return f(0, amount)
         
