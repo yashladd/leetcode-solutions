@@ -1,15 +1,16 @@
 class Solution:
     def minimumTotal(self, a: List[List[int]]) -> int:
         n = len(a)
-        dp = [[0] * (len(a[-1])) for _ in range(n)]
-        for j in range(len(dp[-1])):
-            dp[n-1][j] = a[n-1][j]
+        dp = a[-1][:]
+        # print(dp)
             
         for i in range(n-2, -1, -1):
+            curr = [0] * (len(a[i]))
             for j in range(len(a[i])):
-                dp[i][j] = min(a[i][j] + dp[i+1][j], a[i][j] + dp[i+1][j+1])
+                curr[j] = min(a[i][j] + dp[j], a[i][j] + dp[j+1])
+            dp = curr
                 
-        return dp[0][0]
+        return dp[0]
         
         @cache
         def f(i, j):
