@@ -1,41 +1,33 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
-        
-        v = [0] * n
-        p = [0] * n
-        c= [0] * n
-        
+        vis = [0] * n
+        path = [0] * n
+        safe = [0] * n
         def dfs(node):
-            v[node] = 1
-            p[node] = 1
+            vis[node] = 1
+            path[node] = 1
             
             for nei in graph[node]:
-                if not v[nei]:
+                if not vis[nei]:
                     if dfs(nei):
-                        # c[node] = 0
                         return True
-                elif p[nei]:
-                    # c[node] = 0
+                elif path[nei]: 
                     return True
-                
-            c[node] = 1
-            p[node] = 0
-            
-            return False
+            safe[node] = 1   
+            path[node] = 0
         
         for i in range(n):
-            if not v[i]:
+            if not vis[i]:
                 dfs(i)
-                
                 
         res = []
         for i in range(n):
-            if c[i]:
+            if safe[i]:
                 res.append(i)
-        
-        return res
                 
-                    
+        return res
+        
+                
             
         
