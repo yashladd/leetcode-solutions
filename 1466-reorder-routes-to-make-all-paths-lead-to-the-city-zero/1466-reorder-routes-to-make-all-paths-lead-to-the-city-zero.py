@@ -1,21 +1,21 @@
 class Solution:
     def minReorder(self, n: int, connections: List[List[int]]) -> int:
-        edges = {(x, y) for x, y in connections}
         G = defaultdict(list)
         for par, child in connections:
-            G[par].append(child)
-            G[child].append(par)
+            G[par].append((child, 1))
+            G[child].append((par, 0))
             
-        reverse = 0
-        vis = {}
-        def dfs(node):
-            nonlocal reverse
-            vis[node] = 1
-            for nei in G[node]:
+        q = deque([0])
+        vis = set()
+        cnt = 0
+        vis.add(0)
+        while q:
+            node = q.popleft()
+            for nei, cost in G[node]:
                 if nei not in vis:
-                    if (nei, node) not in edges:
-                        reverse += 1
-                    dfs(nei)
-        dfs(0)
-        return reverse
+                    vis.add(node)
+                    cnt += cost
+                    q.append(nei)
+
+        return cnt
         
