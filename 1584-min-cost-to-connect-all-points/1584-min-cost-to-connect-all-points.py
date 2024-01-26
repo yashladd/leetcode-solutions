@@ -5,7 +5,7 @@ class Solution:
         G = defaultdict(list)
         
         for i in range(n):
-            for j in range(n):
+            for j in range(i+1, n):
                 if i != j:
                     x1, y1 = points[i]
                     x2, y2 = points[j]
