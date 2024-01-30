@@ -9,41 +9,33 @@ class Solution:
         if not root:
             return None
         
-        
         def reorder(node):
             if not node.left:
                 return node.right
-            if not node.right:
+            elif not node.right:
                 return node.left
             
-            rightCh = node.right
-            rightMost = node.left
-            while rightMost.right:
-                rightMost = rightMost.right
-            rightMost.right = rightCh
+            rCh = node.right
+            rmost = node.left
+            while rmost.right:
+                rmost = rmost.right
+            rmost.right = rCh
             return node.left
-            
-            
+        
         if root.val == key:
             return reorder(root)
-        
         curr = root
         while curr:
-            if curr.val > key:
-                if curr.left and curr.left.val == key:
-                    curr.left = reorder(curr.left)
-                else: curr = curr.left
-            else:
+            if curr.val < key:
                 if curr.right and curr.right.val == key:
                     curr.right = reorder(curr.right)
                 else:
                     curr = curr.right
+            else:
+                if curr.left and curr.left.val == key:
+                    curr.left = reorder(curr.left)
+                else:
+                    curr = curr.left
+                    
         return root
-                
-                
-                
-            
-        
-        
-        
         
