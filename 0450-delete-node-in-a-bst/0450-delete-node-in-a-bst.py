@@ -6,45 +6,25 @@
 #         self.right = right
 class Solution:
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+        if not root:
+            return root
         
-        if not root: return None
-        
-        def frmost(node):
-            curr = node
-            while curr and curr.right:
-                curr = curr.right
-            return curr
+        if root.val < key:
+            root.right = self.deleteNode(root.right, key)
+        elif root.val > key:
+            root.left = self.deleteNode(root.left, key)
+        else:
+            if not root.left:
+                return root.right
+            elif not root.right:
+                return root.left
+            curr = root.right
+            while curr.left:
+                curr = curr.left
+            root.val = curr.val
+            root.right = self.deleteNode(root.right, curr.val)
             
-        def rearrange(node):
-            if not node.left:
-                return node.right
-            if not node.right:
-                return node.left
-            rch = node.right
-            rmost = frmost(node.left)
-            rmost.right = rch
-            return node.left
-            
-        
-        if root.val == key:
-            return rearrange(root)
-            
-        curr = root
-        while curr:
-            if curr.val > key:
-                if curr.left and curr.left.val == key:
-                    curr.left = rearrange(curr.left)
-                    break
-                else:
-                    curr = curr.left
-            else:
-                if curr.right and curr.right.val == key:
-                    curr.right = rearrange(curr.right)
-                    break
-                else:
-                    curr = curr.right
-                    
         return root
-            
-            
+                
+        
         
