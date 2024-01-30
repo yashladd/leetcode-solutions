@@ -7,24 +7,43 @@
 class Solution:
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
         if not root:
-            return root
+            return None
         
-        if root.val < key:
-            root.right = self.deleteNode(root.right, key)
-        elif root.val > key:
-            root.left = self.deleteNode(root.left, key)
-        else:
-            if not root.left:
-                return root.right
-            elif not root.right:
-                return root.left
-            curr = root.right
-            while curr.left:
-                curr = curr.left
-            root.val = curr.val
-            root.right = self.deleteNode(root.right, curr.val)
+        
+        def reorder(node):
+            if not node.left:
+                return node.right
+            if not node.right:
+                return node.left
             
+            rightCh = node.right
+            rightMost = node.left
+            while rightMost.right:
+                rightMost = rightMost.right
+            rightMost.right = rightCh
+            return node.left
+            
+            
+        if root.val == key:
+            return reorder(root)
+        
+        curr = root
+        while curr:
+            if curr.val > key:
+                if curr.left and curr.left.val == key:
+                    curr.left = reorder(curr.left)
+                else: curr = curr.left
+            else:
+                if curr.right and curr.right.val == key:
+                    curr.right = reorder(curr.right)
+                else:
+                    curr = curr.right
         return root
                 
+                
+                
+            
+        
+        
         
         
