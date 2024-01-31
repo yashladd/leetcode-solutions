@@ -5,13 +5,13 @@ class Solution:
             if v != -1:
                 g[v].append(i)
         
-        maxi = [-float("inf")]
-        def f(node, time):
-            curr = 0
+        q = deque([(headID, 0)])
+        maxi = 0
+        while q:
+            node, time = q.popleft()
+            maxi = max(maxi, time)
             for nei in g[node]:
-                f(nei, time + informTime[node])
-            maxi[0] = max(maxi[0], time)
+                q.append((nei, time + informTime[node]))
+                
+        return maxi        
         
-        f(headID, 0)
-        
-        return maxi[0]
