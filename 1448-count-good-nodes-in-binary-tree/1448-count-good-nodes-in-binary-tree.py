@@ -6,7 +6,12 @@
 #         self.right = right
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
-        def f(r, maxi = -1e9):
-            return f(r.left, max(r.val, maxi)) + f(r.right, max(r.val, maxi)) + (r.val >= maxi) if r else 0
-                
-        return f(root, -1e9)
+        
+        
+        def f(node, maxi):
+            if not node:
+                return 0
+            return int(node.val >= maxi) + f(node.left, max(maxi, node.val)) + f(node.right, max(maxi, node.val))
+        
+        return f(root, root.val)
+        
