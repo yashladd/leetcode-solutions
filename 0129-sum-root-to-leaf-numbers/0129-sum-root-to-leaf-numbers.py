@@ -7,16 +7,13 @@
 class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
         
-        
+        @cache
         def f(node, currNum):
             if not node:
                 return 0
-            
             if not node.left and not node.right:
                 return currNum * 10 + node.val
-            
             res = 0
-            
             res += f(node.left, currNum * 10 + node.val)
             res += f(node.right, currNum * 10 + node.val)
             
