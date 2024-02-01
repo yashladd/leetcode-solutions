@@ -8,21 +8,14 @@ class Solution:
     def rob(self, root: Optional[TreeNode]) -> int:
         
         @cache
-        def f(node, prev):
+        def f(node):
             if not node:
-                return 0
-            if not node.left and not node.right:
-                return 0 if prev else node.val
+                return [0, 0]
             
-            money = 0
-            take = float("-inf")
-            if not prev:
-                take = f(node.left, 1) + f(node.right, 1) + node.val
-            notTake = f(node.left, 0) + f(node.right, 0)
+            take = node.val + f(node.left)[1] + f(node.right)[1]
+            notTake = max(f(node.left))  + max(f(node.right))
             
-            money = max(take, notTake)
-            return money
+            return [take, notTake]
         
-        return f(root, 0)
-            
+        return max(f(root))
         
