@@ -7,14 +7,14 @@ class Solution:
                 g[i].append(v)
 
         def bfs(node, dist):
-            q = deque([node])
+            q = deque([(node, 0)])
             dist[node] = 0
             while q:
-                node = q.popleft()
+                node, d = q.popleft()
                 for nei in g[node]:
-                    if dist[node] + 1 < dist[nei]:
-                        dist[nei] = dist[node] + 1
-                        q.append(nei)
+                    if d + 1 < dist[nei]:
+                        dist[nei] = d+1
+                        q.append((nei, d+1))
 
         dist1 = [float("inf")] * n
         dist2 = [float("inf")] * n
