@@ -4,10 +4,9 @@ class Solution:
         for ch in s:
             h[ch] += 1
         # print(h)
-        for k, v in h.items():
-            if v == 1:
-                for i, c in enumerate(s):
-                    if c == k:
-                        return i
+        
+        for i, c in enumerate(s):
+            if h[c] == 1:
+                return i
                  
         return -1
