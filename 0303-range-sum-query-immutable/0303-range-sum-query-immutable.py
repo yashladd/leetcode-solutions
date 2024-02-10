@@ -1,21 +1,13 @@
-class NumArray:
+class NumArray:  # 68 ms, faster than 97.72%
 
     def __init__(self, nums: List[int]):
-        self.a = nums
-        
+        self.preSum = nums  # pass by pointer!
+        for i in range(len(nums)-1):
+            self.preSum[i+1] += self.preSum[i]
 
     def sumRange(self, left: int, right: int) -> int:
-        s = 0
-        l, r = left, right
-        while l < r:
-            s += self.a[l]
-            s += self.a[r]
-            l += 1
-            r -= 1
-        if not (left + right) % 2:
-            s += self.a[r]
-        return s
-        
+        if left == 0: return self.preSum[right]
+        return self.preSum[right] - self.preSum[left-1]
 
 
 # Your NumArray object will be instantiated and called as such:
