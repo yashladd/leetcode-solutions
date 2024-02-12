@@ -1,24 +1,28 @@
 class Solution:
     def splitArray(self, nums: List[int], k: int) -> int:
-        def canMake(s):
-            cnt = 1
-            currSum = 0
+
+        def canSum(s):
+            subs = 1
+            curr = 0
             for n in nums:
-                if n > s:
-                    return False
-                if currSum + n <= s:
-                    currSum += n
+                if curr + n <= s:
+                    curr += n
                 else:
-                    currSum = n
-                    cnt += 1
-                    
-            return cnt <= k
-                    
-        lo=max(nums)
-        hi=sum(nums)
-        while lo <= hi:
-            mid = (lo + hi) >> 1
-            if canMake(mid):
-                hi = mid - 1
-            else: lo = mid + 1
-        return lo
+                    subs += 1
+                    curr = n
+            return subs <= k
+        
+        l, h = max(nums), sum(nums)
+        ans = -1
+        while l<= h:
+            m = (l + h) >> 1
+            if canSum(m):
+                ans = m
+                h = m-1
+            else:
+                l = m + 1
+                
+        return ans
+                
+                
+        
