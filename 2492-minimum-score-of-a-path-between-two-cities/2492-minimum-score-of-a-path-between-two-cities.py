@@ -6,14 +6,14 @@ class Solution:
             g[v].append((u, wt))
 
         res = float("inf")
-        dist = [float("inf")] * (n+1)
-        h = []
-        heappush(h, 1)
-        while h:
-            node = heappop(h)
-            for nei, wt in g[node]:
-                if wt < dist[nei] or dist[node] < dist[nei]:
-                    dist[nei] = min(wt, dist[node])
-                    heappush(h, nei)
-
-        return dist[n]
+        vis = [0] * (n+1)
+        
+        def dfs(node):
+            nonlocal res
+            if not vis[node]:
+                vis[node] = 1
+                for nei, wt in g[node]:
+                    res = min(res, wt)
+                    dfs(nei)
+        dfs(1)
+        return res
