@@ -6,6 +6,8 @@ class Solution:
             cnt = 0
             i = 0 
             while i < len(a):
+                if cnt >= m:
+                    return True
                 if not a[i]:
                     i += 1
                     continue
