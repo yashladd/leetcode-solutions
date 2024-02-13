@@ -1,22 +1,18 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        s = set()
-        s.add(n)
-        curr = n
-        res = 0
-        while True:
-            res = 0
-            while curr:
-                res += (curr%10) ** 2
-                curr = curr//10
-            if res == 1:
-                return True
-            if res in s:
-                break
-            else:
-                s.add(res)
-            curr = res
-
-        return False
-
+        def squared(n):
+            result = 0
+            while n>0:
+                last = n%10
+                result += last * last
+                n = n//10
+            return result
         
+        slow = squared(n)
+        fast = squared(squared(n))
+
+        while slow!=fast and fast!=1:
+            slow = squared(slow)
+            fast = squared(squared(fast))
+
+        return fast==1
