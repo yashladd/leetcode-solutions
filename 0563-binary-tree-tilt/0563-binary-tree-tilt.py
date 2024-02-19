@@ -5,19 +5,11 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def findTilt(self, root: Optional[TreeNode]) -> int:
-        res = 0
-        def f(node):
-            nonlocal res
-            if not node:
-                return 0
-            
-            ls = f(node.left)
-            rs = f(node.right)
-            
-            res += abs(ls-rs)
-            
-            return node.val + ls + rs
-        
-        f(root)
-        return res
+    def findTilt(self, root):
+        def tilt(root):
+            # return (sum, tilt) of tree
+            if not root: return (0, 0)
+            left = tilt(root.left)
+            right = tilt(root.right)
+            return (left[0] + right[0] + root.val, abs(left[0] - right[0]) + left[1] + right[1])
+        return tilt(root)[1]
