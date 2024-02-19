@@ -4,7 +4,6 @@ class Solution:
         sf = Counter()
         l = 0
         res = []
-        
         def check():
             for k, v in pf.items():
                 if sf[k] != v:
@@ -13,12 +12,10 @@ class Solution:
         
         for r, ch in enumerate(s):
             sf[ch]+=1
-            
             if r >= len(p):
                 sf[s[l]] -= 1
                 l += 1
-                
-            if check():
+            if pf == sf:
                 res.append(l)
                 
         return res
