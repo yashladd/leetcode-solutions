@@ -1,3 +1,7 @@
+class Cmp(str):
+    def __lt__(x,y):
+        return x + y > y + x
+
 class Solution:
     def largestNumber(self, nums: List[int]) -> str:
         
@@ -5,8 +9,8 @@ class Solution:
         def cmp(x, y):
             return -1 if x + y >= y + x else 1
         
-        a = sorted(map(str, nums), key=cmp_to_key(cmp))
-        return "0" if a[0] == "0" else "".join(a)
+        a = sorted(map(str, nums), key=Cmp)
+        return str(int("".join(a)))
         
         
         
