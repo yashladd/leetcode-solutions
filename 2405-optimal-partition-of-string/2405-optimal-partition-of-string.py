@@ -1,14 +1,16 @@
 class Solution:
     def partitionString(self, s: str) -> int:
-        parts = 0
+        parts = 1
         n = len(s)
         i = 0
+        flag = 0
         while i < n:
-            parts += 1
-            h = {s[i]: 1}
-            while i+1 < n and s[i + 1] not in h:
-                i += 1
-                h[s[i]] = 1
+            val = ord(s[i]) - ord('a')
+            if flag & (1 << val):
+                parts += 1
+                flag = 0
+            flag |= (1 << val)
             i += 1
+            
         return parts
         
