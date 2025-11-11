@@ -8,7 +8,6 @@ class Solution:
         def f(i, j):
             if i < 0 or j < 0:
                 if i < 0:
-
                     if j < 0:
                         return True
                     if p[j] == "*":
