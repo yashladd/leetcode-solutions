@@ -7,7 +7,6 @@ class Solution:
             if nums[i] > lis[-1]:
                 lis.append(nums[i])
             else:
-                idx = bisect.bisect_left(lis, nums[i], 0, len(lis))
+                idx = bisect.bisect_left(lis, nums[i])
                 lis[idx] = nums[i]
         return len(lis)
-            
