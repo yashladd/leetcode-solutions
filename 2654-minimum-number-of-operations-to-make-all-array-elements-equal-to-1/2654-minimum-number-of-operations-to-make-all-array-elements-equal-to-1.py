@@ -8,9 +8,11 @@ class Solution:
         def gcd(a,b):
             if b == 0:
                 return a
-            if b > a:
-                return gcd(b, a)
+            # if b > a:
+            #     return gcd(b, a)
             return gcd(b, a%b)
+
+
         n = len(nums)
         onesCnt = sum([int(x==1) for x in nums])
 
@@ -24,6 +26,8 @@ class Solution:
             for j in range(i, n):
                 g = gcd(g, nums[j])
                 if g == 1:
+                    # Gcd is associative g(a, g(b,c)) = f(b, g(a,c))
                     miniSub = min(miniSub, j-i + 1)
         if miniSub == float("inf"): return -1
+        # Ops req to convert miniSub len subarray is -1 
         return (miniSub-1) + n - 1
