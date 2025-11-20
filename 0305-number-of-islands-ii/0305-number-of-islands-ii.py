@@ -1,72 +1,49 @@
 class DS:
-    def __init__(self, total_nodes):
-        # Parent array
-        self.p = [i for i in range(total_nodes)]
-        # Rank/Size array (optional, but good for optimization)
-        self.s = [1 for _ in range(total_nodes)]
+    def __init__(self, n: int):
+        self.p = list(range(n))
+        self.sz = [1] * n
 
-    def find(self, u):
-        if u == self.p[u]:
-            return u
-        # Path compression
-        self.p[u] = self.find(self.p[u])
-        return self.p[u]
+    def find(self, x: int) -> int:
+        if self.p[x] != x:
+            self.p[x] = self.find(self.p[x])
+        return self.p[x]
 
-    def union(self, u, v):
-        # CRITICAL FIX: Find the ROOTs of u and v, not just immediate parents
-        root_u = self.find(u)
-        root_v = self.find(v)
-        
-        # If they are already in the same set, return False (no merge happened)
-        if root_u == root_v:
-            return False
-        
-        # Union by size/rank
-        if self.s[root_u] < self.s[root_v]:
-            self.p[root_u] = root_v
-            self.s[root_v] += self.s[root_u]
-        else:
-            self.p[root_v] = root_u
-            self.s[root_u] += self.s[root_v]
-            
-        # Return True to indicate a merge occurred
-        return True
+    def union(self, x: int, y: int) -> bool:
+        rx, ry = self.find(x), self.find(y)
+        if rx == ry:
+            return False  # no merge happened
+        # union by size
+        if self.sz[rx] < self.sz[ry]:
+            rx, ry = ry, rx
+        self.p[ry] = rx
+        self.sz[rx] += self.sz[ry]
+        return True      # merged
 
 
 class Solution:
     def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:
         ds = DS(m * n)
+        grid = [[0] * n for _ in range(m)]
         isl = 0
-        # Use a set for fast lookup of existing land
-        grid_set = set()
         res = []
-        
-        for r, c in positions:
-            # CRITICAL FIX: Mapping formula is r * n + c
-            index = r * n + c
-            
-            # If this position is already land, the count doesn't change.
-            # Just append current count and skip.
-            if index in grid_set:
+
+        for i, j in positions:
+            # ignore duplicate add-land operations
+            if grid[i][j] == 1:
                 res.append(isl)
                 continue
-                
-            grid_set.add(index)
-            isl += 1 # Assume it's a new isolated island first
-            
-            # Check 4 directions
-            for dx, dy in [(0,1), (1, 0), (-1, 0), (0, -1)]:
-                nr, nc = r + dx, c + dy
-                
-                if 0 <= nr < m and 0 <= nc < n:
-                    neighbor_index = nr * n + nc
-                    
-                    # If neighbor is land, try to union
-                    if neighbor_index in grid_set:
-                        # CRITICAL FIX: Only decrement if they were actually separate islands
-                        if ds.union(index, neighbor_index):
-                            isl -= 1
-            
+
+            grid[i][j] = 1
+            isl += 1
+            idx = i * n + j
+
+            for dx, dy in [(0,1), (1,0), (-1,0), (0,-1)]:
+                p, q = i + dx, j + dy
+                if 0 <= p < m and 0 <= q < n and grid[p][q] == 1:
+                    nidx = p * n + q
+                    if ds.union(idx, nidx):
+                        isl -= 1  # only decrement when we really merged two islands
+
             res.append(isl)
-        
+
         return res
