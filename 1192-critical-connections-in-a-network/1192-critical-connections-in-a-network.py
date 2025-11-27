@@ -1,36 +1,30 @@
 class Solution:
     def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List[int]]:
-        G = defaultdict(list)
-        
-        for sr, de in connections:
-            G[sr].append(de)
-            G[de].append(sr)
-            
-        tin = [0] * n
-        low = [0] * n
+        g = defaultdict(list)
+        for u, v in connections:
+            g[u].append(v)
+            g[v].append(u)
         time = [0]
-        
+        low = [0] * n
+        tin = [0] * n
         vis = set()
         res = []
-        def dfs(node, par):
-            vis.add(node)
-            tin[node] = time[0]
-            low[node] = time[0]
+
+        def d(no, pa):
+            tin[no] = low[no] = time[0]
             time[0] += 1
-            
-            for nei in G[node]:
-                if nei == par:
+            vis.add(no)
+            for ne in g[no]:
+                if ne == pa:
                     continue
-                    
-                if nei not in vis:
-                    dfs(nei, node)
-                    
-                if low[nei] > tin[node]:
-                    res.append([node, nei])
-                    
-                low[node] = min(low[node], low[nei])
-        dfs(0, -1)
+                if ne not in vis:
+                    d(ne, no)
+                if low[ne] > tin[no]:
+                    res.append([no, ne])
+                low[no] = min(low[ne], low[no])
+
+        d(0, -1)
         return res
-            
-        
+
+
         
