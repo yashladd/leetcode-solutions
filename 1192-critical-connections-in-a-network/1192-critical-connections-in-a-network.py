@@ -19,9 +19,11 @@ class Solution:
                     continue
                 if ne not in vis:
                     d(ne, no)
-                if low[ne] > tin[no]:
-                    res.append([no, ne])
-                low[no] = min(low[ne], low[no])
+                    low[no] = min(low[ne], low[no])
+                    if low[ne] > tin[no]:
+                        res.append([no, ne])
+                else:
+                    low[no] = min(low[ne], low[no])
 
         d(0, -1)
         return res
