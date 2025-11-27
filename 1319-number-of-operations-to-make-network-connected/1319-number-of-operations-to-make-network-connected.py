@@ -40,32 +40,8 @@ class Solution:
         for i in range(n):
             if i == ds.find(i):
                 comps += 1
-        print(extra, comps)
+
         if extra < comps - 1:
             return -1
 
         return comps - 1
-
-        def dfs(x):
-            vis.add(x)
-
-            for nei in g[x]:
-                if nei not in vis:
-                    dfs(nei)
-        
-        for i in range(n):
-            print(i, vis)
-            if i not in vis:
-                dfs(i)
-                comp += 1
-
-
-        """
-         3
-         |
-         0 - 1
-         | 
-         2
-        """
-
-        return comp - 1
