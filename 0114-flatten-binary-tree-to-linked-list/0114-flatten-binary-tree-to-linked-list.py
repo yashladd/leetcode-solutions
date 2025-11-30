@@ -9,22 +9,19 @@ class Solution:
         """
         Do not return anything, modify root in-place instead.
         """
-        if not root:
-            return 
-        
         prev = None
-        def f(root):
+        def f(node):
             nonlocal prev
-            if not root:
+            if not node:
                 return 
 
-            f(root.right)
-            f(root.left)
+            f(node.right)
+            f(node.left)
+            node.left = None
+            node.right = prev
+            prev = node
+        
+            return node
 
-            root.right = prev
-            root.left = None
-            prev = root
-
-        f(root)
-
-
+        return f(root)
+        
