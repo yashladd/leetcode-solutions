@@ -10,15 +10,11 @@ class Solution:
 
 
         def b(p, l, r):
-            # print(p, ino)
-            if l > r :
+            if l > r or not p:
                 return None
                 # or not p
             val = p.popleft()
             root = TreeNode(val)
-
-            # print(root, type(root))
-            # print(root.val, p, ino)
             idx = h[val]
             le = b(p, l, idx-1)
             ri = b(p, idx+1, r)
