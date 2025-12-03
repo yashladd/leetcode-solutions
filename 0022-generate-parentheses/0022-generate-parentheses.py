@@ -1,23 +1,18 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        ds = []
         res = []
-        
-        def back(openCnt, closedCnt):
-            if openCnt == closedCnt == n:
-                res.append("".join(ds))
+        def f(l, r, s):
+            if len(s) == 2 * n:
+                res.append(s[:])
                 return 
             
-            if openCnt < n:
-                ds.append("(")
-                back(openCnt + 1, closedCnt)
-                ds.pop()
-                
-            if closedCnt < openCnt:
-                ds.append(")")
-                back(openCnt, closedCnt + 1)
-                ds.pop()
-                
-        back(0, 0)
+            if l:
+                f(l-1, r, s + "(")
+            if r > l:
+                f(l, r-1, s + ")")
+
+
+        f(n, n, "")
+
         return res
         
