@@ -1,13 +1,14 @@
 class Solution:
-    def merge(self, a: List[List[int]]) -> List[List[int]]:
-        a.sort()
-        ans = [a[0]]
-        
-        for i in range(1, len(a)):
-            if ans[-1][1] >= a[i][0]:
-                ans[-1][1] = max(ans[-1][1], a[i][1])
+    def merge(self, i: List[List[int]]) -> List[List[int]]:
+        i.sort()
+        res = [ ]
+
+        cur = i[0]
+        res = [cur]
+        for s, e in i[1:]:
+            cs, ce = res[-1]
+            if s <= ce:
+                res[-1][1] = max(e, ce)
             else:
-                ans.append(a[i])
-                
-        return ans
-        
+                res.append([s,e])
+        return res
