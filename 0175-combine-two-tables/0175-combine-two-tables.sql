@@ -3,6 +3,6 @@
 -- from person as p join on address as o
 -- where p.personId == o.personId;
 
-SELECT p.firstName, p.lastName, o.city, o.state
+SELECT firstName, lastName, city, state
 FROM Person p
 LEFT JOIN Address o ON p.personId = o.personId;
