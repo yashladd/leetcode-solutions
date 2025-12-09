@@ -1,6 +1,9 @@
--- Write your PostgreSQL query statement below
-select distinct e1.num as ConsecutiveNums
-from Logs e1
-join Logs e2 on e1.id + 1 = e2.id
-join Logs e3 on e2.id + 1 = e3.id
-where e1.num = e2.num and e2.num = e3.num;
+SELECT DISTINCT num AS ConsecutiveNums
+FROM (
+    SELECT 
+        num,
+        LEAD(num, 1) OVER (ORDER BY id) AS next_1,
+        LEAD(num, 2) OVER (ORDER BY id) AS next_2
+    FROM Logs
+) t
+WHERE num = next_1 AND num = next_2;
