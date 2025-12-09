@@ -1,7 +1,6 @@
-SELECT w.id as id
-FROM weather w
-WHERE w.temperature > (
-    SELECT w1.temperature 
-    FROM weather w1
-    WHERE w1.recordDate = w.recordDate - INTERVAL '1 day'
-);
+-- Write your PostgreSQL query statement below
+select w.id as id
+from weather w
+left join weather v
+on w.recordDate = v.recordDate + interval '1 day'
+where w.temperature > v.temperature;
