@@ -3,7 +3,7 @@ class Solution:
         res = []
         def f(l, r, s):
             if len(s) == 2 * n:
-                res.append(s[:])
+                res.append(s)
                 return 
             
             if l:
