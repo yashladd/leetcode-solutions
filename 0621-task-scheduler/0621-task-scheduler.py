@@ -1,44 +1,24 @@
-import java.util.*;
-
-class Solution {
-
-    private record TaskEntry(int remainingCount, int timeAvailable) {} 
-
-    public int leastInterval(char[] tasks, int n) {
-        Map<Character, Integer> cnt = new HashMap<>();
-        for (char t : tasks) {
-            cnt.put(t, cnt.getOrDefault(t, 0) + 1);
-        }
-
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
-        for (int count : cnt.values()) {
-            maxHeap.add(count);
-        }
-
-        Deque<TaskEntry> coolingQueue = new ArrayDeque<>();
-        
-        int time = 0;
-
-        while (!maxHeap.isEmpty() || !coolingQueue.isEmpty()) {
-            time++;
-
-            if (!maxHeap.isEmpty()) {
-                int currCnt = maxHeap.poll();
-                currCnt--;
+class Solution:
+    def leastInterval(self, tasks: List[str], n: int) -> int:
+        cnt = defaultdict(int)
+        for t in tasks:
+            cnt[t] += 1
+        maxHeap = [-x for x in list(cnt.values())]
+        heapify(maxHeap)
+        q = deque([])
+        time = 0
+        while maxHeap or q:
+            time += 1
+            if maxHeap:
+                currCnt = heappop(maxHeap)
+                currCnt += 1
+                nextAvailable = time + n
+                if currCnt < 0:
+                    q.append((currCnt, nextAvailable))
+                    
+            while q and q[0][1] <= time:
+                remCnt, _ = q.popleft()
+                heappush(maxHeap, remCnt)
                 
-                if (currCnt > 0) {
-                    int nextAvailable = time + n;
-                    coolingQueue.addLast(new TaskEntry(currCnt, nextAvailable));
-                }
-            }
-
-            if (!coolingQueue.isEmpty() && coolingQueue.peekFirst().timeAvailable() <= time) {
-                TaskEntry readyTask = coolingQueue.removeFirst();
-                
-                maxHeap.add(readyTask.remainingCount());
-            }
-        }
-
-        return time;
-    }
-}
+        return time
+         
