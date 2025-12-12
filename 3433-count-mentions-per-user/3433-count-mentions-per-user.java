@@ -1,57 +1,46 @@
 class Solution {
     public int[] countMentions(int numberOfUsers, List<List<String>> events) {
-        // 1. Sort events: 
-        // - By timestamp ascending
-        // - If tie, process OFFLINE before MESSAGE
-        Collections.sort(events, (a, b) -> {
+
+        Collections.sort(events, (List<String> a, List<String>  b) -> {
             int timeA = Integer.parseInt(a.get(1));
             int timeB = Integer.parseInt(b.get(1));
             if (timeA != timeB) return Integer.compare(timeA, timeB);
-            
-            // "OFFLINE" should come before "MESSAGE"
-            // We return -1 if a is OFFLINE, 1 if a is MESSAGE (assuming b is the other)
             return a.get(0).equals("OFFLINE") ? -1 : 1;
         });
 
+        System.out.println(events);
+
+        int[] nextAvailable = new int[numberOfUsers];
         int[] mentions = new int[numberOfUsers];
-        int[] onlineUntil = new int[numberOfUsers]; // Stores the time a user comes back online
 
-        for (List<String> event : events) {
-            String type = event.get(0);
-            int time = Integer.parseInt(event.get(1));
 
+        for (List<String> e: events) {
+            String type = e.get(0);
+            int ts = Integer.parseInt(e.get(1));
             if (type.equals("OFFLINE")) {
-                int id = Integer.parseInt(event.get(2));
-                // User is offline for 60 units, back online at time + 60
-                onlineUntil[id] = time + 60;
+                int id = Integer.parseInt(e.get(2));
+                nextAvailable[id] = ts + 60;
             } else {
-                // MESSAGE Event
-                String mentionStr = event.get(2);
-                
-                if (mentionStr.equals("ALL")) {
-                    for (int i = 0; i < numberOfUsers; i++) {
-                        mentions[i]++;
+                String mention = e.get(2);
+                if (mention.equals("ALL")) {
+                    for (int id = 0; id < numberOfUsers; id++) {
+                        mentions[id] += 1;
                     }
-                } else if (mentionStr.equals("HERE")) {
-                    for (int i = 0; i < numberOfUsers; i++) {
-                        // User is online if current time >= the time they are back online
-                        if (time >= onlineUntil[i]) {
-                            mentions[i]++;
-                        }
-                    }
+                } else if (mention.equals("HERE")) {
+                    for (int id = 0; id < numberOfUsers; id++) {
+                        if (nextAvailable[id] <= ts) mentions[id] += 1;
+                    } 
                 } else {
-                    // Handle specific ids like "id0 id1 id0"
-                    // We split by space and process each token
-                    String[] ids = mentionStr.split(" ");
-                    for (String s : ids) {
-                        // Skip the first 2 chars "id" and parse the rest
-                        int id = Integer.parseInt(s.substring(2));
+                    List<Integer> ids = Arrays.stream(e.get(2).split(" "))
+                                        .map((String s) -> Integer.parseInt(s.substring(2)))
+                                        .collect(Collectors.toList());
+                    for (int id: ids) {
+                        System.out.println(id);
                         mentions[id]++;
                     }
                 }
             }
         }
-        
         return mentions;
     }
 }
