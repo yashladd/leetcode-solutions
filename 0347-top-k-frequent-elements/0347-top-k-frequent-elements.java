@@ -1,48 +1,81 @@
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 class Solution {
-    public int[] topKFrequent(int[] nums, int k) {
-        int n = nums.length;
+    int[] unique;
+    Map<Integer, Integer> count;
 
-        // 1. Count Frequencies (Equivalent to Python's 'h = defaultdict(int)' and the first loop)
-        // Key: Number, Value: Frequency
-        Map<Integer, Integer> counts = new HashMap<>();
-        for (int num : nums) {
-            counts.put(num, counts.getOrDefault(num, 0) + 1);
-        }
+    public void swap(int a, int b) {
+        int tmp = unique[a];
+        unique[a] = unique[b];
+        unique[b] = tmp;
+    }
 
-        // 2. Create Frequency Buckets (Equivalent to Python's 'freq = [[] for _ in range(n + 1)]')
-        // The array index is the frequency (0 to n). The value is a List of numbers 
-        // that share that frequency.
-        // We use a raw array of List<Integer> and must initialize each index.
-        List<Integer>[] freqBuckets = new List[n + 1];
-        for (int i = 0; i < freqBuckets.length; i++) {
-            freqBuckets[i] = new ArrayList<>();
-        }
+    public int partition(int left, int right, int pivot_index) {
+        int pivot_frequency = count.get(unique[pivot_index]);
+        swap(pivot_index, right);
+        int store_index = left;
 
-        // Populate the buckets (Equivalent to Python's 'for num, f in h.items(): freq[f].append(num)')
-        for (int num : counts.keySet()) {
-            int freq = counts.get(num);
-            freqBuckets[freq].add(num);
-        }
-
-        // 3. Collect Top K Results (Equivalent to Python's final loop)
-        int[] result = new int[k];
-        int resultIndex = 0;
-        
-        // Iterate backward from the highest possible frequency (n)
-        for (int i = n; i >= 0 && resultIndex < k; i--) {
-            // Check if the current bucket (frequency level) has any numbers
-            for (int num : freqBuckets[i]) {
-                result[resultIndex++] = num;
+        for (int i = left; i <= right; i++) {
+            if (count.get(unique[i]) < pivot_frequency) {
+                swap(store_index, i);
+                store_index++;
             }
         }
+
+        swap(store_index, right);
+
+        return store_index;
+    }
+    
+    public void quickselect(int left, int right, int k_smallest) {
+        /*
+        Sort a list within left..right till kth less frequent element
+        takes its place. 
+        */
+
+        // base case: the list contains only one element
+        if (left == right) return;
         
-        return result;
+        //Select a random pivot_index
+        Random random_num = new Random();
+        int pivot_index = left + random_num.nextInt(right - left); 
+
+        // Find the pivot position in a sorted list
+        pivot_index = partition(left, right, pivot_index);
+
+        // If the pivot is in its final sorted position
+        if (k_smallest == pivot_index) {
+            return;    
+        } else if (k_smallest < pivot_index) {
+            // go left
+            quickselect(left, pivot_index - 1, k_smallest);     
+        } else {
+            // go right 
+            quickselect(pivot_index + 1, right, k_smallest);  
+        }
+    }
+    
+    public int[] topKFrequent(int[] nums, int k) {
+        // Build hash map: character and how often it appears
+        count = new HashMap();
+        for (int num: nums) {
+            count.put(num, count.getOrDefault(num, 0) + 1);
+        }
+        
+        // Array of unique elements
+        int n = count.size();
+        unique = new int[n]; 
+        int i = 0;
+        for (int num: count.keySet()) {
+            unique[i] = num;
+            i++;
+        }
+        
+        // kth top frequent element is (n - k)th less frequent.
+        // Do a partial sort: from less frequent to the most frequent, till
+        // (n - k)th less frequent element takes its place (n - k) in a sorted array. 
+        // All elements on the left are less frequent.
+        // All the elements on the right are more frequent. 
+        quickselect(0, n - 1, n - k);
+        // Return top k frequent elements
+        return Arrays.copyOfRange(unique, n - k, n);
     }
 }
