@@ -5,7 +5,7 @@ class Solution {
         for (int r = 0; r < n; r++) {
             freq[Character.toUpperCase(s.charAt(r)) - 'A']++;
             maxF = Math.max(maxF, freq[Character.toUpperCase(s.charAt(r)) - 'A']);
-            while (r - l + 1 - maxF > k) {
+            if (r - l + 1 - maxF > k) {
                 freq[s.charAt(l++)-'A']--;
             }
             res = Math.max(res, r-l+1);
