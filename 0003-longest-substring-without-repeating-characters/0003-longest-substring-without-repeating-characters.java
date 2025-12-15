@@ -3,17 +3,17 @@ class Solution {
 
         int res = 0, n = s.length(), l = 0;
 
-        Set<Character> m = new HashSet<>();
+        Map<Character, Integer> m = new HashMap<>();
 
 
         for (int r = 0; r < n; r++) {
             Character c = s.charAt(r);
 
-                while (m.contains(c)) {
-                    m.remove(s.charAt(l++));
-                }
+            if (m.containsKey(c)) {
+                l = Math.max(l, m.get(c) + 1);
+            }
 
-                m.add(c);
+            m.put(c, r);
 
 
             res = Math.max(res, (r-l + 1));
