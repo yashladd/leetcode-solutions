@@ -1,56 +1,43 @@
-import java.util.HashMap;
-import java.util.Map;
-
 class Solution {
     public String minWindow(String s, String t) {
-        Map<Character, Integer> sF = new HashMap<>();
-        Map<Character, Integer> tF = new HashMap<>();
-
+        Map<Character, Integer> sf = new HashMap<>(), tf = new HashMap<>();
         int n1 = s.length(), n2 = t.length();
-        if (n2 > n1) return "";
+        String res = "";
+        if (n2 > n1) return res;
 
-        for (char c : t.toCharArray()) {
-            tF.put(c, tF.getOrDefault(c, 0) + 1);
+        for (char c: t.toCharArray()){
+            tf.put(c, tf.getOrDefault(c, 0) + 1);
         }
 
-        int required = tF.size(); // distinct chars in t that must be satisfied
-        int formed = 0;           // how many are currently satisfied
+        int required = tf.size(), l = 0, mini = Integer.MAX_VALUE;
+        int matched = 0;
 
-        int mini = Integer.MAX_VALUE;
-        int bestL = 0;
-        int l = 0;
-        String res = "";
         for (int r = 0; r < n1; r++) {
             char c = s.charAt(r);
-            int newCount = sF.getOrDefault(c, 0) + 1;
-            sF.put(c, newCount);
-
-            // If this char is required and we just met its required count, formed++
-            if (tF.containsKey(c) && newCount == tF.get(c)) {
-                formed++;
+            sf.put(c, sf.getOrDefault(c, 0) + 1);
+            if (tf.containsKey(c) && sf.get(c).intValue() == tf.get(c).intValue()) {
+                matched++;
             }
 
-            // shrink only while window is valid
-            while (formed == required) {
+            while (required == matched) {
+                char leftChar = s.charAt(l);
                 if (r - l + 1 < mini) {
                     mini = r - l + 1;
-                    bestL = l;
                     res = s.substring(l, r + 1);
                 }
 
-                char leftChar = s.charAt(l);
-                int leftCount = sF.get(leftChar) - 1;
-                sF.put(leftChar, leftCount);
-
-                // If leftChar is required and we just dropped below required, formed--
-                if (tF.containsKey(leftChar) && leftCount < tF.get(leftChar)) {
-                    formed--;
+                sf.put(leftChar, sf.get(leftChar) - 1);
+                if (tf.containsKey(leftChar) ) {
+                    if (sf.get(leftChar) < tf.get(leftChar)) {
+                        matched--;
+                    }
                 }
-
                 l++;
+
             }
         }
 
         return res;
+
     }
 }
