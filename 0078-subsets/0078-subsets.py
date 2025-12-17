@@ -1,12 +1,10 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        res = []
-        def f(i, s):
-            if i == len(nums):
-                res.append(s[:])
-                return 
-
-            f(i+1, s)
-            f(i + 1, s + [nums[i]])
-        f(0, [])
-        return res
+        out = []
+        def rec(i, res, out):
+            out.append(res)
+            for j in range(i, len(nums)):
+                rec(j + 1, res + [nums[j]], out)              
+        rec(0, [], out)
+        return out
+            
