@@ -1,30 +1,39 @@
 class Solution:
-    def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
-        n = len(grid)
-        if grid[0][0] == 1 or grid[n-1][n-1] == 1:
+    def shortestPathBinaryMatrix(self, g: List[List[int]]) -> int:
+        N, M = len(g), len(g[0])
+        INF = float("inf")
+        dis = [[INF for _ in range(M)] for _ in range(N)]
+        dis[0][0] = 0
+
+        if g[0][0] or g[N-1][M-1]:
             return -1
-        
+
+        # vis = set()
+        # vis.add((0, 0))
+        DIRS = [
+            (0,1), (1,0), (-1, 0), (0,-1),
+            (1,1), (1,-1), (-1, 1), (-1,-1)
+        ]
+
+        def inb(i, j):
+            return i >= 0 and j>=0 and i < N and j < M
+
+
         q = deque([(0, 0, 1)])
-        vis = [[0] * n for _ in range(n)]
-        vis[0][0] = 1
+
         while q:
-            sz = len(q)
-            print(q)
-            for _ in range(sz):
-                i, j, l = q.popleft()
-                if i == n-1 and j == n-1:
-                    return l
-                for dx, dy in [[0,1], [1,0], [0,-1], [-1,0], [1,1], [1,-1], [-1,-1], [-1,1]]:
-                    r, c = i + dx, j + dy
-                    if (r >= 0 and c >= 0 and r < n and c < n) and not vis[r][c] and not grid[r][c]:
-                        vis[r][c] = 1
-                        q.append((r, c, l + 1))
+            r, c, d = q.popleft()
+            if r == N-1 and c == M-1:
+                return d
+            for dx, dy in DIRS:
+                nr, nc = r + dx, c + dy
+                if inb(nr, nc) and not g[nr][nc] and dis[nr][nc] > 1 + d:
+                    dis[nr][nc] = 1 + d
+                    q.append((nr, nc, 1 + d))
 
         return -1
 
 
-                
-                
-        
+
         
         
