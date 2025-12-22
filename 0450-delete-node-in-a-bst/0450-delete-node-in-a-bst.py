@@ -5,44 +5,40 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+
+    def helper(self, root):
+        if not root.left:
+            return root.right
+        elif not root.right:
+            return root.left
+
+        rightChild = root.right
+        rightMost = self.findRmost(root.left)
+        rightMost.right = rightChild
+        return root.left
+
+    def findRmost(self, root):
+        return root if not root.right else self.findRmost(root.right)
+        
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
         if not root:
             return None
-        
-        
-        
-        def reorder(node):
-            if not node.left:
-                return node.right
-            if not node.right:
-                return node.left
-            
-            rCh = node.right
-            curr = node.left
-            while curr.right:
-                curr = curr.right
-            curr.right = rCh
-            return node.left
-        
-        
+
         if root.val == key:
-            return reorder(root)
+            return self.helper(root)
         
-        curr = root
-        while curr:
-            if curr.val < key:
-                if curr.right and curr.right.val == key:
-                    curr.right = reorder(curr.right)
+        dummy = root
+        while root:
+            if root.val > key:
+                if root.left and root.left.val == key:
+                    root.left = self.helper(root.left)
+                    break
                 else:
-                    curr = curr.right
+                    root = root.left
             else:
-                if curr.left and curr.left.val == key:
-                    curr.left = reorder(curr.left)
+                if root.right and root.right.val == key:
+                    root.right = self.helper(root.right)
+                    break
                 else:
-                    curr = curr.left
-                    
-        return root
-                
-        
-        
-        
+                    root = root.right
+        return dummy
