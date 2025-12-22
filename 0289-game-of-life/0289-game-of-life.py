@@ -2,9 +2,12 @@ class Solution:
     def gameOfLife(self, board: List[List[int]]) -> None:
         """
         Do not return anything, modify board in-place instead.
+
+        0 -> 0 0
+        1 -> 0 1
+        0 -> 1 2
+        1 -> 1 3
         """
-
-
         n, m = len(board), len(board[0])
 
 
@@ -35,4 +38,16 @@ class Solution:
                     board[i][j] = 1
                 elif board[i][j] == 1:
                     board[i][j] = 0
-                
+        
+    # def gameOfLife(self, board: List[List[int]]) -> None:
+    #     """
+    #     Do not return anything, modify board in-place instead.
+    #     0 -> 0 0
+    #     1 -> 0 1
+    #     0 -> 1 2
+    #     1 -> 1 3
+
+
+
+    #     """
+        
