@@ -1,38 +1,30 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 class Solution {
-    void dfs(TreeNode node, Map<Integer, int[]>mp, int depth, int par, int x, int y) {
-        if (node != null) {
-            if (node.val == x){
-                mp.put(x, new int[] {depth, par});
-            } else if (node.val == y) {
-                mp.put(y, new int[] {depth, par});
-            }
+    // Define the record to store node metadata
+    private record DataNode(int depth, Integer parent) {}
 
-            dfs(node.left, mp, depth + 1, node.val, x, y);
-            dfs(node.right, mp, depth + 1, node.val, x, y);
+    private Map<Integer, DataNode> map = new HashMap<>();
 
-        }
-    }
     public boolean isCousins(TreeNode root, int x, int y) {
-        Map<Integer, int[]> mp = new HashMap<>();
-        dfs(root, mp, 0, -1, x, y);
-        int [] xVals = mp.get(x);
-        int [] yVals = mp.get(y);
-        if (xVals[1] == yVals[1]) return false;
-        return xVals[0]== yVals[0];
+        traverse(root, x, y, null, 0);
+
+        // Ensure both values were found before comparing
+        if (!map.containsKey(x) || !map.containsKey(y)) return false;
+
+        DataNode nodeX = map.get(x);
+        DataNode nodeY = map.get(y);
+
+        // Cousins: same depth, different parents
+        return nodeX.depth() == nodeY.depth() && !Objects.equals(nodeX.parent(), nodeY.parent());
+    }
+
+    private void traverse(TreeNode root, int x, int y, Integer parent, int depth) {
+        if (root == null || map.size() == 2) return;
+
+        if (root.val == x || root.val == y) {
+            map.put(root.val, new DataNode(depth, parent));
+        }
+
+        traverse(root.left, x, y, root.val, depth + 1);
+        traverse(root.right, x, y, root.val, depth + 1);
     }
 }
