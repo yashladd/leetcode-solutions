@@ -1,31 +1,18 @@
 class Solution {
     public int[] plusOne(int[] digits) {
 
-        int n = digits.length;
-
-        int car = 0;
-
-        List<Integer> res = new ArrayList<>();
-
-        for (int i = n-1; i >=0 ; i--) {
-            int dig = digits[i];
-            if (i == n-1) {
-                dig += 1;
+        int [] res = Arrays.copyOf(digits, digits.length);
+        for (int i = res.length -1 ; i >= 0 ; i--) {
+            if (res[i] < 9) {
+                res[i] += 1;
+                return res;
             }
-            dig += car;
-            int curr = dig % 10;
-            car = (int) dig/10;
-
-            res.add(curr);
+            res[i] = 0;
         }
 
-        if (car != 0) {
-            res.add(car);
-        }
-
-        Collections.reverse(res);
-
-        return res.stream().mapToInt(i -> i).toArray();
+        int [] allNinesRes = new int[res.length + 1];
+        allNinesRes[0] = 1;
+        return allNinesRes;
         
     }
 }
