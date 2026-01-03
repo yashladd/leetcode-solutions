@@ -3,10 +3,10 @@ class Solution {
         if (source == target) return 0;
 
         // 1. Map each stop to the buses that visit it
-        Map<Integer, List<Integer>> stopsToBuses = new HashMap<>();
+        Map<Integer, List<Integer>> stopsToBuses = new HashMap();
         for (int bus = 0; bus < routes.length; bus++) {
             for (int stop : routes[bus]) {
-                stopsToBuses.computeIfAbsent(stop, k -> new ArrayList<>()).add(bus);
+                stopsToBuses.computeIfAbsent(stop, k -> new ArrayList()).add(bus);
             }
         }
 
