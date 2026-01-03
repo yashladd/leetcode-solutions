@@ -27,7 +27,7 @@ class Solution:
         shortes = inf
         for i in range(n):
             for j in range(m):
-                if reach[i][j] == buildings:
+                if not g[i][j] and reach[i][j] == buildings:
                     shortes = min(shortes, distance[i][j])
 
         return shortes if shortes != inf else -1
