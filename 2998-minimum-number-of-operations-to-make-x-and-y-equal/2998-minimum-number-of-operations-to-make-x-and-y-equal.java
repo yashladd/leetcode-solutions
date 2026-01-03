@@ -1,36 +1,28 @@
 class Solution {
+    Map<Integer, Integer> memo = new HashMap<>();
+
     public int minimumOperationsToMakeEqual(int x, int y) {
-
-        Queue<Integer> q = new LinkedList<>();
-        Set<Integer> visited = new HashSet<>(); // 1. Add visited set
-
-        q.add(x);
-        visited.add(x); // Mark start as visited
-        int steps = 0;
-
-        while (!q.isEmpty()) {
-            int s = q.size();
-            for(int i = 0; i < s; i++) {
-                int curr = q.poll();
-                
-                if (curr == y) return steps;
-                
-                // Better structure to handle visited checks easily:
-                List<Integer> neighbors = new ArrayList<>();
-                if (curr % 11 == 0) neighbors.add(curr / 11);
-                if (curr % 5 == 0) neighbors.add(curr / 5); // 2. Removed "else"
-                neighbors.add(curr - 1);
-                neighbors.add(curr + 1);
-                
-                for (int nextVal : neighbors) {
-                    if (!visited.contains(nextVal)) { // 3. Check if visited
-                        visited.add(nextVal);
-                        q.add(nextVal);
-                    }
-                }
-            }
-            steps++;
+        if (x <= y) {
+            return y - x; // Can only increment to catch up
         }
-        return steps;
+        if (memo.containsKey(x)) {
+            return memo.get(x);
+        }
+
+        // Option 1: Just decrease 1-by-1 to reach y
+        int res = x - y;
+
+        // Option 2: Go to nearest multiple of 5 (down or up), then divide
+        int distTo5 = x % 5;
+        res = Math.min(res, distTo5 + 1 + minimumOperationsToMakeEqual(x / 5, y));
+        res = Math.min(res, (5 - distTo5) + 1 + minimumOperationsToMakeEqual(x / 5 + 1, y));
+
+        // Option 3: Go to nearest multiple of 11 (down or up), then divide
+        int distTo11 = x % 11;
+        res = Math.min(res, distTo11 + 1 + minimumOperationsToMakeEqual(x / 11, y));
+        res = Math.min(res, (11 - distTo11) + 1 + minimumOperationsToMakeEqual(x / 11 + 1, y));
+
+        memo.put(x, res);
+        return res;
     }
 }
