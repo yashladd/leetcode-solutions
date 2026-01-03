@@ -37,5 +37,5 @@ class Solution:
                             return flips
             flips += 1
 
-        
+        return flips
         
