@@ -1,33 +1,49 @@
 class Solution {
     public int sumFourDivisors(int[] nums) {
-        int totalSum = 0;
+        int maxVal = 100000; // Max constraint from problem
+        int[] spf = new int[maxVal + 1]; // Smallest Prime Factor array
 
-        for (int num : nums) {
-            int sum = 0;
-            int count = 0;
-            
-            // We only need to loop up to the square root of num
-            for (int i = 1; i * i <= num; i++) {
-                if (num % i == 0) {
-                    // Found a divisor 'i'
-                    count++;
-                    sum += i;
-                    
-                    // If 'i' is not the square root, add the pair divisor
-                    if (i * i != num) {
-                        count++;
-                        sum += num / i;
+        // 1. Precompute SPF using Sieve
+        for (int i = 0; i <= maxVal; i++) spf[i] = i;
+        for (int i = 2; i * i <= maxVal; i++) {
+            if (spf[i] == i) { // i is prime
+                for (int j = i * i; j <= maxVal; j += i) {
+                    if (spf[j] == j) {
+                        spf[j] = i;
                     }
                 }
-                // Optimization: If we already exceed 4 divisors, stop early
-                if (count > 4) break; 
-            }
-
-            if (count == 4) {
-                totalSum += sum;
             }
         }
-        
+
+        int totalSum = 0;
+
+        // 2. Process each number using SPF
+        for (int num : nums) {
+            // Get the first prime factor
+            int p = spf[num];
+            if (p == num) continue; // If num is prime, it has only 2 divisors (1, num)
+
+            int remaining = num / p;
+            
+            // Case A: num = p * q (Product of two distinct primes)
+            // Check if 'remaining' is a prime and distinct from 'p'
+            if (spf[remaining] == remaining) {
+                if (p != remaining) {
+                    totalSum += (1 + p) * (1 + remaining);
+                }
+            } 
+            // Case B: num = p^3 (Cube of a prime)
+            // If remaining is not prime, check if it is p^2
+            else {
+                int q = spf[remaining];
+                if (q == p) { // Factor must be the same prime 'p'
+                    if (remaining / q == p) { // Ensure remaining was exactly p*p
+                         totalSum += 1 + p + p * p + p * p * p;
+                    }
+                }
+            }
+        }
+
         return totalSum;
     }
 }
