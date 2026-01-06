@@ -5,27 +5,27 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        q = []
-        from heapq import heappush, heappop
-        #NOTE: Python doesn't allow inserting objects which are not comparable as second value
-        # Since second object in the tuple must be a comparable, you can either insrert: 
-        # 1: (node.val, i, node)
-        # 2: (node.val, i)
-        for i in range(len(lists)):
-            if lists[i]:
-                heappush(q, (lists[i].val, i))
-        dummy = ListNode(-1)
-        curr = dummy
-        while q:
-            _, i = heappop(q)
-            curr.next = lists[i]
-            curr = curr.next
-            lists[i] = lists[i].next
-            if lists[i]:
-                heappush(q, (lists[i].val, i))
-                
-        return dummy.next
-            
-                    
-        
-        
+        if not lists: return None
+        d  = ListNode(-1)
+
+        # print(type(lists[0]))
+        t = d
+
+        h = []
+
+        for i, l in enumerate(lists):
+            if l:
+                heappush(h, (l.val, i))
+
+        while h:
+            val, idx = heappop(h)
+            t.next = lists[idx]
+            nex = lists[idx].next
+            lists[idx] = nex
+            t = t.next
+            t.next = None
+            if nex:
+                heappush(h, (nex.val, idx))
+
+
+        return d.next
