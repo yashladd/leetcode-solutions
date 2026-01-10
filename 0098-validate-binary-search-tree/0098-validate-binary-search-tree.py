@@ -4,18 +4,36 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
+
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        
-        def f(r, x, y):
-            if not r:
+
+        def f(node, minVal, maxVal):
+            if not node:
                 return True
+
+            # if not node.left and not node.right:
+            #     return True
             
-            if not r.val > x or not r.val < y:
+            if node.val >= maxVal or node.val <= minVal:
                 return False
-            
-            return f(r.left, x, r.val) and f(r.right, r.val, y)
-        
+
+            isLeftValid = f(node.left, minVal, node.val)
+            isRightValid = f(node.right, node.val, maxVal)
+
+            return isLeftValid and isRightValid
+
+
         return f(root, -float("inf"), float("inf"))
+
             
+
+            
+
+            
+        
+
+
         
