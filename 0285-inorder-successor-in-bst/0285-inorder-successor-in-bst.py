@@ -20,7 +20,6 @@ class Solution:
             nonlocal succ
             if node:
                 if node.val > p.val:
-                    print("reached", p.val, node.val)
                     succ = node
                     f(node.left, p)
                 else:
