@@ -17,7 +17,9 @@ class Codec:
         n = len(s)
         ans = []
         while i < n:
-            j = i
+            # j = i
+            j = s.index("!", i)
+            # print("HashIdxex", x, s, i)
             while s[j] != "!":
                 j += 1
             l = int(s[i:j])
