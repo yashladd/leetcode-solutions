@@ -30,16 +30,18 @@ class Solution:
         def inb(x, y):
             return x >= 0 and x < n and y >= 0 and y < m
         
+        vis = [[0] * m for _ in range(n)]
+        
         for i in range(n):
             for j in range(m):
-                if grid[i][j]:
+                if grid[i][j] and not vis[i][j]:
+                    vis[i][j] = 1
                     node = i * m + j
                     for dx, dy in [(0,1), (1,0), (0,-1), (-1, 0)]:
                         r, c = i + dx, j + dy
-                        if inb(r, c)  and grid[r][c]:
+                        if inb(r, c)  and grid[r][c] and not vis[r][c]:
                             neigh = r * m + c
-                            if ds.find(node) != ds.find(neigh):
-                                ds.union(node, neigh)
+                            ds.union(node, neigh)
         
         maxi = max(ds.size)
         
