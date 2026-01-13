@@ -1,42 +1,34 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 class Solution {
-    int pi;
-    TreeNode f(int l, int r, Stack<Integer> p, int []i, Map<Integer, Integer>mp) {
-        if(l > r || p.isEmpty()) return null;
-        int val = p.pop();
+    // 1. Global counter to track position in preorder array
+    int pi = 0; 
+    
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        pi = 0; // Important: Reset for every new test case
+        Map<Integer, Integer> ino = new HashMap<>();
+        for (int i = 0; i < inorder.length; i++) {
+            ino.put(inorder[i], i);
+        }
+        
+        return f(preorder, 0, inorder.length - 1, ino);
+    }
+
+    private TreeNode f(int[] preorder, int l, int r, Map<Integer, Integer> mp) {
+        // Base case: no elements left in this subtree range
+        if (l > r) return null;
+
+        // 2. Use the counter to get the current root value
+        int val = preorder[pi];
+        pi++; // Move to the next value for the next recursive call
+
         TreeNode root = new TreeNode(val);
 
+        // 3. Split using the inorder map
         int inId = mp.get(val);
-        pi++;
-        root.left = f(l, inId-1, p, i, mp);
-        root.right = f(inId + 1, r, p, i, mp);
+
+        // 4. Recursive calls (Order matters: Left then Right)
+        root.left = f(preorder, l, inId - 1, mp);
+        root.right = f(preorder, inId + 1, r, mp);
+
         return root;
-    }
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
-        Map<Integer, Integer> ino = new HashMap<>();
-        int c = 0;
-        for (int i: inorder) {
-            ino.put(i, c++);
-        }    
-        Stack<Integer> preStack = new Stack<>();
-        // Iterate backwards so the first element (root) ends up at the top
-        for (int i = preorder.length - 1; i >= 0; i--) {
-            preStack.push(preorder[i]);
-        }
-        return f(0, preorder.length-1, preStack, inorder, ino);
     }
 }
