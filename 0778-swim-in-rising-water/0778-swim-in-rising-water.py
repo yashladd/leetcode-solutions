@@ -23,6 +23,6 @@ class Solution:
                     newTime = max(grid[x][y], time)
                     if newTime < vis[x][y]:
                         vis[x][y] = newTime
-                        heappush(h, (max(grid[x][y], time), (x, y)))
+                        heappush(h, (newTime, (x, y)))
                             
         
