@@ -1,15 +1,18 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
-        h = defaultdict(int)
-        n = len(s)
-        l, r = 0, 0
-        maxi = 0
-        while r < n:
-            h[s[r]] += 1
-            while r - l + 1 - max(h.values()) > k:
-                h[s[l]] -= 1
-                l += 1
-            maxi = max(maxi, r-l+1)
-            r += 1
-        return maxi
-            
+        charCnt = defaultdict(int)
+        L = 0
+        N=len(s)
+        best = 0
+        maxF = 0
+        for R in range(N):
+            charCnt[s[R]] += 1
+            maxF = max(maxF, charCnt[s[R]])
+            #windowSize = R - L + 1
+            #mostFrequentCnt = max(charCnt.values())
+            #Number of chars to change = R - L + 1 - max(charCnt.values()
+            while R - L + 1 - maxF > k:
+                charCnt[s[L]] -= 1
+                L += 1
+            best = max(best, R - L +1)
+        return best
