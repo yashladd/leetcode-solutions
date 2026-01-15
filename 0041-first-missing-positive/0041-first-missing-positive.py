@@ -1,19 +1,29 @@
-class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
+class Solution(object):
+    def firstMissingPositive(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
         n = len(nums)
         i = 0
         while i < n:
-            num = nums[i]
-            sortedIdx = num - 1
-            if 1 <= num <= n and nums[i] != nums[sortedIdx]:
-                nums[i], nums[sortedIdx] = nums[sortedIdx], nums[i]
-                # i += 
+            correctIdx = nums[i] - 1
+            if 1 <= nums[i] <= n and nums[i] != nums[correctIdx]:
+                nums[i], nums[correctIdx] = nums[correctIdx], nums[i]
             else:
                 i += 1
 
+
+        # for i in range(n):
+        #     # num = nums[i]
+            
+        #     while 1 <= nums[i] <= n and nums[i] - 1 != i:
+        #         idxToSwap = nums[i] - 1
+        #         nums[i], nums[idxToSwap] = nums[idxToSwap], nums[i]
+
         for i in range(n):
-            if i != nums[i] - 1:
+            if nums[i] != i + 1:
                 return i + 1
 
-        return n + 1
+        return len(nums) + 1
         
