@@ -6,7 +6,7 @@ class Solution {
         int ans = 0; // Default answer if no valid H-index is found
 
         while (l <= r) {
-            int mid = l + (r - l) / 2;
+            int mid = (l + r) >>> 1;
             
             // Your requested logic:
             // Check if the paper at 'mid' has enough citations to be an H-index of (n - mid)
