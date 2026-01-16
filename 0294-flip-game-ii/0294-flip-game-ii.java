@@ -1,26 +1,39 @@
 class Solution {
-    Map<String, Boolean> mp;
-    boolean playFlipOptimally(String s, Map<String, Boolean> mp) {
-        if (mp.containsKey(s)) return mp.get(s);
+    public boolean canWin(String s) {
+    // Convert to char array once at the beginning
+    return canWin(s.toCharArray(), new HashMap<>());
+}
 
-        for (int i = 0; i < s.length() - 1; i++) {
-            if (s.charAt(i) == '+' && s.charAt(i+1) == '+') {
-                String nextState = s.substring(0, i) + "--" + s.substring(i+2, s.length());
-                if (!playFlipOptimally(nextState, mp)) {
-                    mp.put(s, true);
-                    return mp.get(s);
+    private boolean canWin(char[] arr, Map<String, Boolean> memo) {
+        // 1. Must convert to String to check Memoization Key
+        String key = new String(arr); 
+        if (memo.containsKey(key)) return memo.get(key);
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == '+' && arr[i+1] == '+') {
+                
+                // 2. Make the Move (In-Place)
+                arr[i] = '-';
+                arr[i+1] = '-';
+                
+                // 3. Recursive Call (Pass the same array)
+                // If the opponent CANNOT win, then I win.
+                if (!canWin(arr, memo)) {
+                    // Backtrack before returning!
+                    arr[i] = '+';
+                    arr[i+1] = '+';
+                    
+                    memo.put(key, true);
+                    return true;
                 }
-
+                
+                // 4. Backtrack (Undo the move for the next iteration)
+                arr[i] = '+';
+                arr[i+1] = '+';
             }
         }
-        mp.put(s, false);
+
+        memo.put(key, false);
         return false;
-    }
-    public boolean canWin(String currentState) {
-
-        mp = new HashMap<>();
-
-        return playFlipOptimally(currentState, mp);
-        
     }
 }
