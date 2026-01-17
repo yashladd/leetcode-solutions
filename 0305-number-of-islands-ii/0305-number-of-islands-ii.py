@@ -1,24 +1,24 @@
 class DS:
-    def __init__(self, n: int):
-        self.p = list(range(n))
-        self.sz = [1] * n
+    def __init__(self, n):
+        self.par = [i for i in range(n+1)]
+        self.size = [1 for _ in range(n+1)]
 
-    def find(self, x: int) -> int:
-        if self.p[x] != x:
-            self.p[x] = self.find(self.p[x])
-        return self.p[x]
+    def union(self, u, v):
+        pu, pv = self.find(u), self.find(v)
+        if pu == pv:
+            return False
+        
+        if self.size[pv] > self.size[pv]:
+            pu, pv = pv, pu
 
-    def union(self, x: int, y: int) -> bool:
-        rx, ry = self.find(x), self.find(y)
-        if rx == ry:
-            return False  # no merge happened
-        # union by size
-        if self.sz[rx] < self.sz[ry]:
-            rx, ry = ry, rx
-        self.p[ry] = rx
-        self.sz[rx] += self.sz[ry]
-        return True      # merged
+        self.par[pv] = pu
+        self.size[pu] += self.size[pv]
+        return True
 
+    def find(self, u):
+        if self.par[u] != u:
+            self.par[u] = self.find(self.par[u])
+        return self.par[u]
 
 class Solution:
     def numIslands2(self, m: int, n: int, positions: List[List[int]]) -> List[int]:
