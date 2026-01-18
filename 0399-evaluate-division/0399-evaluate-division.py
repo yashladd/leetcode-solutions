@@ -9,7 +9,7 @@ class Solution:
             vals.add(v)
 
         def bfs(sr, de):
-            found = False
+
             q = deque([(sr, 1.0)])
             vis = set()
             vis.add(sr)
@@ -21,8 +21,8 @@ class Solution:
                     if nei not in vis:
                         vis.add(nei)
                         q.append([nei, cur * mul])
-            if not found:
-                return -1.0
+
+            return -1.0
         res= []
         for u, v in queries:
             if u not in vals or v not in vals:
