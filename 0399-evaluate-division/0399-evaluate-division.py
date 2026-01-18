@@ -10,17 +10,17 @@ class Solution:
 
         def bfs(sr, de):
             found = False
-            q = deque([(sr, 1.0, -1)])
+            q = deque([(sr, 1.0)])
             vis = set()
             vis.add(sr)
             while q:
-                node, cur, par = q.popleft()
+                node, cur = q.popleft()
                 if node == de:
                     return cur
                 for nei, mul in g[node]:
-                    if nei != par and nei not in vis:
+                    if nei not in vis:
                         vis.add(nei)
-                        q.append([nei, cur * mul, node])
+                        q.append([nei, cur * mul])
             if not found:
                 return -1.0
         res= []
