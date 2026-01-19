@@ -14,7 +14,7 @@ class Solution:
         
         for name, info_list in name_to_info.items():
             # Sort by time (optional, but good practice)
-            info_list.sort() 
+            # info_list.sort() 
             
             for i in range(len(info_list)):
                 time1, amount1, city1, idx1 = info_list[i]
