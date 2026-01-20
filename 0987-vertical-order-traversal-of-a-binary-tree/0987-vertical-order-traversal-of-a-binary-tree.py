@@ -6,16 +6,19 @@
 #         self.right = right
 class Solution:
     def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
-        q = deque([(root, 0, 0)])
-        levels = defaultdict(list)
+        positions = defaultdict(list)
+
+        q = deque([(0, 0, root)])
+
         while q:
-            node, vertical, level = q.popleft() 
-            levels[vertical].append((level, node.val))
+            vert, lev, node = q.popleft()
+            positions[vert].append((lev, node.val))
             if node.left:
-                q.append((node.left, vertical - 1, level + 1))
+                q.append((vert-1, lev + 1, node.left))
+
             if node.right:
-                q.append((node.right, vertical + 1, level + 1))
-                
-        return [[x[1] for x in sorted(level)] for _, level in sorted(levels.items())]
-            
-        
+                q.append((vert+1, lev + 1, node.right))
+        res = []
+        for vert in sorted(positions.keys()):
+            res.append([x[1] for x in sorted(positions[vert])])
+        return res
