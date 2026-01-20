@@ -1,22 +1,22 @@
 class FreqStack:
 
     def __init__(self):
-        self.hashStack = defaultdict(list)
-        self.frequency = defaultdict(int)
-        self.maxF = 0
+        self.h = []
+        self.cnt = defaultdict(int)
+        self.idx = 0
         
 
     def push(self, val: int) -> None:
-        self.frequency[val] += 1
-        self.hashStack[self.frequency[val]].append(val)
-        self.maxF = max(self.maxF, self.frequency[val])
-    
+        self.cnt[val] += 1
+        heappush(self.h, (-self.cnt[val], -self.idx, val))
+        self.idx += 1
+        
+
     def pop(self) -> int:
-        val = self.hashStack[self.maxF].pop()
-        self.frequency[val] -= 1
-        while self.maxF and not self.hashStack[self.maxF]:
-            self.maxF -= 1
+        _, _, val = heappop(self.h)
+        self.cnt[val] -= 1
         return val
+        
 
 
 # Your FreqStack object will be instantiated and called as such:
