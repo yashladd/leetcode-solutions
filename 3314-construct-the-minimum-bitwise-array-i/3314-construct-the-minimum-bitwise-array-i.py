@@ -4,7 +4,7 @@ class Solution:
         for num in nums:
             original = num
             candidate = -1
-            for j in range(1, original):
+            for j in range(original):
                 if (j | (j + 1)) == original:
                     candidate = j
                     break
