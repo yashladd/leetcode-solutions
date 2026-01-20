@@ -2,40 +2,62 @@ class Solution:
     def findInMountainArray(self, target: int, mountain_arr: 'MountainArray') -> int:
         n = mountain_arr.length()
         
-        # 1. FIND PEAK INDEX
-        l, r = 0, n - 1
-        while l < r:
-            m = (l + r) >> 1
-            if mountain_arr.get(m) < mountain_arr.get(m + 1):
-                l = m + 1
-            else:
-                r = m
-        peakIdx = l
+        # ---------------------------------------------------------
+        # STEP 1: FIND PEAK (Using YOUR Logic)
+        # ---------------------------------------------------------
+        l, r = 1, n - 2
+        peak_idx = -1
         
-        # 2. SEARCH LEFT (Strictly Increasing)
-        l, r = 0, peakIdx
         while l <= r:
             m = (l + r) >> 1
-            val = mountain_arr.get(m) # Call once!
+            
+            # We cache the values to save API calls (limit is 100)
+            val = mountain_arr.get(m)
+            val_left = mountain_arr.get(m - 1)
+            val_right = mountain_arr.get(m + 1)
+            
+            # 1. Found the Peak?
+            if val_left < val and val > val_right:
+                peak_idx = m
+                break
+            
+            if val < val_right:
+                l = m + 1
+            
+            # 3. Descending Slope? (Move Left)
+            # Your logic: r = m.
+            # Optimization: r = m - 1 is safer and faster
+            else:
+                r = m - 1
+                
+        # ---------------------------------------------------------
+        # STEP 2: SEARCH LEFT (Ascending part: 0 to peak)
+        # ---------------------------------------------------------
+        l, r = 0, peak_idx
+        while l <= r:
+            m = (l + r) >> 1
+            val = mountain_arr.get(m)
             
             if val == target:
                 return m
             elif val < target:
-                l = m + 1  # Move Right
+                l = m + 1
             else:
-                r = m - 1  # Move Left
-        
-        # 3. SEARCH RIGHT (Strictly Decreasing)
-        l, r = peakIdx, n - 1
+                r = m - 1
+                
+        # ---------------------------------------------------------
+        # STEP 3: SEARCH RIGHT (Descending part: peak to n-1)
+        # ---------------------------------------------------------
+        l, r = peak_idx, n - 1
         while l <= r:
             m = (l + r) >> 1
-            val = mountain_arr.get(m) # Call once!
+            val = mountain_arr.get(m)
             
             if val == target:
                 return m
-            elif val > target: # NOTE: Logic flipped for decreasing array
-                l = m + 1  # Move Right (towards smaller values)
+            elif val > target:  # NOTE: Logic is reversed for descending side!
+                l = m + 1       # If val > target, we need smaller, so go Right
             else:
-                r = m - 1  # Move Left (towards larger values)
+                r = m - 1
                 
         return -1
