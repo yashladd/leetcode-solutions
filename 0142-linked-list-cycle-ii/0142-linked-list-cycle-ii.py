@@ -6,6 +6,32 @@
 
 class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Proof they are at same distance
+
+
+        x = distance before entering loop 
+        y = distance from loop to pt where they meet
+        z = distance from pt to start of loop 
+
+        l = length of the loop = z + y
+
+        distance traveleed by fast = 
+        f = x + p*l + y
+        s = x + q*l + y
+
+        2s = f
+
+        2x + 2ql + 2y = x + pl + y
+
+        x + y = k*l
+        y = l - z from above
+
+        x = k*l + z
+
+
+
+        """
         if not head:
             return None
         
