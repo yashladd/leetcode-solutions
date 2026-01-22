@@ -31,15 +31,15 @@ class Codec:
         def rdeserialize(l):
             """ a recursive helper function for deserialization."""
             if l[0] == 'None':
-                l.pop(0)
+                l.popleft()
                 return None
-            
-            root = TreeNode(l[0])
-            l.pop(0)
+            val = l.popleft()
+            root = TreeNode(val)
+            # l.pop(0)
             root.left = rdeserialize(l)
             root.right = rdeserialize(l)
             return root
-
-        data_list = data.split(',')
+        # print(data)
+        data_list = deque(data.split(','))
         root = rdeserialize(data_list)
         return root
