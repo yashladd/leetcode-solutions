@@ -11,12 +11,11 @@ class Solution:
         # Sort in decreasing order.
         arr.sort(reverse=True)
 
-        mask = 0
         
         memo = {}
         
-        def backtrack(index, count, curr_sum):
-            nonlocal mask
+        def backtrack(index, count, curr_sum, mask):
+            # nonlocal mask
             n = len(arr)
             
             # We made k - 1 subsets with target sum and the last subset will also have target sum.
@@ -34,25 +33,26 @@ class Solution:
             # When curr sum reaches target then one subset is made.
             # Increment count and reset current sum.
             if curr_sum == target_sum:
-                memo[mask] = backtrack(0, count + 1, 0)
+                # Start with same mask
+                memo[mask] = backtrack(0, count + 1, 0, mask)
                 return memo[mask]
 
             # Try not picked elements to make some combinations.
             for j in range(index, n):
                 if ((mask >> j) & 1) == 0:
                     # Include this element in current subset.
-                    mask = (mask | (1 << j))
+                    # mask = (mask | (1 << j))
 
                     # If using current jth element in this subset leads to make all valid subsets.
-                    if backtrack(j + 1, count, curr_sum + arr[j]):
+                    if backtrack(j + 1, count, curr_sum + arr[j], mask | (1 << j)):
                         return True
 
                     # Backtrack step.
-                    mask = (mask ^ (1 << j))
+                    # mask = (mask ^ (1 << j))
 
             # We were not able to make a valid combination after picking 
             # each element from the array, hence we can't make k subsets.
             memo[mask] = False
             return memo[mask] 
 
-        return backtrack(0, 0, 0)
+        return backtrack(0, 0, 0, 0)
