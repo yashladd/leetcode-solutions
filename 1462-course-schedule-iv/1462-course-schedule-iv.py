@@ -1,34 +1,24 @@
 class Solution:
     def checkIfPrerequisite(self, n: int, prerequisites: List[List[int]], queries: List[List[int]]) -> List[bool]:
-        g = defaultdict(list)
-        ind = [0] * n
-        for u, v in prerequisites:
-            g[u].append(v)
-            ind[v] += 1
-        
-        q = deque([])
+        G = [[float("inf")] * n for _ in range(n)]
         for i in range(n):
-            if not ind[i]: 
-                q.append(i)
-        
-        reach = [[False] * n for _ in range(n)]
-        
-        while q:
-            node = q.popleft()
-            for nei in g[node]:
-                reach[node][nei] = True
-                
-                for i in range(n):
-                    if reach[i][node]:
-                        reach[i][nei] = True
-                        
-                ind[nei] -= 1
-                if not ind[nei]:
-                    q.append(nei)
+            G[i][i] = 0
+            
+        for u, v in prerequisites:
+            G[u][v] = 1
+            
+        for k in range(n):
+            for i in range(n):
+                for j in range(n):
+                    G[i][j] = min(G[i][j], G[i][k] + G[k][j])
                     
-                    
-        return [reach[u][v] for u, v in queries]
+        ans = [False] * len(queries)
+        
+        for i, (u, v) in enumerate(queries):
+            if G[u][v] != float("inf"):
+                ans[i] = True
                 
+        return ans
             
         
         
