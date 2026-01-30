@@ -25,8 +25,8 @@ class Solution:
             for adj in adjList[node]:
                 # Add node and prerequisite of the node to the prerequisites of adj
                 nodePrerequisites[adj].add(node)
-                for prereq in nodePrerequisites[node]:
-                    nodePrerequisites[adj].add(prereq)
+
+                nodePrerequisites[adj] |= nodePrerequisites[node]
 
                 indegree[adj] -= 1
                 if indegree[adj] == 0:
