@@ -1,51 +1,68 @@
-class DS:
-    def __init__(self, n):
-        self.par = [0] * (n + 1)
-        for i in range(n + 1):
-            self.par[i] = i
+class DisjointSet(object):
+    def __init__(self, n) -> None:
+        self.rank = [0] * (n+1)
+        self.parent = []
+        for i in range(n+1):
+            self.parent.append(i)
         self.size = [1] * (n + 1)
-    
-    def find(self, node):
-        if node == self.par[node]:
+
+    def findUParent(self, node):
+        if node == self.parent[node]:
             return node
-        self.par[node] = self.find(self.par[node])
-        return self.par[node]
-    
-    def union(self, u, v):
-        up_u, up_v = self.find(u), self.find(v)
-        if up_u == up_v:
-            return 
-        if self.size[up_u] < self.size[up_v]:
-            self.par[up_u] = up_v
-            self.size[up_v] += self.size[up_u]
+        self.parent[node] = self.findUParent(self.parent[node])
+        return self.parent[node]
+
+    def unionByRank(self, u, v):
+        ultp_u = self.findUParent(u)
+        ultp_v = self.findUParent(v)
+        if ultp_u == ultp_v:
+            return
+
+        if self.rank[ultp_u] < self.rank[ultp_v]:
+            self.parent[ultp_u] = ultp_v 
+        elif self.rank[ultp_v] < self.rank[ultp_u]:
+            self.parent[ultp_v] = ultp_u
+        # Equal ranks
+        else: 
+            self.parent[ultp_u] = ultp_v
+            self.rank[ultp_u] += 1
+
+    def unionBySize(self, u, v):
+        ultp_u = self.findUParent(u)
+        ultp_v = self.findUParent(v)
+        if ultp_u == ultp_v:
+            return
+
+        if self.size[ultp_u] < self.size[ultp_v]:
+            self.parent[ultp_u] = ultp_v
+            self.size[ultp_v] += self.size[ultp_u]
         else:
-            self.par[up_v] = up_u
-            self.size[up_u] += self.size[up_v]
+            self.parent[ultp_v] = ultp_u
+            self.size[ultp_u] += self.size[ultp_v]
 
 class Solution:
     def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
         n = len(accounts)
-        ds = DS(n)
-        
-        mailToIdx = {}
+        mailMap = {}
+        ds = DisjointSet(n)
         for i in range(n):
             for mail in accounts[i][1:]:
-                if mail not in mailToIdx:
-                    mailToIdx[mail]  = i
+                if mail not in mailMap:
+                    mailMap[mail] = i
                 else:
-                    ds.union(i, mailToIdx[mail])
-                    
-        mergedMails = [[] for _ in range(n)]
+                    ds.unionBySize(i, mailMap[mail])
+                    continue
         
-        for mail, idx in mailToIdx.items():
-            i = ds.find(idx)
-            mergedMails[i].append(mail)
-            
-            
-        res = []
-        for idx, mails in enumerate(mergedMails):
-            if not len(mails):
+        merged = [[] for _ in range(n)]
+        print(mailMap)
+        for mail, i in mailMap.items():
+            par = ds.findUParent(i)
+            merged[par].append(mail)
+                
+        ans = []
+        for i, emails in enumerate(merged):
+            if not len(emails):
                 continue
-            res.append([accounts[idx][0]] + sorted(mergedMails[idx]))
-        
-        return res
+            ans.append([accounts[i][0]] + sorted(emails))
+            
+        return ans
