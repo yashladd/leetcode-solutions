@@ -1,64 +1,45 @@
-from collections import defaultdict
-
-class Solution(object):
-    def findLadders(self, beginWord, endWord, wordList):
-        wl = set(wordList)
-        if endWord not in wl:
+class Solution:
+    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        wordSet = set(wordList)
+        if endWord not in wordSet:
             return []
         
-        # 1. BFS to build the 'parents' graph
-        # 'layer' contains the current set of words we are visiting
-        layer = {beginWord}
-        parents = defaultdict(set)
-        
-        # We remove words from wl only after processing the whole level
-        wl.discard(beginWord)
-        
+        # BFS setup
+        queue = deque([beginWord])
+        prev_words = defaultdict(list)  # for reconstructing paths
+        distance = {beginWord: 0}
         found = False
+        word_len = len(beginWord)
         
-        while layer and not found:
-            next_layer = set()
-            words_to_remove = set()
-            
-            for w in layer:
-                for i in range(len(w)):
-                    # Try changing each character to a-z
-                    for char_code in range(97, 123):
-                        ch = chr(char_code)
-                        if ch == w[i]:
+        while queue and not found:
+            next_level_visited = set()
+            for _ in range(len(queue)):
+                current = queue.popleft()
+                for i in range(word_len):
+                    for c in "abcdefghijklmnopqrstuvwxyz":
+                        if c == current[i]:
                             continue
-                            
-                        t = w[:i] + ch + w[i+1:]
-                        
-                        if t in wl:
-                            # We found a valid next word
-                            next_layer.add(t)
-                            parents[t].add(w) # Record the parent to reconstruct path later
-                            words_to_remove.add(t)
-                            
-                            if t == endWord:
+                        next_word = current[:i] + c + current[i+1:]
+                        if next_word in wordSet:
+                            if next_word not in distance:
+                                distance[next_word] = distance[current] + 1
+                                queue.append(next_word)
+                                next_level_visited.add(next_word)
+                            if distance[next_word] == distance[current] + 1:
+                                prev_words[next_word].append(current)
+                            if next_word == endWord:
                                 found = True
-            
-            # Remove visited words from the main set so we don't visit them again
-            # (This ensures we only find shortest paths)
-            wl -= words_to_remove
-            layer = next_layer
+            wordSet -= next_level_visited
         
-        if not found:
-            return []
-            
-        # 2. DFS (Backtracking) to reconstruct paths from endWord -> beginWord
-        res = []
-        def backtrack(node, path):
-            if node == beginWord:
-                # We reached the start, add the full reversed path to results
-                res.append([beginWord] + path[::-1])
+        # Recursive backtracking to build paths
+        def backtrack(word, path):
+            if word == beginWord:
+                result.append([beginWord] + path[::-1])
                 return
-            
-            # Go through all recorded parents
-            if node in parents:
-                for p in parents[node]:
-                    backtrack(p, path + [node])
+            for prev in prev_words[word]:
+                backtrack(prev, path + [word])
         
-        backtrack(endWord, [])
-        return res
+        result = []
+        if found:
+            backtrack(endWord, [])
+        return result
