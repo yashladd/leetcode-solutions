@@ -18,15 +18,15 @@ class Solution:
         if i < 0:
             return arr
         
-        max_ = i + 1
-			# max number greater on right that less than A[i]
-        for j in range(max_ + 1, len(arr)):
-            if arr[max_] < arr[j] < arr[i]: 
-                max_ = j
-            
+        maxIdx = i+1
+        maxNum = arr[maxIdx]
+        for j in range(maxIdx+1, len(arr)):
+            if arr[maxIdx] < arr[j] < arr[i]:
+                maxNum = arr[j]
+                maxIdx = j 
         
         
-        arr[i], arr[max_] = arr[max_], arr[i]
+        arr[i], arr[maxIdx] = arr[maxIdx], arr[i]
         
         return arr
         
