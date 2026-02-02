@@ -1,59 +1,68 @@
 class Node:
-    def __init__(self):
-        self. children  = {}
-        self.isWord = False
-class Trie:
-    def __init__(self):
-        self.root = Node()
+    def __init__(self, isEnd = False):
+        self.chars = {}
+        self.isEnd = isEnd
         
-    def add(self, word):
-        cur = self.root
-        for ch in word:
-            if ch not in cur.children:
-                cur.children[ch] = Node()
-            cur = cur.children[ch]
-        cur.isWord = True
-                
-
+        
+class Trie:
+    def __init__(self, dictonary = set()):
+        self.root = Node()
+        for w in dictonary:
+            curr = self.root
+            for ch in w:
+                if ch not in curr.chars:
+                    curr.chars[ch] = Node()
+                curr = curr.chars[ch]
+            curr.isEnd = True
+            
+        
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
-        trie = Trie()
-        for w in words:
-            trie.add(w)
-            
-        r, c = len(board), len(board[0])
-        def inb(p, q):
-            return p < r and p >= 0 and q < c and q >= 0
+        t = Trie(set(words))
+        n, m = len(board), len(board[0])
+        res = []
+        root = t.root
         
-        vis = [[0] * c for _ in range(r)]  
-        def dfs(i, j, node, path, vis):
-            if not inb(i,j) or board[i][j] not in node.children or vis[i][j]: return 
-            path += board[i][j]
-            # print("IJ",i, j, path, node.isWord,node.children.keys())
-            vis[i][j] = 1
-            node = node.children[board[i][j]]
-            if node.isWord:
-                # print("reached")
-                res.add(path)
-                # return 
+        def find(i, j, node, vis, curr):
+            if i < 0 or j < 0 or i >= n or j >=m:
+                return 
+            
+            if vis[i][j]: return 
             
             
-            # print(node.children.keys())
-            dfs(i + 1, j, node, path, vis)
-            dfs(i, j + 1, node, path, vis)
-            dfs(i - 1, j, node, path, vis)
-            dfs(i, j-1, node, path, vis)
+            char = board[i][j]
             
-        
+            if char not in node.chars:
+                return 
+            
+            
+            vis[i][j]  = 1
+            node = node.chars[char]
+            if node.isEnd:
+                # res.append("".join(curr[:]))
+                res.append("".join(curr + [char]))
+                node.isEnd = False
+                
+            find(i+1, j, node, vis, curr + [char])
+            find(i-1, j, node, vis, curr + [char])
+            find(i, j+1, node, vis, curr + [char])
+            find(i, j-1, node, vis, curr + [char])
+            
             vis[i][j] = 0
             
-        res = set()
-        root = trie.root
-        for i in range(r):
-            for j in range(c):
-                dfs(i, j, root, "", vis)
+        for i in range(n):
+            for j in range(m):
+                vis = [[0 for _ in range(m)] for _ in range(n)] 
+                find(i, j, root, vis, [])
+                
+        return res
         
-        return list(res)
+        
+    
             
+            
+            
+            
+        
         
         
