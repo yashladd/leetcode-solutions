@@ -12,6 +12,21 @@ class Solution:
 
         Hence dp(i) = k-1 * dp(i-1) + k-1 * dp(i-2)
         """
+        if n == 0:
+            return 0
+
+        if n == 1:
+            return k
+            
+        if n == 2:
+            return k*k
+
+        prev1, prev2 = k*k, k
+        for i in range(3, n+1):
+            curr = (k-1) * (prev1 + prev2)
+            prev1, prev2 = curr, prev1
+
+        return prev1
 
         @cache
         def ways(idx):
