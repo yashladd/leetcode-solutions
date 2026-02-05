@@ -23,17 +23,22 @@ class LogSystem:
         self.logs.append((id, timestamp))
 
     def retrieve(self, start: str, end: str, granularity: str) -> List[int]:
-        # Determine the slice length based on granularity
         idx = self.indices[granularity]
         
-        # Truncate start and end times to the required granularity
-        s_cut = start[:idx]
-        e_cut = end[:idx]
+        # Suffixes representing the smallest and largest possible values
+        # We assume range 2000-2017 based on constraints, but 1999/2099 works too as bounds
+        min_suffix = "2000:01:01:00:00:00"
+        max_suffix = "2017:12:31:23:59:59"
+        
+        # Construct the full range strings ONCE
+        # Take the user's prefix + the rest from our min/max templates
+        start_full = start[:idx] + min_suffix[idx:]
+        end_full   = end[:idx]   + max_suffix[idx:]
         
         res = []
         for id, timestamp in self.logs:
-            # Truncate the log's timestamp and compare lexicographically
-            if s_cut <= timestamp[:idx] <= e_cut:
+            # Now we compare full strings. No slicing needed inside the loop!
+            if start_full <= timestamp <= end_full:
                 res.append(id)
                 
         return res
