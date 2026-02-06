@@ -25,16 +25,24 @@ class Solution:
 
         l = 0
         res = []
+        requiredMatches = len(f2)
+        matches = 0
         for r in range(n1):
+            # 1. ADD: Update count first, THEN check for a new match
             f1[s[r]] += 1
-
-            if r - n2 >= 0:
+            if s[r] in f2 and f1[s[r]] == f2[s[r]]:
+                matches += 1
+            
+            # 2. REMOVE: If window is too big, check for broken match, THEN update count
+            if r >= n2:
+                if s[l] in f2 and f1[s[l]] == f2[s[l]]:
+                    matches -= 1
                 f1[s[l]] -= 1
                 l += 1
-            
-            if f1 == f2:
+                
+            # 3. RECORD: Check matches only when window size is exactly n2
+            if matches == requiredMatches:
                 res.append(l)
-
         return res
 
 
