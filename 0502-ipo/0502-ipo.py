@@ -12,7 +12,7 @@ class Solution:
 
             if not projectsMeeetCapital:
                 break
-                
+
             maxProfit = heappop(projectsMeeetCapital)
             currentCapital += -maxProfit
 
