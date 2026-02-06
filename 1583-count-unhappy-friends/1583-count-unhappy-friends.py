@@ -19,9 +19,11 @@ class Solution:
                 rank[person1][person2] = wt
 
         cnt = 0
+        #o(n)
         for x in range(n):
             y = paired[x]
             isUnhappy = False
+            # o(n)
             for u in preferences[x]:
                 if u == y:
                     break
