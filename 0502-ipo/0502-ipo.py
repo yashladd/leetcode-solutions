@@ -1,21 +1,23 @@
 class Solution:
     def findMaximizedCapital(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
-        projects = [(c, p) for c, p in zip(capital, profits)]
-        projects.sort()
-        max_profits = []
-        idx = 0
-        while k:
-            while idx < len(projects) and w >= projects[idx][0]:
-                heappush(max_profits, -projects[idx][1])
-                idx += 1
-            if len(max_profits):
-                w -= heappop(max_profits)
-            else:
+        currentCapital = w
+        projectsMeeetCapital = []
+        minCapitalProjects = [(c, -p) for p, c in zip(profits, capital)]
+        heapify(minCapitalProjects)
+
+        for _ in range(k):
+            while minCapitalProjects and minCapitalProjects[0][0] <= currentCapital:
+                _, profit = heappop(minCapitalProjects)
+                heappush(projectsMeeetCapital, profit)
+
+            if not projectsMeeetCapital:
                 break
-            k -= 1
+                
+            maxProfit = heappop(projectsMeeetCapital)
+            currentCapital += -maxProfit
 
-        return w
+        return currentCapital
 
 
 
-        
+
