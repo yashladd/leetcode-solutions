@@ -1,21 +1,21 @@
 class Solution:
     def countVowelSubstrings(self, word: str) -> int:
-        cnt = 0
+        last_seen = {v: -1 for v in "aeiou"}
+        start = 0
+        ans = 0
         vowels = set("aeiou")
         
-        # Iterate over every possible starting position
-        for i in range(len(word)):
-            current_vowels = set()
-            # Expand to the right
-            for j in range(i, len(word)):
-                # If we hit a consonant, this substring and any extension of it are invalid
-                if word[j] not in vowels:
-                    break
-                
-                current_vowels.add(word[j])
-                
-                # If we have all 5 vowels, this is a valid vowel substring
-                if len(current_vowels) == 5:
-                    cnt += 1
+        for i, char in enumerate(word):
+            if char not in vowels:
+                # Reset window on consonant
+                start = i + 1
+                last_seen = {v: -1 for v in "aeiou"}
+            else:
+                last_seen[char] = i
+                # If we have seen all 5 vowels in the current valid run
+                if min(last_seen.values()) >= start:
+                    # Valid substrings ending here start anywhere from 'start' 
+                    # up to the earliest position of a required vowel.
+                    ans += min(last_seen.values()) - start + 1
                     
-        return cnt
+        return ans
