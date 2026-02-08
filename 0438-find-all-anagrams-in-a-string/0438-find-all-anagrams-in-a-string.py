@@ -38,6 +38,9 @@ class Solution:
                 if s[l] in f2 and f1[s[l]] == f2[s[l]]:
                     matches -= 1
                 f1[s[l]] -= 1
+                if not f1[s[l]]:
+                    del f1[s[l]]
+
                 l += 1
                 
             # 3. RECORD: Check matches only when window size is exactly n2
