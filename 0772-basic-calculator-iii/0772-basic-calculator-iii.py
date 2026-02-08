@@ -1,28 +1,29 @@
 class Solution:
-    def calculate(self, s):    
+    def calculate(self, s: str) -> int:
         def calc(it):
-            def update(op, v):
-                if op == "+": stack.append(v)
-                if op == "-": stack.append(-v)
-                if op == "*": stack.append(stack.pop() * v)
-                if op == "/": stack.append(int(stack.pop() / v))
-        
-            num, stack, sign = 0, [], "+"
-            
+            def apply(num, sign):
+                if sign == "+": stk.append(num)
+                elif sign == "-": stk.append(-num)
+                elif sign == "*": stk.append(stk.pop() * num)
+                else:  stk.append(int(stk.pop()/num))
+
+            num, sign, stk = 0, '+', []
             while it < len(s):
-                if s[it].isdigit():
-                    num = num * 10 + int(s[it])
-                elif s[it] in "+-*/":
-                    update(sign, num)
+                ch = s[it]
+                if ch.isdigit():
+                    num = num * 10 + int(ch)
+                elif ch in "+-*/":
+                    apply(num, sign)
                     num, sign = 0, s[it]
-                elif s[it] == "(":
-                    num, j = calc(it + 1)
-                    it = j - 1
-                elif s[it] == ")":
-                    update(sign, num)
-                    return sum(stack), it + 1
+                elif ch == "(":
+                    num, j = calc(it+1)
+                    it = j
+                elif ch == ")":
+                    apply(num, sign)
+                    return sum(stk), it
                 it += 1
-            update(sign, num)
-            return sum(stack), it
-        res, idx = calc(0)
+            apply(num, sign)
+            return sum(stk), it
+
+        res, it =  calc(0)
         return res
