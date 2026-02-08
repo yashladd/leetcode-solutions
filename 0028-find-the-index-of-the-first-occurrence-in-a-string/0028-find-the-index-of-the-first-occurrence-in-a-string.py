@@ -51,7 +51,9 @@ class Solution:
                 i += 1
                 j += 1
                 if j == m:
-                    return i - m 
+                    return i - m
+                    # If need to find all indices add to res
+                    # j = lps[j-1] # Note we should move j -> lps[j-1] not 0 as per KMP 
             else:
                 if j == 0:
                     i += 1
