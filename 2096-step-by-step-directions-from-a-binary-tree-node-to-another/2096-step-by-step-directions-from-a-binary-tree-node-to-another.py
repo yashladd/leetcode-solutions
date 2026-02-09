@@ -1,84 +1,63 @@
 class Solution:
-    def getDirections(
-        self, root: TreeNode, startValue: int, destValue: int
-    ) -> str:
-        # Map to store parent nodes
-        parent_map = {}
+    def getDirections(self, root: Optional[TreeNode], startValue: int, destValue: int) -> str:
+        q: list[TreeNode] = [root]
+        while q:
+            cur_node: TreeNode = q.pop()
+            if cur_node.val == startValue:
+                start_node = cur_node  # here we're setting up the start node
+                break
 
-        # Find the start node and populate parent map
-        start_node = self._find_start_node(root, startValue)
-        self._populate_parent_map(root, parent_map)
+            if cur_node.left:
+                q.append(cur_node.left)
+            if cur_node.right:
+                q.append(cur_node.right)
 
-        # Perform BFS to find the path
-        q = deque([start_node])
-        visited_nodes = set()
-        # Key: next node, Value: <current node, direction>
-        path_tracker = {}
-        visited_nodes.add(start_node)
+        # child node value -> TreeNode object which is parent to node with this value
+        nodes_parents: dict[int, TreeNode] = {}
+        q = [root]
+        while q:
+            cur_node = q.pop()
+            if cur_node.left:
+                nodes_parents[cur_node.left.val] = cur_node
+                q.append(cur_node.left)
+            if cur_node.right:
+                nodes_parents[cur_node.right.val] = cur_node
+                q.append(cur_node.right)
+
+        visited = set()
+        q = [start_node]
+        # key is the destination node to which we travel - value is a tuple with 2 elements - (source_node, direction)
+        tracked_path: dict[TreeNode, tuple(TreeNode, str)] = {}
 
         while q:
-            current_element = q.popleft()
+            cur_node = q.pop()
+            visited.add(cur_node)
 
-            # If destination is reached, return the path
-            if current_element.val == destValue:
-                return self._backtrack_path(current_element, path_tracker)
+            if cur_node.val == destValue:
+                destination_node = cur_node
+                break  # we've reached the target node
 
-            # Check and add parent node
-            if current_element.val in parent_map:
-                parent_node = parent_map[current_element.val]
-                if parent_node not in visited_nodes:
-                    q.append(parent_node)
-                    path_tracker[parent_node] = (current_element, "U")
-                    visited_nodes.add(parent_node)
+            if cur_node.val in nodes_parents and nodes_parents[cur_node.val] not in visited:
+                parent = nodes_parents[cur_node.val]
+                q.append(parent)
+                tracked_path[parent] = (cur_node, "U")  # this is parent node, we go up
 
-            # Check and add left child
-            if (
-                current_element.left
-                and current_element.left not in visited_nodes
-            ):
-                q.append(current_element.left)
-                path_tracker[current_element.left] = (current_element, "L")
-                visited_nodes.add(current_element.left)
+            if cur_node.left and cur_node.left not in visited:
+                q.append(cur_node.left)
+                tracked_path[cur_node.left] = (cur_node, "L")
 
-            # Check and add right child
-            if (
-                current_element.right
-                and current_element.right not in visited_nodes
-            ):
-                q.append(current_element.right)
-                path_tracker[current_element.right] = (current_element, "R")
-                visited_nodes.add(current_element.right)
+            if cur_node.right and cur_node.right not in visited:
+                q.append(cur_node.right)
+                tracked_path[cur_node.right] = (cur_node, "R")
 
-        # This line should never be reached if the tree is valid
-        return ""
+        # Now we need to construct path in a string from tracked_path we have
+        result_path: list[str] = []
+        cur_node = destination_node
 
-    def _backtrack_path(self, node, path_tracker):
-        path = []
-        # Construct the path
-        while node in path_tracker:
-            # Add the directions in reverse order and move on to the previous node
-            path.append(path_tracker[node][1])
-            node = path_tracker[node][0]
-        path.reverse()
-        return "".join(path)
+        while cur_node != start_node:
+            source_node, direction = tracked_path[cur_node]
+            result_path.append(direction)  # directions will be in reversed order
+            cur_node = source_node
 
-    def _populate_parent_map(self, node, parent_map):
-        if not node:
-            return
-
-        # Add children to the map and recurse further
-        if node.left:
-            parent_map[node.left.val] = node
-            self._populate_parent_map(node.left, parent_map)
-
-        if node.right:
-            parent_map[node.right.val] = node
-            self._populate_parent_map(node.right, parent_map)
-
-    def _find_start_node(self, node, start_value):
-        if not node:
-            return None
-
-        if node.val == start_value:
-            return node
-        return self._find_start_node(node.left, start_value) or self._find_start_node(node.right, start_value)
+        result_path.reverse()
+        return "".join(result_path)
