@@ -4,8 +4,8 @@ class Solution:
         vis = set([startUrl])
 
         def get_hostname(u):
-            u = u.split("//")
-            return u[1].split("/")[0]
+            # u = u.split("//")
+            return u.split("/")[2]
 
         def same_hostname(u):
             return get_hostname(u) == get_hostname(startUrl)
