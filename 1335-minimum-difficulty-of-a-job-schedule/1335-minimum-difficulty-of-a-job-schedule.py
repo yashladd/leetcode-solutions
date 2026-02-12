@@ -1,16 +1,21 @@
 class Solution:
-    def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
-        def dp(jobs, d):
-            A = [[float("inf")] * d for i in range(len(jobs))]
-            A[0][0] = jobs[0]
-            for i in range(1, len(jobs)):
-                A[i][0] = max(A[i - 1][0], jobs[i])
+    def minDifficulty(self, jd: List[int], d: int) -> int:
+        N = len(jd)
+        @cache
+        def f(i, d):
+            if i == N:
+                if d == 0:
+                    return 0
+                return inf
 
-            for i in range(1, len(jobs)):
-                for j in range(1, min(i + 1, d)):
-                    for k in range(i):
-                        A[i][j] = min(A[i][j], A[k][j - 1] + max(jobs[k + 1:i + 1]))
+            if d <= 0:
+                return inf
 
-            return A[-1][-1]
-        ans = dp(jobDifficulty, d)
-        return ans if ans != inf else -1
+            costToEndHere = jd[i] + f(i+1, d-1)
+            maxi = -inf
+            for j in range(i, N):
+                maxi = max(maxi, jd[j])
+                costToEndHere = min(costToEndHere, maxi + f(j+1, d-1))
+            return costToEndHere
+        res = f(0, d)
+        return res if res != inf else -1
