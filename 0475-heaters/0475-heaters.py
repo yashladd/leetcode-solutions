@@ -12,21 +12,23 @@ class Solution:
         res = hi
 
         def canMake(radius):
-            for house in houses:
-                # Find the first heater to the right of the house
-                idx = bisect_left(heaters, house)
+            h_idx = 0  # Pointer for houses
+            
+            for heater in heaters:
+                # Define the range covered by this heater
+                left_limit = heater - radius
+                right_limit = heater + radius
                 
-                covered = False
-                # Check heater to the right
-                if idx < len(heaters) and heaters[idx] - radius <= house:
-                    covered = True
-                # Check heater to the left
-                if not covered and idx > 0 and heaters[idx-1] + radius >= house:
-                    covered = True
+                # Advance the house pointer if the house is covered by this heater
+                while h_idx < len(houses) and left_limit <= houses[h_idx] <= right_limit:
+                    h_idx += 1
                     
-                if not covered:
-                    return False
-            return True
+                # Optimization: If all houses are covered, we can stop early
+                if h_idx == len(houses):
+                    return True
+                    
+            # If we finished checking all heaters but still have houses left
+            return h_idx == len(houses)
 
 
         while lo <= hi:
