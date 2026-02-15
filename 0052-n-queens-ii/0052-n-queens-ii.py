@@ -1,30 +1,47 @@
 class Solution:
     def totalNQueens(self, n: int) -> int:
-        cnt = 0 
-
-        rs, cs, ld, rd = set(), set(), set(), set()
-
-        def f(i):
-            nonlocal cnt
-            if i == n:
-                cnt += 1
-
-            for j in range(n):
-                if i not in rs and j not in cs \
-                    and (i + j) not in rd and (i-j) not in ld:
-                    rs.add(i)
-                    cs.add(j)
-                    ld.add(i-j)
-                    rd.add(i+j)
-                    f(i+1)
-                    rs.remove(i)
-                    cs.remove(j)
-                    ld.remove(i-j)
-                    rd.remove(i+j)
-
-        f(0)
-
-        return cnt
-
-
+        """
+          0  1  2   3 
+        0 0 -1 -2   -3
+        1 1  0  -1  -2
+        2 2  1  0   -1
+        3 3  2  1   0
         
+        """
+        rows = set()
+        cols = set()
+        diag = set()
+        anti = set()
+        
+        cnt = 0
+        board = [["." for _ in range(n)] for _ in range(n)]
+        def f(row):
+            if row == n:
+                return 1
+            
+            ways = 0
+            
+            for col in range(n):
+                if board[row][col] == "." and row not in rows and col not in cols and row + col not in diag and row - col not in anti:
+                    cols.add(col)
+                    rows.add(row)
+                    diag.add(row + col)
+                    anti.add(row-col)
+                    
+                    board[row][col] == "!"
+                    
+                    ways += f(row + 1)
+                    
+                    board[row][col] == "."
+                    rows.discard(row)
+                    cols.discard(col)
+                    diag.discard(row + col)
+                    anti.discard(row - col)
+                    
+            return ways
+                    
+                    
+                    
+        
+        return f(0)
+            
