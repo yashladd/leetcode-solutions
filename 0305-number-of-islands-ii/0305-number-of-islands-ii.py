@@ -8,7 +8,7 @@ class DS:
         if pu == pv:
             return False
         
-        if self.size[pv] > self.size[pv]:
+        if self.size[pv] > self.size[pu]:
             pu, pv = pv, pu
 
         self.par[pv] = pu
