@@ -6,11 +6,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 ## Sliding Window
@@ -25,4 +27,20 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
+## Dynamic Programming
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
+## Trie
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
+## Memoization
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 <!---LeetCode Topics End-->
