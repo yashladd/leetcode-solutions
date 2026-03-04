@@ -1,27 +1,48 @@
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.isWord = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def addWord(self, word):
+        curr = self.root
+        for c in word:
+            if c not in curr.children:
+                curr.children[c] = TrieNode()
+            curr = curr.children[c]
+        curr.isWord = True
+
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        trie = Trie()
+        for word in wordDict:
+            trie.addWord(word)
+
         cache = {}
 
-        wd = set(wordDict)
+        def f(idx):
+            if idx == len(s):
+                return [""]
 
-        def f(s):
-            res = []
-            if not s:
-                return []
-            if s in cache:
-                return cache[s]
-            for i in range(len(s)):
-                word = s[:i+1]
-                if word in wd:
-                    # CHECK: Is this the last word in the string?
-                    if i == len(s) - 1:
-                        res.append(word)  # Success! Add the word alone.
-                    else:
-                        suffs = f(s[i+1:])
-                        for suff in suffs:
-                            res.append(word + " " + suff) # Add word + space + suffix
+            res = []                
+            curr = trie.root
 
-            cache[s] = res[:]
+            for j in range(idx, len(s)):
+                ch = s[j]
+                if ch not in curr.children:
+                    break
+
+                curr = curr.children[ch]
+                if curr.isWord:
+                    for suff in f(j+1):
+                        if len(suff):
+                            res.append(s[idx:j+1] + " " + suff)
+                        else:
+                            res.append(s[idx:j+1])
+            
             return res
 
-        return f(s)
+        return f(0)
