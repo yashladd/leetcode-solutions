@@ -1,24 +1,32 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
+    def delHelper(self, node, forests):
+        if not node:
+            return None
+
+        node.left = self.delHelper(node.left, forests)
+        node.right = self.delHelper(node.right, forests)
+        if node.val in self.to_del:
+            if node.left: forests.add(node.left)
+            if node.right: forests.add(node.right)
+            forests.discard(node)
+            return None
+
+        return node
+        
     def delNodes(self, root: Optional[TreeNode], to_delete: List[int]) -> List[TreeNode]:
-        to_del = set(to_delete)
-        forest = []
+        self.to_del = set(to_delete)
 
-        def helper(node, is_root):
-            if not node:
-                return None
-            
-            # Check if this node itself needs to be deleted
-            deleted = node.val in to_del
-            
-            # If this node is a root and not deleted, add to result
-            if is_root and not deleted:
-                forest.append(node)
-            
-            # Recurse: if this node is deleted, its children become potential roots
-            node.left = helper(node.left, deleted)
-            node.right = helper(node.right, deleted)
-            
-            return None if deleted else node
+        forests = set()
 
-        helper(root, True)
-        return forest
+        self.delHelper(root, forests)
+
+        if root.val not in self.to_del:
+            forests.add(root)
+
+        return list(forests)
