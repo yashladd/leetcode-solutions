@@ -1,48 +1,18 @@
-class TrieNode:
-    def __init__(self):
-        self.children = {}
-        self.isWord = False
-
-class Trie:
-    def __init__(self):
-        self.root = TrieNode()
-
-    def addWord(self, word):
-        curr = self.root
-        for c in word:
-            if c not in curr.children:
-                curr.children[c] = TrieNode()
-            curr = curr.children[c]
-        curr.isWord = True
-
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
-        trie = Trie()
-        for word in wordDict:
-            trie.addWord(word)
+        res =  []
+        words = set(wordDict)
 
-        cache = {}
+        def f(i, path):
+            if i == len(s):
+                res.append(" ".join(path))
+                return 
 
-        def f(idx):
-            if idx == len(s):
-                return [""]
-
-            res = []                
-            curr = trie.root
-
-            for j in range(idx, len(s)):
-                ch = s[j]
-                if ch not in curr.children:
-                    break
-
-                curr = curr.children[ch]
-                if curr.isWord:
-                    for suff in f(j+1):
-                        if len(suff):
-                            res.append(s[idx:j+1] + " " + suff)
-                        else:
-                            res.append(s[idx:j+1])
             
-            return res
+            for j in range(i+1, len(s) + 1):
+                curr = s[i:j]
+                if curr in words:
+                    f(j, path + [curr])
 
-        return f(0)
+        f(0, [])
+        return res
