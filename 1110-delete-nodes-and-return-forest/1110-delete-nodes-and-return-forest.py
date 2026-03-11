@@ -5,28 +5,24 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def delHelper(self, node, forests):
+    def delHelper(self, node, forests, is_root):
         if not node:
             return None
 
-        node.left = self.delHelper(node.left, forests)
-        node.right = self.delHelper(node.right, forests)
-        if node.val in self.to_del:
-            if node.left: forests.add(node.left)
-            if node.right: forests.add(node.right)
-            forests.discard(node)
-            return None
+        should_del = node.val in self.to_del
 
-        return node
-        
+        if not should_del and is_root:
+            forests.append(node)
+
+        node.left = self.delHelper(node.left, forests, should_del)
+        node.right = self.delHelper(node.right, forests, should_del)
+
+        return None if should_del else node
+
     def delNodes(self, root: Optional[TreeNode], to_delete: List[int]) -> List[TreeNode]:
         self.to_del = set(to_delete)
+        forests = []
 
-        forests = set()
+        self.delHelper(root, forests, True)
 
-        self.delHelper(root, forests)
-
-        if root.val not in self.to_del:
-            forests.add(root)
-
-        return list(forests)
+        return forests
