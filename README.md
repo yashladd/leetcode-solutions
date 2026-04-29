@@ -14,6 +14,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0221-maximal-square](https://github.com/yashladd/leetcode-solutions/tree/main/0221-maximal-square/) | Medium |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1110-delete-nodes-and-return-forest](https://github.com/yashladd/leetcode-solutions/tree/main/1110-delete-nodes-and-return-forest/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 ## Hash Table
@@ -92,6 +93,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1110-delete-nodes-and-return-forest](https://github.com/yashladd/leetcode-solutions/tree/main/1110-delete-nodes-and-return-forest/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
@@ -106,6 +108,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1110-delete-nodes-and-return-forest](https://github.com/yashladd/leetcode-solutions/tree/main/1110-delete-nodes-and-return-forest/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
@@ -140,4 +143,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
+## Binary Search Tree
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
+## Monotonic Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 <!---LeetCode Topics End-->
