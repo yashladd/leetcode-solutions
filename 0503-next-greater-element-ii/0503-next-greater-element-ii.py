@@ -1,21 +1,32 @@
 class Solution:
     def nextGreaterElements(self, nums: List[int]) -> List[int]:
+        """
+        [1,2,3,4,3]
+        1 2 3 4 3 1 2 3 4
+        
+        
+        """
+        
+        stk = nums[:-1][::-1]
+        
         n = len(nums)
-        out = [-1] * n
-        nums = nums + nums
-        stk = [nums[-1]]
-        for i in range(len(nums)-2, -1, -1):
-            while stk and nums[i] >= stk[-1]:
+        
+        
+        res = [-1] * n
+        
+        
+        for i in range(n-1, -1, -1):
+            curr = nums[i]
+            
+            while stk and stk[-1] <= curr:
                 stk.pop()
-
-            if i < n:
-                if stk:
-                    out[i] = stk[-1]
-            
-            stk.append(nums[i])
-
-        return out
-            
-
                 
-
+            if stk:
+                res[i] = stk[-1]
+            
+            stk.append(curr)
+            
+        return res
+        
+        
+        
