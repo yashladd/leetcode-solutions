@@ -1,32 +1,33 @@
 class Solution:
-    def canCross(self, nums: List[int]) -> bool:
+    def canCross(self, stones: List[int]) -> bool:
+        n = len(stones)
         
-        n = len(nums)
+        # Quick check: The first jump must be exactly 1 unit to stone[1]
+        if stones[1] != 1:
+            return False
+            
+        # Map stone value to its index for O(1) lookups
+        stone_map = {val: i for i, val in enumerate(stones)}
         
-        if n == 1:
-            return True
         @cache
         def f(i, p):
-            if i == n-1:
+            if i == n - 1:
                 return True
             
-            
-            for j in range(i+1, n):
-                jump = nums[j] - nums[i]
+            # The frog can jump k-1, k, or k+1 units
+            for jump in [p - 1, p, p + 1]:
+                if jump <= 0:
+                    continue
                 
-                if p-1 <= jump <= p+1:
-                    if f(j, jump):
+                next_stone_val = stones[i] + jump
+                
+                # Check if a stone exists at the calculated position
+                if next_stone_val in stone_map:
+                    if f(stone_map[next_stone_val], jump):
                         return True
-    
             
             return False
         
-        if n >= 2:
-            if nums[1] - nums[0] > 1:
-                return False
-            
-            return f(1, 1)
-        
-        
-                    
-        
+        # Start at index 1 (the second stone) because we already 
+        # confirmed the first jump of 1 unit was successful.
+        return f(1, 1)
