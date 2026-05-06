@@ -18,6 +18,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
+| [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1110-delete-nodes-and-return-forest](https://github.com/yashladd/leetcode-solutions/tree/main/1110-delete-nodes-and-return-forest/) | Medium |
 | [1478-allocate-mailboxes](https://github.com/yashladd/leetcode-solutions/tree/main/1478-allocate-mailboxes/) | Hard |
@@ -30,6 +31,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
+| [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [1110-delete-nodes-and-return-forest](https://github.com/yashladd/leetcode-solutions/tree/main/1110-delete-nodes-and-return-forest/) | Medium |
 | [2384-largest-palindromic-number](https://github.com/yashladd/leetcode-solutions/tree/main/2384-largest-palindromic-number/) | Medium |
@@ -41,6 +43,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [1478-allocate-mailboxes](https://github.com/yashladd/leetcode-solutions/tree/main/1478-allocate-mailboxes/) | Hard |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 ## Union-Find
@@ -56,6 +59,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0443-string-compression](https://github.com/yashladd/leetcode-solutions/tree/main/0443-string-compression/) | Medium |
+| [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
 | [2384-largest-palindromic-number](https://github.com/yashladd/leetcode-solutions/tree/main/2384-largest-palindromic-number/) | Medium |
 ## Dynamic Programming
@@ -68,6 +72,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0213-house-robber-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0213-house-robber-ii/) | Medium |
 | [0221-maximal-square](https://github.com/yashladd/leetcode-solutions/tree/main/0221-maximal-square/) | Medium |
 | [0403-frog-jump](https://github.com/yashladd/leetcode-solutions/tree/main/0403-frog-jump/) | Hard |
+| [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
 | [1478-allocate-mailboxes](https://github.com/yashladd/leetcode-solutions/tree/main/1478-allocate-mailboxes/) | Hard |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
@@ -76,6 +81,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 ## Memoization
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -138,6 +144,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
 ## Two Pointers
 | Problem Name | Difficulty |
