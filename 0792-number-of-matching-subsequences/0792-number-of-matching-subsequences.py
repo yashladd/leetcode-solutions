@@ -1,22 +1,19 @@
-class Solution(object):
-    def numMatchingSubseq(self, S, words):
+class Solution:
+    def numMatchingSubseq(self, s: str, words: List[str]) -> int:
+        char_map = defaultdict(list)
+
+        for w in words:
+            it = iter(w)
+            char_map[next(it)].append(it)
         ans = 0
-        heads = [[] for _ in range(26)]
-        for word in words:
-            it = iter(word)
-            heads[ord(next(it)) - ord('a')].append(it)
-
-        for letter in S:
-            letter_index = ord(letter) - ord('a')
-            old_bucket = heads[letter_index]
-            heads[letter_index] = []
-
-            while old_bucket:
-                it = old_bucket.pop()
-                nxt = next(it, None)
-                if nxt:
-                    heads[ord(nxt) - ord('a')].append(it)
-                else:
+        for ch in s:
+            curr_match_chars = char_map[ch]
+            char_map[ch] = []
+            for prevIt in curr_match_chars:
+                nex = next(prevIt, None)
+                if not nex:
                     ans += 1
+                    continue
+                char_map[nex].append(prevIt)
 
-        return ans
+        return ans 
