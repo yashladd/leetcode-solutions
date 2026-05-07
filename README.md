@@ -24,6 +24,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1478-allocate-mailboxes](https://github.com/yashladd/leetcode-solutions/tree/main/1478-allocate-mailboxes/) | Hard |
 | [1861-rotating-the-box](https://github.com/yashladd/leetcode-solutions/tree/main/1861-rotating-the-box/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
+| [3660-jump-game-ix](https://github.com/yashladd/leetcode-solutions/tree/main/3660-jump-game-ix/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -76,6 +77,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
 | [1478-allocate-mailboxes](https://github.com/yashladd/leetcode-solutions/tree/main/1478-allocate-mailboxes/) | Hard |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
+| [3660-jump-game-ix](https://github.com/yashladd/leetcode-solutions/tree/main/3660-jump-game-ix/) | Medium |
 ## Trie
 | Problem Name | Difficulty |
 | ------- | ------- |
