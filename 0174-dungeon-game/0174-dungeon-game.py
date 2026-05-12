@@ -17,5 +17,11 @@ class Solution:
                 
                 # Health needed before entering current room
                 dp[i][j] = max(1, min_health_next - dungeon[i][j])
-                
+        print(dp)
+        """
+        [[7,  5,  2, inf],
+         [6,  11, 5, inf], 
+         [1,  1,  6, 1],
+         [inf,inf,1, inf]]
+        """
         return dp[0][0]
