@@ -1,6 +1,9 @@
 import bisect
 
 class Solution:
+    """
+    [9, 5, 0, 3, 1, 2] --> Dry run this example
+    """
     def maxFixedPoints(self, nums: list[int]) -> int:
         valid_pairs = []
         
