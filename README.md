@@ -159,6 +159,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
+| [1344-angle-between-hands-of-a-clock](https://github.com/yashladd/leetcode-solutions/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
 | [1478-allocate-mailboxes](https://github.com/yashladd/leetcode-solutions/tree/main/1478-allocate-mailboxes/) | Hard |
 ## Binary Search
 | Problem Name | Difficulty |
