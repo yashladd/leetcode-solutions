@@ -1,23 +1,44 @@
+from dataclasses import dataclass
+from typing import List
+from heapq import heappush, heappop
+
+@dataclass(frozen=True)
+class TaskInfo:
+    priority: int
+    taskId: int
+    userId: int
+
+    # Custom comparison to force heapq to act like a Max-Heap
+    def __lt__(self, other):
+        # 1. Highest priority comes first
+        if self.priority != other.priority:
+            return self.priority > other.priority
+        # 2. If priorities tie, highest taskId comes first
+        return self.taskId > other.taskId
+
 class TaskManager:
     def __init__(self, tasks: List[List[int]]):
         self.task_queue = []
-        self.task_info = {} # Maps taskId -> (priority, userId)
+        self.task_info = {} 
         
         for u_id, t_id, priority in tasks:
-            heappush(self.task_queue, (-priority, -t_id, u_id))
-            self.task_info[t_id] = (priority, u_id)
+            task = TaskInfo(priority=priority, taskId=t_id, userId=u_id)
+            heappush(self.task_queue, task)
+            self.task_info[t_id] = task
 
     def add(self, userId: int, taskId: int, priority: int) -> None:
-        heappush(self.task_queue, (-priority, -taskId, userId))
-        self.task_info[taskId] = (priority, userId)
+        task = TaskInfo(priority=priority, taskId=taskId, userId=userId)
+        heappush(self.task_queue, task)
+        self.task_info[taskId] = task
 
     def edit(self, taskId: int, newPriority: int) -> None:
-        # Fetch the existing userId
-        _, userId = self.task_info[taskId]
+        old_task = self.task_info[taskId]
         
-        # Overwrite the dictionary key with a brand new tuple
-        self.task_info[taskId] = (newPriority, userId)
-        heappush(self.task_queue, (-newPriority, -taskId, userId))
+        # Create a new frozen instance with updated priority
+        new_task = TaskInfo(priority=newPriority, taskId=taskId, userId=old_task.userId)
+        
+        self.task_info[taskId] = new_task
+        heappush(self.task_queue, new_task)
 
     def rmv(self, taskId: int) -> None:
         if taskId in self.task_info:
@@ -25,27 +46,26 @@ class TaskManager:
 
     def execTop(self) -> int:
         while self.task_queue:
-            neg_priority, neg_taskId, userId = self.task_queue[0]
-            taskId = -neg_taskId
-            priority = -neg_priority
+            # We now just grab the entire object from the top of the heap
+            top_task = self.task_queue[0]
             
-            # 1. Does the task still exist?
-            if taskId not in self.task_info:
+            # 1. Does the task still exist in our active records?
+            if top_task.taskId not in self.task_info:
                 heappop(self.task_queue)
                 continue
             
-            # Unpack the current active state from our single dictionary
-            active_priority, active_userId = self.task_info[taskId]
-            
-            # 2. Is this a stale heap entry?
-            if priority != active_priority or userId != active_userId:
+            # 2. Is this a stale heap entry? 
+            # Because frozen dataclasses check equality by comparing all their fields,
+            # we can just use `!=` to see if the heap task perfectly matches the active task.
+            active_task = self.task_info[top_task.taskId]
+            if top_task != active_task:
                 heappop(self.task_queue)
                 continue
                 
             # Valid top task!
             heappop(self.task_queue)
-            del self.task_info[taskId]
+            del self.task_info[top_task.taskId]
             
-            return userId
+            return top_task.userId
             
         return -1
