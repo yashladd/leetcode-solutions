@@ -11,11 +11,11 @@ class Solution:
 
 
         for i in range(N):
-            for j in range(N):
-                if i != j:
-                    chars[i], chars[j] = chars[j], chars[i]
-                    maxi = max(maxi, int("".join(chars)))
-                    chars[i], chars[j] = chars[j], chars[i]
+            for j in range(i+1, N):
+
+                chars[i], chars[j] = chars[j], chars[i]
+                maxi = max(maxi, int("".join(chars)))
+                chars[i], chars[j] = chars[j], chars[i]
 
         return maxi
 
