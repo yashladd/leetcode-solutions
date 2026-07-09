@@ -1,23 +1,23 @@
 class Solution:
     def maximumSwap(self, num: int) -> int:
+        num_str = list(str(num))
+        n = len(num_str)
+        max_right_index = [0] * n
 
-        maxi = num
+        max_right_index[n - 1] = n - 1
+        for i in range(n - 2, -1, -1):
+            max_right_index[i] = (
+                i
+                if num_str[i] > num_str[max_right_index[i + 1]]
+                else max_right_index[i + 1]
+            )
 
-        num_str = str(num)
+        for i in range(n):
+            if num_str[i] < num_str[max_right_index[i]]:
+                num_str[i], num_str[max_right_index[i]] = (
+                    num_str[max_right_index[i]],
+                    num_str[i],
+                )
+                return int("".join(num_str))
 
-        N = len(num_str)
-
-        chars = list(num_str)
-
-
-        for i in range(N):
-            for j in range(i+1, N):
-
-                chars[i], chars[j] = chars[j], chars[i]
-                maxi = max(maxi, int("".join(chars)))
-                chars[i], chars[j] = chars[j], chars[i]
-
-        return maxi
-
-
-        
+        return num
