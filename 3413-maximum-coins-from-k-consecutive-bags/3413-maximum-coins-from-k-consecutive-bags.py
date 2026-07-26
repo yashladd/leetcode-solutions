@@ -1,23 +1,32 @@
 class Solution:
     def maximumCoins(self, coins: List[List[int]], k: int) -> int:
-        def best_left_aligned(segs):
-            segs.sort()
-            starts = [s[0] for s in segs]
-            pre = [0] * (len(segs) + 1)              # pre[i] = coins in segs[0..i-1]
-            for i, (l, r, c) in enumerate(segs):
-                pre[i+1] = pre[i] + (r - l + 1) * c
-
-            best = 0
-            for i, (l, _, _) in enumerate(segs):
-                end = l + k - 1                       # window is [l, end]
-                j = bisect_right(starts, end) - 1     # last segment that starts inside
-                total = pre[j] - pre[i]               # segments i..j-1: fully inside
-                lj, rj, cj = segs[j]                  # segment j: maybe clipped
-                total += (min(rj, end) - lj + 1) * cj
-                best = max(best, total)
-            return best
-
         return max(
-            best_left_aligned(coins),
-            best_left_aligned([[-r, -l, c] for l, r, c in coins]),
+            self._best_left_aligned(coins, k),
+            self._best_left_aligned([[-r, -l, c] for l, r, c in coins], k)
         )
+
+    def _best_left_aligned(self, segs, k):
+        segs = sorted(segs)
+        N = len(segs)
+        pref = [0] * (N+1)
+        starts = [l for l, r, c in segs]
+
+        for i, (l, r, c) in enumerate(segs):
+            pref[i+1] = pref[i] + (r-l+1) * c
+
+        best = 0
+
+        for i, (l, r, c) in enumerate(segs):
+            start = l
+            end = l + k - 1
+
+            j = bisect_right(starts, end) - 1
+
+            curr_total = pref[j] - pref[i]
+            l_j, r_j, c_j = segs[j]
+            clipped_segment = min(r_j, end) - l_j + 1
+            clipped_amount = clipped_segment * c_j
+
+            best = max(best, curr_total + clipped_amount)
+
+        return best
