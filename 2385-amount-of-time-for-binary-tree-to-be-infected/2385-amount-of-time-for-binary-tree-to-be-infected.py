@@ -38,7 +38,8 @@ class Solution:
                         vis.add(ch)
                         next_level.append(ch)
             level = next_level
-            time += 1
+            if next_level:
+                time += 1
 
 
-        return time - 1
+        return time
