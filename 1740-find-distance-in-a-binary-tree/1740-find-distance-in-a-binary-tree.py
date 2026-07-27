@@ -4,17 +4,19 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
     def findDistance(self, root: Optional[TreeNode], p: int, q: int) -> int:
+        # Early exit for identical nodes
         if p == q:
             return 0
+            
         target_depths = {p: 0, q: 0}
         lca_depth = [0]
 
-
-        def dfs(node, curr_depth) -> None:
+        def dfs(node, curr_depth) -> bool:
             if not node:
-                return None
+                return False
 
             if node.val == p:
                 target_depths[p] = curr_depth
@@ -27,20 +29,13 @@ class Solution:
 
             is_target = (node.val == p or node.val == q)
 
-            if left_found and right_found or (is_target and (left_found or right_found)):
+            # Trigger if we found targets in both branches, 
+            # OR if this node is a target and the other is below it
+            if (left_found and right_found) or (is_target and (left_found or right_found)):
                 lca_depth[0] = curr_depth
 
             return left_found or right_found or is_target
 
         dfs(root, 0)
 
-        return target_depths[p] + target_depths[q] - 2 * lca_depth[0]
-            
-
-
-
-
-
-            
-
-            
+        return target_depths[p] + target_depths[q] - (2 * lca_depth[0])
