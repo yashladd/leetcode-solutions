@@ -62,6 +62,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
 | [2001-number-of-pairs-of-interchangeable-rectangles](https://github.com/yashladd/leetcode-solutions/tree/main/2001-number-of-pairs-of-interchangeable-rectangles/) | Medium |
 | [2384-largest-palindromic-number](https://github.com/yashladd/leetcode-solutions/tree/main/2384-largest-palindromic-number/) | Medium |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
 ## Sliding Window
@@ -172,6 +173,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1302-deepest-leaves-sum](https://github.com/yashladd/leetcode-solutions/tree/main/1302-deepest-leaves-sum/) | Medium |
 | [1644-lowest-common-ancestor-of-a-binary-tree-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1644-lowest-common-ancestor-of-a-binary-tree-ii/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -186,6 +188,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1302-deepest-leaves-sum](https://github.com/yashladd/leetcode-solutions/tree/main/1302-deepest-leaves-sum/) | Medium |
 | [1644-lowest-common-ancestor-of-a-binary-tree-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1644-lowest-common-ancestor-of-a-binary-tree-ii/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
 | [2685-count-the-number-of-complete-components](https://github.com/yashladd/leetcode-solutions/tree/main/2685-count-the-number-of-complete-components/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
@@ -202,6 +205,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1302-deepest-leaves-sum](https://github.com/yashladd/leetcode-solutions/tree/main/1302-deepest-leaves-sum/) | Medium |
 | [1644-lowest-common-ancestor-of-a-binary-tree-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1644-lowest-common-ancestor-of-a-binary-tree-ii/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -262,6 +266,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1129-shortest-path-with-alternating-colors](https://github.com/yashladd/leetcode-solutions/tree/main/1129-shortest-path-with-alternating-colors/) | Medium |
 | [1302-deepest-leaves-sum](https://github.com/yashladd/leetcode-solutions/tree/main/1302-deepest-leaves-sum/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
 | [2685-count-the-number-of-complete-components](https://github.com/yashladd/leetcode-solutions/tree/main/2685-count-the-number-of-complete-components/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
