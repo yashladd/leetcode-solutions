@@ -162,6 +162,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0110-balanced-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0110-balanced-binary-tree/) | Easy |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
+| [0543-diameter-of-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0543-diameter-of-binary-tree/) | Easy |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1028-recover-a-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1028-recover-a-tree-from-preorder-traversal/) | Hard |
@@ -174,6 +175,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
+| [0543-diameter-of-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0543-diameter-of-binary-tree/) | Easy |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [1028-recover-a-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1028-recover-a-tree-from-preorder-traversal/) | Hard |
 | [1110-delete-nodes-and-return-forest](https://github.com/yashladd/leetcode-solutions/tree/main/1110-delete-nodes-and-return-forest/) | Medium |
@@ -185,6 +187,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0110-balanced-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0110-balanced-binary-tree/) | Easy |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
+| [0543-diameter-of-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0543-diameter-of-binary-tree/) | Easy |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1028-recover-a-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1028-recover-a-tree-from-preorder-traversal/) | Hard |
