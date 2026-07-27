@@ -18,6 +18,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0239-sliding-window-maximum](https://github.com/yashladd/leetcode-solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0403-frog-jump](https://github.com/yashladd/leetcode-solutions/tree/main/0403-frog-jump/) | Hard |
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
@@ -45,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0525-contiguous-array](https://github.com/yashladd/leetcode-solutions/tree/main/0525-contiguous-array/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
@@ -140,6 +142,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
 ## Hash Function
@@ -187,6 +190,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0670-maximum-swap](https://github.com/yashladd/leetcode-solutions/tree/main/0670-maximum-swap/) | Medium |
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
 | [1344-angle-between-hands-of-a-clock](https://github.com/yashladd/leetcode-solutions/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
@@ -301,4 +305,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [2001-number-of-pairs-of-interchangeable-rectangles](https://github.com/yashladd/leetcode-solutions/tree/main/2001-number-of-pairs-of-interchangeable-rectangles/) | Medium |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/yashladd/leetcode-solutions/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
+## Randomized
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 <!---LeetCode Topics End-->
