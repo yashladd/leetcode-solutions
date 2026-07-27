@@ -6,26 +6,41 @@
 #         self.right = right
 class Solution:
     def findDistance(self, root: Optional[TreeNode], p: int, q: int) -> int:
-        if not root:
+        if p == q:
             return 0
+        target_depths = {p: 0, q: 0}
+        lca_depth = [0]
 
-        def f(n: TreeNode, val: int, path: List[str]) -> bool:
-            if n.val == val:
-                return True
-            if n.left and f(n.left, val, path):
-                path.append("L")
-            elif n.right and f(n.right, val, path):
-                path.append("R")
-            return len(path) > 0
 
-        p1 = [] 
-        f(root, p, p1)
-        p2 = []
-        f(root, q, p2)
-        print(p1, p2)
-        while p1 and p2 and  p1[-1] == p2[-1]:
-            p1.pop()
-            p2.pop()
+        def dfs(node, curr_depth) -> None:
+            if not node:
+                return None
 
-        return len(p1) + len(p2)
+            if node.val == p:
+                target_depths[p] = curr_depth
+                
+            if node.val == q:
+                target_depths[q] = curr_depth
 
+            left_found = dfs(node.left, curr_depth + 1)
+            right_found = dfs(node.right, curr_depth + 1)
+
+            is_target = (node.val == p or node.val == q)
+
+            if left_found and right_found or (is_target and (left_found or right_found)):
+                lca_depth[0] = curr_depth
+
+            return left_found or right_found or is_target
+
+        dfs(root, 0)
+
+        return target_depths[p] + target_depths[q] - 2 * lca_depth[0]
+            
+
+
+
+
+
+            
+
+            
