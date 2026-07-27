@@ -4,38 +4,39 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
 class Solution:
     def findDistance(self, root: Optional[TreeNode], p: int, q: int) -> int:
-        # Early exit for identical nodes
-        if p == q:
-            return 0
-            
-        target_depths = {p: 0, q: 0}
-        lca_depth = [0]
-
-        def dfs(node, curr_depth) -> bool:
+        def get_path_reverse(node, target, path):
             if not node:
                 return False
-
-            if node.val == p:
-                target_depths[p] = curr_depth
                 
-            if node.val == q:
-                target_depths[q] = curr_depth
+            # 1. Base Case: We found the target! Append it first.
+            if node.val == target:
+                path.append(node.val)
+                return True
+                
+            # 2. Recurse left and right
+            left_found = get_path_reverse(node.left, target, path)
+            right_found = get_path_reverse(node.right, target, path)
+            
+            # 3. If the target was found below us, append this current node
+            if left_found or right_found:
+                path.append(node.val)
+                return True
+                
+            return False
 
-            left_found = dfs(node.left, curr_depth + 1)
-            right_found = dfs(node.right, curr_depth + 1)
-
-            is_target = (node.val == p or node.val == q)
-
-            # Trigger if we found targets in both branches, 
-            # OR if this node is a target and the other is below it
-            if (left_found and right_found) or (is_target and (left_found or right_found)):
-                lca_depth[0] = curr_depth
-
-            return left_found or right_found or is_target
-
-        dfs(root, 0)
-
-        return target_depths[p] + target_depths[q] - (2 * lca_depth[0])
+        path_p = []
+        path_q = []
+        
+        get_path_reverse(root, p, path_p)
+        get_path_reverse(root, q, path_q)
+        
+        # Both paths now end with the root. 
+        # We pop from the end as long as the elements match.
+        while path_p and path_q and path_p[-1] == path_q[-1]:
+            path_p.pop()
+            path_q.pop()
+            
+        # The remaining elements in both arrays are the unshared nodes!
+        return len(path_p) + len(path_q)
