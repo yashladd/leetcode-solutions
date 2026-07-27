@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/">381. Insert Delete GetRandom O(1) - Duplicates allowed</a></h2><h3>Hard</h3><hr><div><p><code>RandomizedCollection</code> is a data structure that contains a collection of numbers, possibly duplicates (i.e., a multiset). It should support inserting and removing specific elements and also reporting a random element.</p>
+<h2><a href="https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed">381. Insert Delete GetRandom O(1) - Duplicates allowed</a></h2><h3>Hard</h3><hr><p><code>RandomizedCollection</code> is a data structure that contains a collection of numbers, possibly duplicates (i.e., a multiset). It should support inserting and removing specific elements and also reporting a random element.</p>
 
 <p>Implement the <code>RandomizedCollection</code> class:</p>
 
@@ -16,8 +16,9 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input</strong>
-["RandomizedCollection", "insert", "insert", "insert", "getRandom", "remove", "getRandom"]
+<pre>
+<strong>Input</strong>
+[&quot;RandomizedCollection&quot;, &quot;insert&quot;, &quot;insert&quot;, &quot;insert&quot;, &quot;getRandom&quot;, &quot;remove&quot;, &quot;getRandom&quot;]
 [[], [1], [1], [2], [], [1], []]
 <strong>Output</strong>
 [null, true, false, true, 2, true, 1]
@@ -46,4 +47,3 @@ randomizedCollection.getRandom(); // getRandom should return 1 or 2, both equall
 	<li>At most <code>2 * 10<sup>5</sup></code> calls <strong>in total</strong> will be made to <code>insert</code>, <code>remove</code>, and <code>getRandom</code>.</li>
 	<li>There will be <strong>at least one</strong> element in the data structure when <code>getRandom</code> is called.</li>
 </ul>
-</div>
