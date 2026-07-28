@@ -1,65 +1,73 @@
+from dataclasses import dataclass
+@dataclass
 class Node:
-    def __init__(self, key, val, next = None, prev = None):
-        self.key = key
-        self.val = val
-        self.next = next
-        self.prev = prev
+    key: int
+    val: int
+    next: Optional[Node] = None
+    prev: Optional[Node] = None
+
 
 class LRUCache:
 
     def __init__(self, capacity: int):
-        self.cache = {}
-        self.capacity = capacity
-        self.head = Node(-1,-1)
-        self.tail = Node(-1,-1)
-        self.head.next = self.tail
-        self.tail.prev = self.head
+        self._capacity = capacity
+        self._head = Node(-1, -1)
+        self._tail = Node(-1,-1)
+        self._head.next = self._tail
+        self._tail.prev = self._head
+        self._size = 0
+        self._cache = {}
 
+    def _move_to_end(self, node):
+        prev_node = node.prev
+        next_node = node.next
+        prev_node.next = next_node
+        next_node.prev = prev_node
 
-    def deleteNode(self, node):
-        prevNode = node.prev
-        nextNode = node.next
-
-        prevNode.next = nextNode
-        nextNode.prev = prevNode
-
-        node.next = None
-        node.prev = None
-
-
-    def addLast(self, node):
-        secondLast = self.tail.prev
-        secondLast.next = node
-        node.prev = secondLast
-        node.next = self.tail
-        self.tail.prev = node
+        tail_prev = self._tail.prev
+        tail_prev.next = node
+        node.prev = tail_prev
+        node.next = self._tail
+        self._tail.prev = node
         
 
     def get(self, key: int) -> int:
-        if key not in self.cache:
+        if key not in self._cache:
             return -1
-        
-        node = self.cache[key]
-        self.deleteNode(node)
-        self.addLast(node)
+
+        node = self._cache[key]
+        self._move_to_end(node)
         return node.val
 
-    def put(self, key: int, value: int) -> None:
-        if key in self.cache:
-            node = self.cache[key]
-            node.val = value
-            self.deleteNode(node)
-            self.addLast(node)
-        else:
-            if len(self.cache) == self.capacity:
-                leastRecentlyUsed = self.head.next
-                self.deleteNode(leastRecentlyUsed)
-                del self.cache[leastRecentlyUsed.key]
-
-            mostRecentlyUsed = Node(key, value)
-            self.cache[key] = mostRecentlyUsed
-            self.addLast(mostRecentlyUsed)
+    def _evict_front(self):
+        node = self._head.next
+        self._head.next = self._head.next.next
+        self._head.next.prev = self._head
+        node.next = None
+        node.prev = None
+        return node
         
+    def put(self, key: int, value: int) -> None:
+        if key in self._cache:
+            node = self._cache[key]
+            node.val = value
+            self._move_to_end(node)
+            return 
+
+        if len(self._cache) == self._capacity:
+            node = self._evict_front()
+
+            del self._cache[node.key]
+
+        node_to_insert = Node(key, value)
+        
+        self._tail.prev.next = node_to_insert
+        node_to_insert.prev = self._tail.prev
+        node_to_insert.next = self._tail
+        self._tail.prev = node_to_insert
+
+        self._cache[key] = node_to_insert
+
         
 
 
