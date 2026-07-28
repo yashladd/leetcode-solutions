@@ -48,6 +48,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0041-first-missing-positive](https://github.com/yashladd/leetcode-solutions/tree/main/0041-first-missing-positive/) | Hard |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0146-lru-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0146-lru-cache/) | Medium |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
@@ -145,10 +146,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0061-rotate-list](https://github.com/yashladd/leetcode-solutions/tree/main/0061-rotate-list/) | Medium |
+| [0146-lru-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0146-lru-cache/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0146-lru-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0146-lru-cache/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
@@ -353,4 +356,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0207-course-schedule](https://github.com/yashladd/leetcode-solutions/tree/main/0207-course-schedule/) | Medium |
+## Doubly-Linked List
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0146-lru-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0146-lru-cache/) | Medium |
 <!---LeetCode Topics End-->
