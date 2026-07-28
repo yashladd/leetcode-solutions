@@ -27,7 +27,7 @@ class LRUCache:
         node.prev = None
 
 
-    def addFront(self, node):
+    def addLast(self, node):
         secondLast = self.tail.prev
         secondLast.next = node
         node.prev = secondLast
@@ -41,7 +41,7 @@ class LRUCache:
         
         node = self.cache[key]
         self.deleteNode(node)
-        self.addFront(node)
+        self.addLast(node)
         return node.val
 
     def put(self, key: int, value: int) -> None:
@@ -49,7 +49,7 @@ class LRUCache:
             node = self.cache[key]
             node.val = value
             self.deleteNode(node)
-            self.addFront(node)
+            self.addLast(node)
         else:
             if len(self.cache) == self.capacity:
                 leastRecentlyUsed = self.head.next
@@ -58,7 +58,7 @@ class LRUCache:
 
             mostRecentlyUsed = Node(key, value)
             self.cache[key] = mostRecentlyUsed
-            self.addFront(mostRecentlyUsed)
+            self.addLast(mostRecentlyUsed)
         
         
 
