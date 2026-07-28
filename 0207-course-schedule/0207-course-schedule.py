@@ -1,29 +1,29 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        adj = defaultdict(list)
-        for sr, de in prerequisites:
-            adj[sr].append(de)
-            
-        vis = [0] * numCourses
-        path = [0] * numCourses
+        visited = set()
 
-        def dfs(node):
-            vis[node] = 1
-            path[node] = 1
-            for nei in adj[node]:
-                if not vis[nei]:
-                    if dfs(nei): return True
-                elif path[nei]:
-                    return True
-            path[node] = 0  
-            return False
-        
-        for i in range(numCourses):
-            if not vis[i]:
-                if dfs(i): return False
-                
-        return True
-                
-                    
-            
+        g = defaultdict(list)
+        indegree = [0] * numCourses
+        for u, v in prerequisites:
+            g[u].append(v)
+            indegree[v] += 1
+
+        q = deque()
+        for i, v in enumerate(indegree):
+            if v == 0:
+                q.append(i)
+                visited.add(i)
+
+        while q:
+            node = q.popleft()
+
+            for ch in g[node]:
+                indegree[ch] -= 1
+                if indegree[ch] == 0  and ch not in visited:
+                    visited.add(ch)
+                    q.append(ch)
+
+        return len(visited) == numCourses
+
+
         
