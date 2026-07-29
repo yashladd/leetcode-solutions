@@ -30,6 +30,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
+| [1011-capacity-to-ship-packages-within-d-days](https://github.com/yashladd/leetcode-solutions/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
 | [1110-delete-nodes-and-return-forest](https://github.com/yashladd/leetcode-solutions/tree/main/1110-delete-nodes-and-return-forest/) | Medium |
 | [1258-synonymous-sentences](https://github.com/yashladd/leetcode-solutions/tree/main/1258-synonymous-sentences/) | Medium |
 | [1288-remove-covered-intervals](https://github.com/yashladd/leetcode-solutions/tree/main/1288-remove-covered-intervals/) | Medium |
@@ -236,6 +237,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
+| [1011-capacity-to-ship-packages-within-d-days](https://github.com/yashladd/leetcode-solutions/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
