@@ -1,6 +1,6 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], days: int) -> int:
-        low = min(weights)
+        low = max(weights)
         high = sum(weights)
 
         min_capacity = high
