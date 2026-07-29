@@ -5,6 +5,8 @@ class DisjointSet:
 
     def union(self, u, v):
         p_u, p_v = self.find(u), self.find(v)
+        if p_u == p_v:
+            return 
         sz_u, sz_v = self.size[p_u], self.size[p_v]
         if sz_v > sz_u:
             p_v, p_u = p_u, p_v
