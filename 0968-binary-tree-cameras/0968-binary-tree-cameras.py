@@ -50,7 +50,6 @@ class Solution:
         min_cameras, root_state = get_min_cameras(root)
 
         if root_state == State.NEEDS_COVER:
-            print("exec")
             min_cameras += 1
 
         return min_cameras
