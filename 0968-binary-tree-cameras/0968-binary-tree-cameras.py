@@ -1,37 +1,58 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+from enum import Enum, auto
+class State(Enum):
+    HAS_CAMERA = auto()
+    SIBLING_COVERS = auto()
+    NEEDS_COVER = auto()
+
 class Solution:
+    """
+       1
+
+     2   3
+
+        4
+      2     5
+     2 
+        1   6   
+    """
     def minCameraCover(self, root: Optional[TreeNode]) -> int:
-        self.cameras = 0
         
-        # States:
-        # 0: Uncovered (Needs Camera)
-        # 1: Has Camera
-        # 2: Covered (No Camera needed)
-        
-        def dfs(node):
+        def get_min_cameras(node: Optional[TreeNode]) -> int:
             if not node:
-                return 2  # Null nodes are "covered"
+                return 0, State.SIBLING_COVERS
+
+
+            if not node.left and not node.right:
+                return 0, State.NEEDS_COVER
+
+
+            left_cameras, left_state = get_min_cameras(node.left)
+
+            right_cameras, right_state = get_min_cameras(node.right)
+
+            if left_state == State.NEEDS_COVER or right_state == State.NEEDS_COVER:
+                return 1 + left_cameras + right_cameras, State.HAS_CAMERA
+
+            if left_state == State.HAS_CAMERA or right_state == State.HAS_CAMERA:
+                return left_cameras + right_cameras, State.SIBLING_COVERS
+
             
-            left = dfs(node.left)
-            right = dfs(node.right)
+
+            return left_cameras + right_cameras, State.NEEDS_COVER
+
+
+        min_cameras, root_state = get_min_cameras(root)
+
+        if root_state == State.NEEDS_COVER:
+            print("exec")
+            min_cameras += 1
+
+        return min_cameras
+
             
-            # If any child is uncovered, we MUST place a camera here
-            if left == 0 or right == 0:
-                self.cameras += 1
-                return 1
-            
-            # If any child has a camera, this node is covered
-            if left == 1 or right == 1:
-                return 2
-            
-            # If both children are covered (but have no cameras to help us),
-            # this node becomes uncovered.
-            return 0
-            
-        # Run DFS
-        root_state = dfs(root)
-        
-        # Edge Case: If the root itself returns "Uncovered", we need one last camera for it
-        if root_state == 0:
-            self.cameras += 1
-            
-        return self.cameras
