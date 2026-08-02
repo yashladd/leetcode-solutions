@@ -6,37 +6,37 @@
 #         self.right = right
 class Solution:
     def findDistance(self, root: Optional[TreeNode], p: int, q: int) -> int:
-        def get_path_reverse(node, target, path):
+
+        def populate_reverse_path(node, path_info, target):
             if not node:
                 return False
-                
-            # 1. Base Case: We found the target! Append it first.
+
             if node.val == target:
-                path.append(node.val)
+                path_info.append(node.val)
                 return True
-                
-            # 2. Recurse left and right
-            left_found = get_path_reverse(node.left, target, path)
-            right_found = get_path_reverse(node.right, target, path)
-            
-            # 3. If the target was found below us, append this current node
+
+            left_found = populate_reverse_path(node.left, path_info, target)
+            right_found = populate_reverse_path(node.right, path_info, target)
+
+
             if left_found or right_found:
-                path.append(node.val)
+                path_info.append(node.val)
                 return True
-                
+
             return False
 
-        path_p = []
-        path_q = []
-        
-        get_path_reverse(root, p, path_p)
-        get_path_reverse(root, q, path_q)
-        
-        # Both paths now end with the root. 
-        # We pop from the end as long as the elements match.
-        while path_p and path_q and path_p[-1] == path_q[-1]:
-            path_p.pop()
-            path_q.pop()
-            
-        # The remaining elements in both arrays are the unshared nodes!
-        return len(path_p) + len(path_q)
+
+        p_path = []
+
+        populate_reverse_path(root, p_path, p)
+
+        q_path = []
+        populate_reverse_path(root, q_path, q)
+
+        while p_path and q_path and p_path[-1] == q_path[-1]:
+            p_path.pop()
+            q_path.pop()
+
+
+        return len(p_path) + len(q_path)
+
