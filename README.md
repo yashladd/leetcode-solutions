@@ -9,6 +9,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0014-longest-common-prefix](https://github.com/yashladd/leetcode-solutions/tree/main/0014-longest-common-prefix/) | Easy |
 | [0041-first-missing-positive](https://github.com/yashladd/leetcode-solutions/tree/main/0041-first-missing-positive/) | Hard |
 | [0045-jump-game-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0045-jump-game-ii/) | Medium |
+| [0055-jump-game](https://github.com/yashladd/leetcode-solutions/tree/main/0055-jump-game/) | Medium |
 | [0068-text-justification](https://github.com/yashladd/leetcode-solutions/tree/main/0068-text-justification/) | Hard |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
@@ -128,6 +129,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0022-generate-parentheses](https://github.com/yashladd/leetcode-solutions/tree/main/0022-generate-parentheses/) | Medium |
 | [0032-longest-valid-parentheses](https://github.com/yashladd/leetcode-solutions/tree/main/0032-longest-valid-parentheses/) | Hard |
 | [0045-jump-game-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0045-jump-game-ii/) | Medium |
+| [0055-jump-game](https://github.com/yashladd/leetcode-solutions/tree/main/0055-jump-game/) | Medium |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0152-maximum-product-subarray](https://github.com/yashladd/leetcode-solutions/tree/main/0152-maximum-product-subarray/) | Medium |
@@ -284,6 +286,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0045-jump-game-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0045-jump-game-ii/) | Medium |
+| [0055-jump-game](https://github.com/yashladd/leetcode-solutions/tree/main/0055-jump-game/) | Medium |
 | [0670-maximum-swap](https://github.com/yashladd/leetcode-solutions/tree/main/0670-maximum-swap/) | Medium |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
 | [2144-minimum-cost-of-buying-candies-with-discount](https://github.com/yashladd/leetcode-solutions/tree/main/2144-minimum-cost-of-buying-candies-with-discount/) | Easy |
