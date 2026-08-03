@@ -1,50 +1,44 @@
-from collections import deque
-from typing import List
-
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        m, n = len(grid), len(grid[0])
-        
-        # Optimization: If k is large enough to walk the Manhattan distance 
-        # (shortest path without walls), just return that distance immediately.
-        # This prevents TLE/MLE on large grids with massive K.
-        if k >= m + n - 2:
-            return m + n - 2
+        n, m = len(grid), len(grid[0])
+        dirs = [
+            (0,1),
+            (1,0),
+            (0,-1),
+            (-1,0)
+        ]
 
-        # State: (row, col, remaining_k)
-        q = deque([(0, 0, k)])
-        
-        # Visited stores: visited[row][col] = max_k_remaining_seen_so_far
-        # Initialize with -1 (meaning not visited yet)
-        visited = [[-1] * n for _ in range(m)]
-        visited[0][0] = k
-        
-        steps = 0
-        
+        if k >= n + m:
+            return n + m - 2
+
+
+        if grid[0][0] == 1 and k == 0:
+            return -1
+
+
+        vis = [[(k  + 1)for _ in range(m)] for _ in range(n)]
+        need_remove_start = (grid[0][0] == 1)
+        q = deque([(0, 0, need_remove_start, 0)])
+
+        vis[0][0] = need_remove_start
+
+
         while q:
-            # Process level by level to track steps easily
-            for _ in range(len(q)):
-                r, c, rem = q.popleft()
-                
-                # Target reached
-                if r == m - 1 and c == n - 1:
-                    return steps
-                
-                for dx, dy in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
-                    nr, nc = r + dx, c + dy
-                    
-                    if 0 <= nr < m and 0 <= nc < n:
-                        # Calculate new remainder
-                        new_rem = rem - grid[nr][nc]
-                        
-                        # LOGIC FIX:
-                        # 1. Check if we have enough k (new_rem >= 0)
-                        # 2. Check if this path is BETTER than previous paths to this cell
-                        #    (new_rem > visited[nr][nc])
-                        if new_rem >= 0 and new_rem > visited[nr][nc]:
-                            visited[nr][nc] = new_rem
-                            q.append((nr, nc, new_rem))
-            
-            steps += 1
-            
+            row, col, removals, steps = q.popleft()
+
+            if row == n-1 and col == m-1:
+                return steps
+
+            for dx, dy in dirs:
+                next_row, next_col = row + dx, col + dy
+                if next_row < n and next_col < m and next_row >= 0 and next_col >= 0:
+                    need_remove_cell = (grid[next_row][next_col] == 1)
+                    new_removals = removals + need_remove_cell
+                    if vis[next_row][next_col] > new_removals:
+                        vis[next_row][next_col] = new_removals
+                        q.append((next_row, next_col, new_removals, steps + 1))
+
+
         return -1
+
+        
