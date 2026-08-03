@@ -23,6 +23,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0403-frog-jump](https://github.com/yashladd/leetcode-solutions/tree/main/0403-frog-jump/) | Hard |
+| [0498-diagonal-traverse](https://github.com/yashladd/leetcode-solutions/tree/main/0498-diagonal-traverse/) | Medium |
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [0525-contiguous-array](https://github.com/yashladd/leetcode-solutions/tree/main/0525-contiguous-array/) | Medium |
@@ -235,6 +236,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0174-dungeon-game](https://github.com/yashladd/leetcode-solutions/tree/main/0174-dungeon-game/) | Hard |
 | [0221-maximal-square](https://github.com/yashladd/leetcode-solutions/tree/main/0221-maximal-square/) | Medium |
+| [0498-diagonal-traverse](https://github.com/yashladd/leetcode-solutions/tree/main/0498-diagonal-traverse/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [1293-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/yashladd/leetcode-solutions/tree/main/1293-shortest-path-in-a-grid-with-obstacles-elimination/) | Hard |
 | [1861-rotating-the-box](https://github.com/yashladd/leetcode-solutions/tree/main/1861-rotating-the-box/) | Medium |
@@ -269,6 +271,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0068-text-justification](https://github.com/yashladd/leetcode-solutions/tree/main/0068-text-justification/) | Hard |
+| [0498-diagonal-traverse](https://github.com/yashladd/leetcode-solutions/tree/main/0498-diagonal-traverse/) | Medium |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/yashladd/leetcode-solutions/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
