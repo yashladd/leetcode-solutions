@@ -82,6 +82,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0003-longest-substring-without-repeating-characters](https://github.com/yashladd/leetcode-solutions/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0239-sliding-window-maximum](https://github.com/yashladd/leetcode-solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 | [1100-find-k-length-substrings-with-no-repeated-characters](https://github.com/yashladd/leetcode-solutions/tree/main/1100-find-k-length-substrings-with-no-repeated-characters/) | Medium |
+| [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
 ## Sorting
@@ -121,6 +122,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1100-find-k-length-substrings-with-no-repeated-characters](https://github.com/yashladd/leetcode-solutions/tree/main/1100-find-k-length-substrings-with-no-repeated-characters/) | Medium |
 | [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1209-remove-all-adjacent-duplicates-in-string-ii/) | Medium |
 | [1258-synonymous-sentences](https://github.com/yashladd/leetcode-solutions/tree/main/1258-synonymous-sentences/) | Medium |
+| [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
 | [2384-largest-palindromic-number](https://github.com/yashladd/leetcode-solutions/tree/main/2384-largest-palindromic-number/) | Medium |
 ## Dynamic Programming
@@ -142,6 +144,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
 | [0968-binary-tree-cameras](https://github.com/yashladd/leetcode-solutions/tree/main/0968-binary-tree-cameras/) | Hard |
 | [1478-allocate-mailboxes](https://github.com/yashladd/leetcode-solutions/tree/main/1478-allocate-mailboxes/) | Hard |
+| [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
 | [3660-jump-game-ix](https://github.com/yashladd/leetcode-solutions/tree/main/3660-jump-game-ix/) | Medium |
 ## Trie
@@ -368,6 +371,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0525-contiguous-array](https://github.com/yashladd/leetcode-solutions/tree/main/0525-contiguous-array/) | Medium |
+| [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2281-sum-of-total-strength-of-wizards](https://github.com/yashladd/leetcode-solutions/tree/main/2281-sum-of-total-strength-of-wizards/) | Hard |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
 ## Divide and Conquer
