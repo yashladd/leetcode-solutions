@@ -32,6 +32,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0815-bus-routes](https://github.com/yashladd/leetcode-solutions/tree/main/0815-bus-routes/) | Hard |
+| [0969-pancake-sorting](https://github.com/yashladd/leetcode-solutions/tree/main/0969-pancake-sorting/) | Medium |
 | [0990-satisfiability-of-equality-equations](https://github.com/yashladd/leetcode-solutions/tree/main/0990-satisfiability-of-equality-equations/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/yashladd/leetcode-solutions/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
@@ -92,6 +93,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
+| [0969-pancake-sorting](https://github.com/yashladd/leetcode-solutions/tree/main/0969-pancake-sorting/) | Medium |
 | [1258-synonymous-sentences](https://github.com/yashladd/leetcode-solutions/tree/main/1258-synonymous-sentences/) | Medium |
 | [1288-remove-covered-intervals](https://github.com/yashladd/leetcode-solutions/tree/main/1288-remove-covered-intervals/) | Medium |
 | [1478-allocate-mailboxes](https://github.com/yashladd/leetcode-solutions/tree/main/1478-allocate-mailboxes/) | Hard |
@@ -284,6 +286,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0443-string-compression](https://github.com/yashladd/leetcode-solutions/tree/main/0443-string-compression/) | Medium |
 | [0763-partition-labels](https://github.com/yashladd/leetcode-solutions/tree/main/0763-partition-labels/) | Medium |
+| [0969-pancake-sorting](https://github.com/yashladd/leetcode-solutions/tree/main/0969-pancake-sorting/) | Medium |
 | [1861-rotating-the-box](https://github.com/yashladd/leetcode-solutions/tree/main/1861-rotating-the-box/) | Medium |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/yashladd/leetcode-solutions/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
 ## Simulation
@@ -299,6 +302,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0055-jump-game](https://github.com/yashladd/leetcode-solutions/tree/main/0055-jump-game/) | Medium |
 | [0670-maximum-swap](https://github.com/yashladd/leetcode-solutions/tree/main/0670-maximum-swap/) | Medium |
 | [0763-partition-labels](https://github.com/yashladd/leetcode-solutions/tree/main/0763-partition-labels/) | Medium |
+| [0969-pancake-sorting](https://github.com/yashladd/leetcode-solutions/tree/main/0969-pancake-sorting/) | Medium |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
 | [2144-minimum-cost-of-buying-candies-with-discount](https://github.com/yashladd/leetcode-solutions/tree/main/2144-minimum-cost-of-buying-candies-with-discount/) | Easy |
 | [2384-largest-palindromic-number](https://github.com/yashladd/leetcode-solutions/tree/main/2384-largest-palindromic-number/) | Medium |
