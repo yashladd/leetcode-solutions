@@ -1,35 +1,39 @@
 from enum import IntEnum
 class State(IntEnum):
     COMPLETED = 1
-    VISITED = 2
-    PATH_VISITED = 3
+    VISITING = 2
 
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        GRAY, BLACK = 1, 2
+        g = defaultdict(list)
+
+        for u, c in prerequisites:
+            g[u].append(c)
+
         state = {}
-        out = []
+        res = []
+        for course in range(numCourses):
+            if course not in state:
+                if self.visit_dependencies_and_check_cycle(g, course, state, res):
+                    return []
 
-        # build adjacency: course -> list of courses it depends on (must take first)
-        adj = [[] for _ in range(numCourses)]
-        for a, b in prerequisites:        # must take b before a  →  edge a -> b
-            adj[a].append(b)
+        return res
+    
 
-        def dfs(c):
-            if state.get(c) == BLACK:
-                return True
-            if state.get(c) == GRAY:      # on current path → back edge → cycle
-                return False
-            state[c] = GRAY
-            for dep in adj[c]:
-                if not dfs(dep):
-                    return False
-            state[c] = BLACK
-            out.append(c)                 # post-order: append after deps
+    def visit_dependencies_and_check_cycle(self, g, course, state, res):
+        if course in state and state[course] == State.COMPLETED:
+            return False
+
+        if course in state and state[course] == State.VISITING:
             return True
 
-        for c in range(numCourses):
-            if c not in state:
-                if not dfs(c):
-                    return []
-        return out
+        state[course] = State.VISITING
+
+        for dep in g[course]:
+            if self.visit_dependencies_and_check_cycle(g, dep, state, res):
+                return True
+
+        res.append(course)
+        state[course] = State.COMPLETED
+        return False
+        
