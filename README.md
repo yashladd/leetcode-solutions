@@ -184,6 +184,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
+| [0715-range-module](https://github.com/yashladd/leetcode-solutions/tree/main/0715-range-module/) | Hard |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
 ## Hash Function
@@ -373,6 +374,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Ordered Set
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0715-range-module](https://github.com/yashladd/leetcode-solutions/tree/main/0715-range-module/) | Hard |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
 ## Prefix Sum
@@ -408,6 +410,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Segment Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0715-range-module](https://github.com/yashladd/leetcode-solutions/tree/main/0715-range-module/) | Hard |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
