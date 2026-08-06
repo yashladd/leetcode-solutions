@@ -89,6 +89,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [1258-synonymous-sentences](https://github.com/yashladd/leetcode-solutions/tree/main/1258-synonymous-sentences/) | Medium |
@@ -179,6 +180,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0146-lru-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0146-lru-cache/) | Medium |
+| [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
@@ -278,6 +280,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0061-rotate-list](https://github.com/yashladd/leetcode-solutions/tree/main/0061-rotate-list/) | Medium |
 | [0160-intersection-of-two-linked-lists](https://github.com/yashladd/leetcode-solutions/tree/main/0160-intersection-of-two-linked-lists/) | Easy |
+| [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0443-string-compression](https://github.com/yashladd/leetcode-solutions/tree/main/0443-string-compression/) | Medium |
 | [0763-partition-labels](https://github.com/yashladd/leetcode-solutions/tree/main/0763-partition-labels/) | Medium |
 | [1861-rotating-the-box](https://github.com/yashladd/leetcode-solutions/tree/main/1861-rotating-the-box/) | Medium |
@@ -351,6 +354,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/yashladd/leetcode-solutions/tree/main/0239-sliding-window-maximum/) | Hard |
+| [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
@@ -423,4 +427,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0398-random-pick-index](https://github.com/yashladd/leetcode-solutions/tree/main/0398-random-pick-index/) | Medium |
+## Data Stream
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 <!---LeetCode Topics End-->
