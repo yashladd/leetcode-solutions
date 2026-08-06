@@ -21,11 +21,9 @@ class Solution:
     
 
     def visit_dependencies_and_check_cycle(self, g, course, state, res):
-        if course in state and state[course] == State.COMPLETED:
-            return False
-
-        if course in state and state[course] == State.VISITING:
-            return True
+        s = state.get(course)
+        if s == State.COMPLETED: return False
+        if s == State.VISITING:  return True
 
         state[course] = State.VISITING
 
