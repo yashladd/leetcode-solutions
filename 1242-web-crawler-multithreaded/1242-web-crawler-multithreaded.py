@@ -1,48 +1,39 @@
-import threading
-from concurrent.futures import ThreadPoolExecutor
+import concurrent.futures
+from urllib.parse import urlparse
+
+# class HtmlParser:
+#    def getUrls(self, url: str) -> list[str]: ...
 
 class Solution:
-    def crawl(self, startUrl: str, htmlParser: 'HtmlParser') -> List[str]:
-        # 1. Helper to extract hostname
-        def get_hostname(url):
-            # Split by "/" and take the 3rd element (index 2)
-            # e.g. "http://example.com/foo" -> ["http:", "", "example.com", "foo"]
-            return url.split('/')[2]
-
-        target_hostname = get_hostname(startUrl)
+    def crawl(self, startUrl: str, htmlParser: 'HtmlParser') -> list[str]:
+        # Extract the target hostname
+        target_hostname = urlparse(startUrl).hostname
         
-        # 2. Thread-safe structures
         visited = {startUrl}
-        lock = threading.Lock()
         
-        # We start with the startUrl in our queue
-        queue = [startUrl]
-        
-        # Use a ThreadPool to manage concurrency
-        # 10-20 workers is usually a good balance for I/O tasks like this
-        with ThreadPoolExecutor(max_workers=16) as executor:
+        # Helper function for the thread pool to execute
+        def fetch_urls(url):
+            return htmlParser.getUrls(url)
             
-            while queue:
-                # Submit tasks for all URLs in the current level
-                # This runs htmlParser.getUrls() in parallel
-                futures = [executor.submit(htmlParser.getUrls, url) for url in queue]
+        # Initialize ThreadPoolExecutor
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            # Keep a set of running futures
+            futures = {executor.submit(fetch_urls, startUrl)}
+            
+            while futures:
+                # Wait for at least one thread to finish fetching its URLs
+                done, futures = concurrent.futures.wait(
+                    futures, 
+                    return_when=concurrent.futures.FIRST_COMPLETED
+                )
                 
-                next_queue = []
-                
-                # Collect results as they finish
-                for future in futures:
-                    found_urls = future.result()
-                    
-                    for url in found_urls:
-                        # Check hostname matches
-                        if get_hostname(url) == target_hostname:
-                            # Critical section: Check and add to visited
-                            with lock:
-                                if url not in visited:
-                                    visited.add(url)
-                                    next_queue.append(url)
-                
-                # Move to the next level
-                queue = next_queue
-                
+                for future in done:
+                    new_urls = future.result()
+                    for next_url in new_urls:
+                        # Only process unvisited URLs that match the target hostname
+                        if next_url not in visited and urlparse(next_url).hostname == target_hostname:
+                            visited.add(next_url)
+                            # Submit the new URL to the thread pool and track its future
+                            futures.add(executor.submit(fetch_urls, next_url))
+                            
         return list(visited)
