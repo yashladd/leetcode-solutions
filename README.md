@@ -235,6 +235,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0979-distribute-coins-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
 | [1028-recover-a-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1028-recover-a-tree-from-preorder-traversal/) | Hard |
 | [1110-delete-nodes-and-return-forest](https://github.com/yashladd/leetcode-solutions/tree/main/1110-delete-nodes-and-return-forest/) | Medium |
+| [1242-web-crawler-multithreaded](https://github.com/yashladd/leetcode-solutions/tree/main/1242-web-crawler-multithreaded/) | Medium |
 | [1302-deepest-leaves-sum](https://github.com/yashladd/leetcode-solutions/tree/main/1302-deepest-leaves-sum/) | Medium |
 | [1644-lowest-common-ancestor-of-a-binary-tree-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1644-lowest-common-ancestor-of-a-binary-tree-ii/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
@@ -334,6 +335,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0815-bus-routes](https://github.com/yashladd/leetcode-solutions/tree/main/0815-bus-routes/) | Hard |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [1129-shortest-path-with-alternating-colors](https://github.com/yashladd/leetcode-solutions/tree/main/1129-shortest-path-with-alternating-colors/) | Medium |
+| [1242-web-crawler-multithreaded](https://github.com/yashladd/leetcode-solutions/tree/main/1242-web-crawler-multithreaded/) | Medium |
 | [1293-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/yashladd/leetcode-solutions/tree/main/1293-shortest-path-in-a-grid-with-obstacles-elimination/) | Hard |
 | [1302-deepest-leaves-sum](https://github.com/yashladd/leetcode-solutions/tree/main/1302-deepest-leaves-sum/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
@@ -459,4 +461,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [1723-find-minimum-time-to-finish-all-jobs](https://github.com/yashladd/leetcode-solutions/tree/main/1723-find-minimum-time-to-finish-all-jobs/) | Hard |
+## Concurrency
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1242-web-crawler-multithreaded](https://github.com/yashladd/leetcode-solutions/tree/main/1242-web-crawler-multithreaded/) | Medium |
 <!---LeetCode Topics End-->
