@@ -70,6 +70,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0398-random-pick-index](https://github.com/yashladd/leetcode-solutions/tree/main/0398-random-pick-index/) | Medium |
 | [0525-contiguous-array](https://github.com/yashladd/leetcode-solutions/tree/main/0525-contiguous-array/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
+| [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
 | [0763-partition-labels](https://github.com/yashladd/leetcode-solutions/tree/main/0763-partition-labels/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0811-subdomain-visit-count](https://github.com/yashladd/leetcode-solutions/tree/main/0811-subdomain-visit-count/) | Medium |
@@ -98,6 +99,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0969-pancake-sorting](https://github.com/yashladd/leetcode-solutions/tree/main/0969-pancake-sorting/) | Medium |
 | [1258-synonymous-sentences](https://github.com/yashladd/leetcode-solutions/tree/main/1258-synonymous-sentences/) | Medium |
@@ -127,6 +129,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0443-string-compression](https://github.com/yashladd/leetcode-solutions/tree/main/0443-string-compression/) | Medium |
+| [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
 | [0763-partition-labels](https://github.com/yashladd/leetcode-solutions/tree/main/0763-partition-labels/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0811-subdomain-visit-count](https://github.com/yashladd/leetcode-solutions/tree/main/0811-subdomain-visit-count/) | Medium |
@@ -355,6 +358,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0032-longest-valid-parentheses](https://github.com/yashladd/leetcode-solutions/tree/main/0032-longest-valid-parentheses/) | Hard |
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
+| [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1106-parsing-a-boolean-expression](https://github.com/yashladd/leetcode-solutions/tree/main/1106-parsing-a-boolean-expression/) | Hard |
 | [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1209-remove-all-adjacent-duplicates-in-string-ii/) | Medium |
