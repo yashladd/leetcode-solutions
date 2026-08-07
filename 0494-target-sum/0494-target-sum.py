@@ -1,21 +1,16 @@
+from collections import defaultdict
+
 class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
+        # dp stores {current_sum: number_of_ways}
+        dp = defaultdict(int)
+        dp[0] = 1  # Base case: 1 way to get sum 0 using 0 elements
         
-        n = len(nums)
-        @cache
-        def f(idx, t):
-            if idx == 0:
-                ways = 0
-                if t - nums[idx] == 0:
-                    ways += 1
-                if t + nums[idx] == 0:
-                    ways += 1
-                return ways
+        for num in nums:
+            next_dp = defaultdict(int)
+            for curr_sum, count in dp.items():
+                next_dp[curr_sum + num] += count
+                next_dp[curr_sum - num] += count
+            dp = next_dp  # Move to the next "row"
             
-            pos =  f(idx-1, t - nums[idx])
-            neg =  f(idx-1, t + nums[idx])
-            
-            return pos + neg
-        
-        return f(n-1, target)
-        
+        return dp[target]
