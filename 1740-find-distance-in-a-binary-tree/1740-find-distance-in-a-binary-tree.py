@@ -6,37 +6,31 @@
 #         self.right = right
 class Solution:
     def findDistance(self, root: Optional[TreeNode], p: int, q: int) -> int:
-
-        def populate_reverse_path(node, path_info, target):
+        
+        def _build(node, t, out):
             if not node:
                 return False
 
-            if node.val == target:
-                path_info.append(node.val)
+            if node.val == t:
+                out.append(node.val)
                 return True
 
-            left_found = populate_reverse_path(node.left, path_info, target)
-            right_found = populate_reverse_path(node.right, path_info, target)
+            l_f = _build(node.left, t, out)
+            r_f = _build(node.right, t, out)
 
-
-            if left_found or right_found:
-                path_info.append(node.val)
+            if l_f or r_f:
+                out.append(node.val)
                 return True
 
             return False
 
+        one, two = [], []
 
-        p_path = []
-
-        populate_reverse_path(root, p_path, p)
-
-        q_path = []
-        populate_reverse_path(root, q_path, q)
-
-        while p_path and q_path and p_path[-1] == q_path[-1]:
-            p_path.pop()
-            q_path.pop()
+        _build(root, p, one)
+        _build(root, q, two)
 
 
-        return len(p_path) + len(q_path)
+        while one and two and one[-1] == two[-1]: one.pop(), two.pop()
 
+        return len(one) + len(two)
+                
