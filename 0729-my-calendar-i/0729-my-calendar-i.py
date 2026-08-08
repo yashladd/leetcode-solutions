@@ -1,21 +1,41 @@
-from sortedcontainers import SortedList
+# from __future__ import annotations
+from dataclasses import dataclass
+@dataclass
+class Node:
+    start: int
+    end: int
+    left: Node | None = None
+    right: Node | None = None
+
+
 class MyCalendar:
 
     def __init__(self):
-        self.events = SortedList()
+        self.root = None
+        
 
     def book(self, startTime: int, endTime: int) -> bool:
-        if not len(self.events):
-            self.events.add((startTime, endTime))
+        if not self.root:
+            self.root = Node(startTime, endTime)
             return True
 
-        idx = bisect_right(self.events, (startTime, endTime))
+        curr = self.root
 
-        if (idx - 1 >= 0 and self.events[idx-1][1] > startTime) or (idx < len(self.events) and self.events[idx][0] < endTime):
-            return False
+        while True:
+            if endTime <= curr.start:
+                if not curr.left:
+                    curr.left = Node(startTime, endTime)
+                    return True
+                curr = curr.left
+            elif startTime >= curr.end:
+                if not curr.right:
+                    curr.right = Node(startTime, endTime)
+                    return True
+                curr = curr.right
+            else:
+                return False
 
-        self.events.add((startTime, endTime))
-        return True
+        
         
 
 
