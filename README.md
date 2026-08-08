@@ -33,6 +33,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
+| [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0811-subdomain-visit-count](https://github.com/yashladd/leetcode-solutions/tree/main/0811-subdomain-visit-count/) | Medium |
 | [0815-bus-routes](https://github.com/yashladd/leetcode-solutions/tree/main/0815-bus-routes/) | Hard |
@@ -210,6 +211,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 | [0715-range-module](https://github.com/yashladd/leetcode-solutions/tree/main/0715-range-module/) | Hard |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
+| [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
 ## Hash Function
 | Problem Name | Difficulty |
@@ -301,6 +303,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
+| [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/yashladd/leetcode-solutions/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
@@ -412,11 +415,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0715-range-module](https://github.com/yashladd/leetcode-solutions/tree/main/0715-range-module/) | Hard |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
+| [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
 ## Prefix Sum
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0525-contiguous-array](https://github.com/yashladd/leetcode-solutions/tree/main/0525-contiguous-array/) | Medium |
+| [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 | [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2281-sum-of-total-strength-of-wizards](https://github.com/yashladd/leetcode-solutions/tree/main/2281-sum-of-total-strength-of-wizards/) | Hard |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
@@ -448,6 +453,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0715-range-module](https://github.com/yashladd/leetcode-solutions/tree/main/0715-range-module/) | Hard |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
+| [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
