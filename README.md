@@ -22,6 +22,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0239-sliding-window-maximum](https://github.com/yashladd/leetcode-solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0403-frog-jump](https://github.com/yashladd/leetcode-solutions/tree/main/0403-frog-jump/) | Hard |
@@ -67,6 +68,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0160-intersection-of-two-linked-lists](https://github.com/yashladd/leetcode-solutions/tree/main/0160-intersection-of-two-linked-lists/) | Easy |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0398-random-pick-index](https://github.com/yashladd/leetcode-solutions/tree/main/0398-random-pick-index/) | Medium |
@@ -206,6 +208,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0146-lru-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0146-lru-cache/) | Medium |
 | [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
+| [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
@@ -282,6 +285,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0174-dungeon-game](https://github.com/yashladd/leetcode-solutions/tree/main/0174-dungeon-game/) | Hard |
 | [0221-maximal-square](https://github.com/yashladd/leetcode-solutions/tree/main/0221-maximal-square/) | Medium |
+| [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
 | [0498-diagonal-traverse](https://github.com/yashladd/leetcode-solutions/tree/main/0498-diagonal-traverse/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [1293-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/yashladd/leetcode-solutions/tree/main/1293-shortest-path-in-a-grid-with-obstacles-elimination/) | Hard |
@@ -324,6 +328,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0068-text-justification](https://github.com/yashladd/leetcode-solutions/tree/main/0068-text-justification/) | Hard |
+| [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
 | [0498-diagonal-traverse](https://github.com/yashladd/leetcode-solutions/tree/main/0498-diagonal-traverse/) | Medium |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/yashladd/leetcode-solutions/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
 ## Greedy
