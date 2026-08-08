@@ -1,26 +1,33 @@
-from sortedcontainers import SortedList
+from collections import defaultdict
 
 class MyCalendarTwo:
     def __init__(self):
-        # We use a SortedList just like in My Calendar III
-        self.events = SortedList()
+        # Stores the net change of active bookings at any given timestamp
+        self.timeline = defaultdict(int)
 
     def book(self, start: int, end: int) -> bool:
-        # 1. Temporarily add the new event
-        self.events.add((start, 1))
-        self.events.add((end, -1))
+        # 1. Temporarily log the new event
+        self.timeline[start] += 1
+        self.timeline[end] -= 1
         
         active_bookings = 0
         
-        # 2. Run the sweep line to check for triple bookings
-        for time, val in self.events:
-            active_bookings += val
+        # 2. Sweep through the timestamps in chronological order
+        for time in sorted(self.timeline.keys()):
+            active_bookings += self.timeline[time]
             
-            # 3. If we hit a triple booking, ROLLBACK and fail
+            # 3. If we hit a triple booking, ROLLBACK and return False
             if active_bookings >= 3:
-                self.events.remove((start, 1))
-                self.events.remove((end, -1))
+                self.timeline[start] -= 1
+                self.timeline[end] += 1
+                
+                # Cleanup zero-values to save memory (optional but shows good habits)
+                if self.timeline[start] == 0:
+                    del self.timeline[start]
+                if self.timeline[end] == 0:
+                    del self.timeline[end]
+                    
                 return False
                 
-        # 4. If we made it through safely, keep the booking!
+        # 4. If the loop finishes safely, the booking is valid!
         return True
