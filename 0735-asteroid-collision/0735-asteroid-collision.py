@@ -1,29 +1,19 @@
 class Solution:
-    def asteroidCollision(self, a: List[int]) -> List[int]:
-        """
-
-        """
-        i = 0
-        res = []
-        n = len(a)
+    def asteroidCollision(self, asteroids: List[int]) -> List[int]:
         stk = []
-        while i < n and a[i] < 0:
-            res.append(a[i])
-            i += 1
 
-        for j in range(i, n):
-            # Only collide if top of stack is Right (+) and current is Left (-)
-            while stk and stk[-1] > 0 and a[j] < 0:
-                prev = stk.pop()
-                if prev == abs(a[j]):
-                    break
-                elif prev > abs(a[j]):
-                    stk.append(prev)
-                    break
-            else:
-                stk.append(a[j])
+        for a in asteroids:
+            alive = True
+            while alive and stk and a < 0 < stk[-1]:
+                if stk[-1] < abs(a):
+                    stk.pop()
+                else:
+                    if stk[-1] == abs(a):
+                        stk.pop()
+                    alive = False
 
-        return res + stk
+            if alive:
+                stk.append(a)
 
+        return stk
 
-        
