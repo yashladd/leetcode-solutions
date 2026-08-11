@@ -1,44 +1,43 @@
 class Solution:
-    operators = "+-*/"
-
     def calculate(self, s: str) -> int:
-        state = {"s": s, "it": 0}   # mutable cursor shared across recursive calls
-        value, _ = self._calc(state)
-        return value
+        state = {"s": s, "it": 0}
+        val, _ = self._calc(state)
+        return val
 
-    def _update(self, op: str, v: int, stack: list) -> None:
+    def _update(self, op, stk, val):
         if op == "+":
-            stack.append(v)
+            stk.append(val)
         elif op == "-":
-            stack.append(-v)
+            stk.append(-val)
         elif op == "*":
-            stack.append(stack.pop() * v)
-        elif op == "/":
-            # int(a / b) truncates toward zero (python // floors, wrong for negatives)
-            stack.append(int(stack.pop() / v))
+            stk.append(stk.pop() * val)
+        else:
+            stk.append(int(stk.pop() / v))
 
-    def _calc(self, state: dict):
-        s = state["s"]
-        num, stack, sign = 0, [], "+"
-        it = state["it"]
 
+    def _calc(self, state):
+        s = state['s']
+        it = state['it']
+        num, stk, sign = 0, [], "+"
         while it < len(s):
             ch = s[it]
             if ch.isdigit():
                 num = num * 10 + int(ch)
-            elif ch in self.operators:
-                self._update(sign, num, stack)
-                num, sign = 0, ch
+            elif ch in "+-/*":
+                self._update(sign, stk, num)
+                num = 0
+                sign = ch
             elif ch == "(":
                 state["it"] = it + 1
-                num, j = self._calc(state)
-                it = j
+                num, next_it = self._calc(state)
+                it = next_it
             elif ch == ")":
-                self._update(sign, num, stack)
-                return sum(stack), it
-            # spaces fall through, no-op
+                self._update(sign, stk, num)
+                return sum(stk), it
             it += 1
 
         state["it"] = it
-        self._update(sign, num, stack)   # flush the trailing operand
-        return sum(stack), it
+        self._update(sign, stk, num)
+        return sum(stk), it
+
+        
