@@ -133,6 +133,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0072-edit-distance](https://github.com/yashladd/leetcode-solutions/tree/main/0072-edit-distance/) | Medium |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0224-basic-calculator](https://github.com/yashladd/leetcode-solutions/tree/main/0224-basic-calculator/) | Hard |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0443-string-compression](https://github.com/yashladd/leetcode-solutions/tree/main/0443-string-compression/) | Medium |
 | [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
@@ -298,6 +299,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0189-rotate-array](https://github.com/yashladd/leetcode-solutions/tree/main/0189-rotate-array/) | Medium |
+| [0224-basic-calculator](https://github.com/yashladd/leetcode-solutions/tree/main/0224-basic-calculator/) | Hard |
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0398-random-pick-index](https://github.com/yashladd/leetcode-solutions/tree/main/0398-random-pick-index/) | Medium |
@@ -376,6 +378,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0032-longest-valid-parentheses](https://github.com/yashladd/leetcode-solutions/tree/main/0032-longest-valid-parentheses/) | Hard |
+| [0224-basic-calculator](https://github.com/yashladd/leetcode-solutions/tree/main/0224-basic-calculator/) | Hard |
 | [0272-closest-binary-search-tree-value-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0272-closest-binary-search-tree-value-ii/) | Hard |
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 | [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
@@ -508,6 +511,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0224-basic-calculator](https://github.com/yashladd/leetcode-solutions/tree/main/0224-basic-calculator/) | Hard |
 | [1106-parsing-a-boolean-expression](https://github.com/yashladd/leetcode-solutions/tree/main/1106-parsing-a-boolean-expression/) | Hard |
 ## Knapsack Problem
 | Problem Name | Difficulty |
