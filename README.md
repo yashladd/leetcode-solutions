@@ -35,6 +35,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
+| [0735-asteroid-collision](https://github.com/yashladd/leetcode-solutions/tree/main/0735-asteroid-collision/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0811-subdomain-visit-count](https://github.com/yashladd/leetcode-solutions/tree/main/0811-subdomain-visit-count/) | Medium |
 | [0815-bus-routes](https://github.com/yashladd/leetcode-solutions/tree/main/0815-bus-routes/) | Hard |
@@ -334,6 +335,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0068-text-justification](https://github.com/yashladd/leetcode-solutions/tree/main/0068-text-justification/) | Hard |
 | [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
 | [0498-diagonal-traverse](https://github.com/yashladd/leetcode-solutions/tree/main/0498-diagonal-traverse/) | Medium |
+| [0735-asteroid-collision](https://github.com/yashladd/leetcode-solutions/tree/main/0735-asteroid-collision/) | Medium |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/yashladd/leetcode-solutions/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
@@ -377,6 +379,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0272-closest-binary-search-tree-value-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0272-closest-binary-search-tree-value-ii/) | Hard |
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 | [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
+| [0735-asteroid-collision](https://github.com/yashladd/leetcode-solutions/tree/main/0735-asteroid-collision/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [1106-parsing-a-boolean-expression](https://github.com/yashladd/leetcode-solutions/tree/main/1106-parsing-a-boolean-expression/) | Hard |
 | [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1209-remove-all-adjacent-duplicates-in-string-ii/) | Medium |
