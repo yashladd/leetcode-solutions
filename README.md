@@ -546,4 +546,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0126-word-ladder-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0126-word-ladder-ii/) | Hard |
 | [0127-word-ladder](https://github.com/yashladd/leetcode-solutions/tree/main/0127-word-ladder/) | Hard |
+## Brute-Force Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 <!---LeetCode Topics End-->
