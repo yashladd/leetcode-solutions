@@ -7,6 +7,8 @@ class Solution:
 
         for end_idx in range(N-1, -1, -1):
             for start_idx in range(end_idx+1):
+                if not can_break[end_idx+1]:
+                    continue
                 word = s[start_idx: end_idx+1]
                 if word in vocab:
                     if can_break[end_idx+1]:
