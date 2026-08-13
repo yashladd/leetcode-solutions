@@ -1,26 +1,15 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        N = len(s)
+        can_break = [False] * (N+1)
+        can_break[N] = True
         vocab = set(wordDict)
-        cache = {}
-        return self._can_break(0, s, vocab, cache)
 
+        for end_idx in range(N-1, -1, -1):
+            for start_idx in range(end_idx+1):
+                word = s[start_idx: end_idx+1]
+                if word in vocab:
+                    if can_break[end_idx+1]:
+                        can_break[start_idx] = True
 
-    def _can_break(self, idx: int, s: str, vocab: set[str], cache: dict[int, bool]):
-        if idx >= len(s):
-            return True
-
-        if idx in cache:
-            return cache[idx]
-
-        for break_idx in range(idx+1, len(s)+1):
-            broken_word = s[idx: break_idx]
-            if broken_word in vocab:
-                is_success =  self._can_break(break_idx, s, vocab, cache)
-                if is_success:
-                    cache[idx] = True
-                    return True
-        cache[idx] = False
-        return False
-
-
-
+        return can_break[0]
