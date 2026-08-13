@@ -1,19 +1,26 @@
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
-        wl = set(wordList)
-        q = deque([(beginWord, 1)])
-        see = set()
-        see.add(beginWord)
-        while q:
-            w, d = q.popleft()
-            if w == endWord:
-                return d
-            for i in range(len(w)):
-                for ch in list(map(chr, range(ord('a'), ord('a') + 26))):
-                    t = w[:i] + ch + w[i+1:] 
-                    if t in wl and t not in see:
-                        q.append((t, d + 1))
-                        see.add(t)
-        
-        return 0
+        word_set=set(wordList)
+
+        if endWord not in word_set:
+            return 0
+
+    
+        frontier = deque([(beginWord, 1)])
+        seen = {beginWord}
+        while frontier:
+            curr_word, steps = frontier.popleft()
+
             
+            for i, ch in enumerate(curr_word):
+                for letter in string.ascii_lowercase:
+                    next_word = curr_word[:i] + letter + curr_word[i+1:]
+                    if next_word == endWord:
+                        return steps + 1
+                    if next_word in word_set and next_word not in seen:
+                        seen.add(next_word)
+                        frontier.append((next_word, steps + 1))
+
+        return 0
+
+
