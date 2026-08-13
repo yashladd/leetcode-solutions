@@ -1,45 +1,55 @@
 class Solution:
-    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
-        wordSet = set(wordList)
-        if endWord not in wordSet:
+    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
+        word_set = set(wordList)
+
+        if (endWord not in word_set or not endWord or not beginWord or len(endWord) != len(beginWord)):
             return []
-        
-        # BFS setup
-        queue = deque([beginWord])
-        prev_words = defaultdict(list)  # for reconstructing paths
-        distance = {beginWord: 0}
+
+        level = deque([(beginWord)])
+
+        prev_words = defaultdict(list)
         found = False
-        word_len = len(beginWord)
-        
-        while queue and not found:
-            next_level_visited = set()
-            for _ in range(len(queue)):
-                current = queue.popleft()
-                for i in range(word_len):
-                    for c in "abcdefghijklmnopqrstuvwxyz":
-                        if c == current[i]:
+        while level and not found:
+            level_visited = set()
+            next_level = deque()
+            sz = len(level)
+            for _ in range(sz):
+                curr_word = level.popleft()
+
+                for i, ch in enumerate(curr_word):
+                    for letter in string.ascii_lowercase:
+                        if ch == letter:
                             continue
-                        next_word = current[:i] + c + current[i+1:]
-                        if next_word in wordSet:
-                            if next_word not in distance:
-                                distance[next_word] = distance[current] + 1
-                                queue.append(next_word)
-                                next_level_visited.add(next_word)
-                            if distance[next_word] == distance[current] + 1:
-                                prev_words[next_word].append(current)
+
+                        next_word = curr_word[:i] + letter + curr_word[i+1:]
+
+                        if next_word in word_set:
                             if next_word == endWord:
                                 found = True
-            wordSet -= next_level_visited
+                            prev_words[next_word].append(curr_word)
+                            if next_word not in level_visited:
+                                level_visited.add(next_word)
+                                next_level.append((next_word))
+
+            level = next_level
+            word_set -= level_visited
+
         
-        # Recursive backtracking to build paths
+        res = []
+
+        print(prev_words)
+
         def backtrack(word, path):
+            print(path)
             if word == beginWord:
-                result.append([beginWord] + path[::-1])
-                return
+                sequence = path + [beginWord]
+                res.append(sequence[::-1])
+                return 
+
             for prev in prev_words[word]:
                 backtrack(prev, path + [word])
-        
-        result = []
+
         if found:
             backtrack(endWord, [])
-        return result
+
+        return res
