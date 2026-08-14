@@ -1,26 +1,23 @@
+from collections import defaultdict
+
 class MyCalendarThree:
-
     def __init__(self):
-        self.events = SortedList()
+        # Stores the net change of active bookings at any given timestamp
+        self.timeline = defaultdict(int)
+
+    def book(self, start: int, end: int) -> bool:
+        # 1. Temporarily log the new event
+        self.timeline[start] += 1
+        self.timeline[end] -= 1
         
-
-    def book(self, start: int, end: int) -> int:
-        cnt = 0
-        self.events.add((start, 1))
-        self.events.add((end, -1))
-        k = 0
-        for time, val in self.events:
-            # print(time, val)
-            cnt += val
-            k = max(k, cnt)
-
-        return k
-
-
-
-
-
-
-# Your MyCalendarThree object will be instantiated and called as such:
-# obj = MyCalendarThree()
-# param_1 = obj.book(startTime,endTime)
+        max_bookings = 0
+        active_bookings = 0
+        # 2. Sweep through the timestamps in chronological order
+        for time in sorted(self.timeline.keys()):
+            active_bookings += self.timeline[time]
+            
+            # 3. If we hit a triple booking, ROLLBACK and return False
+            max_bookings = max(max_bookings, active_bookings)
+                
+        # 4. If the loop finishes safely, the booking is valid!
+        return max_bookings
