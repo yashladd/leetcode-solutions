@@ -17,8 +17,7 @@ class DS:
         return True
 
     def find(self, u):
-        p_u = self._p[u]
-        if u == p_u:
+        if u == self._p[u]:
             return u
         self._p[u] = self.find(self._p[u])
         return self._p[u]
