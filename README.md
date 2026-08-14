@@ -11,6 +11,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0045-jump-game-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0045-jump-game-ii/) | Medium |
 | [0055-jump-game](https://github.com/yashladd/leetcode-solutions/tree/main/0055-jump-game/) | Medium |
 | [0068-text-justification](https://github.com/yashladd/leetcode-solutions/tree/main/0068-text-justification/) | Hard |
+| [0085-maximal-rectangle](https://github.com/yashladd/leetcode-solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0152-maximum-product-subarray](https://github.com/yashladd/leetcode-solutions/tree/main/0152-maximum-product-subarray/) | Medium |
@@ -166,6 +167,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0045-jump-game-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0045-jump-game-ii/) | Medium |
 | [0055-jump-game](https://github.com/yashladd/leetcode-solutions/tree/main/0055-jump-game/) | Medium |
 | [0072-edit-distance](https://github.com/yashladd/leetcode-solutions/tree/main/0072-edit-distance/) | Medium |
+| [0085-maximal-rectangle](https://github.com/yashladd/leetcode-solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0152-maximum-product-subarray](https://github.com/yashladd/leetcode-solutions/tree/main/0152-maximum-product-subarray/) | Medium |
@@ -300,6 +302,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0085-maximal-rectangle](https://github.com/yashladd/leetcode-solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0174-dungeon-game](https://github.com/yashladd/leetcode-solutions/tree/main/0174-dungeon-game/) | Hard |
 | [0221-maximal-square](https://github.com/yashladd/leetcode-solutions/tree/main/0221-maximal-square/) | Medium |
 | [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
@@ -394,6 +397,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0032-longest-valid-parentheses](https://github.com/yashladd/leetcode-solutions/tree/main/0032-longest-valid-parentheses/) | Hard |
+| [0085-maximal-rectangle](https://github.com/yashladd/leetcode-solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0224-basic-calculator](https://github.com/yashladd/leetcode-solutions/tree/main/0224-basic-calculator/) | Hard |
 | [0272-closest-binary-search-tree-value-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0272-closest-binary-search-tree-value-ii/) | Hard |
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
@@ -412,6 +416,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0085-maximal-rectangle](https://github.com/yashladd/leetcode-solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
 | [2281-sum-of-total-strength-of-wizards](https://github.com/yashladd/leetcode-solutions/tree/main/2281-sum-of-total-strength-of-wizards/) | Hard |
