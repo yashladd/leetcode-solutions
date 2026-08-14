@@ -30,17 +30,13 @@ class Solution:
         logs.sort()
 
         ds = DS(n)
-
+        group_size = n
         for t, u, v in logs:
             res = ds.union(u, v)
-            # print(ds._p)
-            # print(ds._s)
             if res:
-                u_s = ds.getSize(ds.find(u))
-                v_s = ds.getSize(ds.find(v))
-
-                if u_s == n or v_s == n:
-                    return t
+                group_size -= 1
+            if group_size == 1:
+                return t
 
         return -1
         
