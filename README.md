@@ -60,6 +60,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2001-number-of-pairs-of-interchangeable-rectangles](https://github.com/yashladd/leetcode-solutions/tree/main/2001-number-of-pairs-of-interchangeable-rectangles/) | Medium |
 | [2144-minimum-cost-of-buying-candies-with-discount](https://github.com/yashladd/leetcode-solutions/tree/main/2144-minimum-cost-of-buying-candies-with-discount/) | Easy |
 | [2281-sum-of-total-strength-of-wizards](https://github.com/yashladd/leetcode-solutions/tree/main/2281-sum-of-total-strength-of-wizards/) | Hard |
+| [2560-house-robber-iv](https://github.com/yashladd/leetcode-solutions/tree/main/2560-house-robber-iv/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
 | [3660-jump-game-ix](https://github.com/yashladd/leetcode-solutions/tree/main/3660-jump-game-ix/) | Medium |
@@ -190,6 +191,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1723-find-minimum-time-to-finish-all-jobs](https://github.com/yashladd/leetcode-solutions/tree/main/1723-find-minimum-time-to-finish-all-jobs/) | Hard |
 | [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
+| [2560-house-robber-iv](https://github.com/yashladd/leetcode-solutions/tree/main/2560-house-robber-iv/) | Medium |
 | [3660-jump-game-ix](https://github.com/yashladd/leetcode-solutions/tree/main/3660-jump-game-ix/) | Medium |
 | [3840-house-robber-v](https://github.com/yashladd/leetcode-solutions/tree/main/3840-house-robber-v/) | Medium |
 ## Trie
@@ -341,6 +343,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/yashladd/leetcode-solutions/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
+| [2560-house-robber-iv](https://github.com/yashladd/leetcode-solutions/tree/main/2560-house-robber-iv/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
@@ -375,6 +378,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
 | [2144-minimum-cost-of-buying-candies-with-discount](https://github.com/yashladd/leetcode-solutions/tree/main/2144-minimum-cost-of-buying-candies-with-discount/) | Easy |
 | [2384-largest-palindromic-number](https://github.com/yashladd/leetcode-solutions/tree/main/2384-largest-palindromic-number/) | Medium |
+| [2560-house-robber-iv](https://github.com/yashladd/leetcode-solutions/tree/main/2560-house-robber-iv/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
 ## Counting
 | Problem Name | Difficulty |
