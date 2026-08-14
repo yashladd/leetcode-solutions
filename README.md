@@ -63,6 +63,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
 | [3660-jump-game-ix](https://github.com/yashladd/leetcode-solutions/tree/main/3660-jump-game-ix/) | Medium |
+| [3840-house-robber-v](https://github.com/yashladd/leetcode-solutions/tree/main/3840-house-robber-v/) | Medium |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/yashladd/leetcode-solutions/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
@@ -190,6 +191,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
 | [3660-jump-game-ix](https://github.com/yashladd/leetcode-solutions/tree/main/3660-jump-game-ix/) | Medium |
+| [3840-house-robber-v](https://github.com/yashladd/leetcode-solutions/tree/main/3840-house-robber-v/) | Medium |
 ## Trie
 | Problem Name | Difficulty |
 | ------- | ------- |
