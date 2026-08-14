@@ -263,6 +263,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1644-lowest-common-ancestor-of-a-binary-tree-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1644-lowest-common-ancestor-of-a-binary-tree-ii/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
+| [2477-minimum-fuel-cost-to-report-to-the-capital](https://github.com/yashladd/leetcode-solutions/tree/main/2477-minimum-fuel-cost-to-report-to-the-capital/) | Medium |
 | [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/3319-k-th-largest-perfect-subtree-size-in-binary-tree/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
@@ -285,6 +286,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1644-lowest-common-ancestor-of-a-binary-tree-ii](https://github.com/yashladd/leetcode-solutions/tree/main/1644-lowest-common-ancestor-of-a-binary-tree-ii/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
+| [2477-minimum-fuel-cost-to-report-to-the-capital](https://github.com/yashladd/leetcode-solutions/tree/main/2477-minimum-fuel-cost-to-report-to-the-capital/) | Medium |
 | [2685-count-the-number-of-complete-components](https://github.com/yashladd/leetcode-solutions/tree/main/2685-count-the-number-of-complete-components/) | Medium |
 | [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/3319-k-th-largest-perfect-subtree-size-in-binary-tree/) | Medium |
 ## Binary Tree
@@ -404,6 +406,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1302-deepest-leaves-sum](https://github.com/yashladd/leetcode-solutions/tree/main/1302-deepest-leaves-sum/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
+| [2477-minimum-fuel-cost-to-report-to-the-capital](https://github.com/yashladd/leetcode-solutions/tree/main/2477-minimum-fuel-cost-to-report-to-the-capital/) | Medium |
 | [2685-count-the-number-of-complete-components](https://github.com/yashladd/leetcode-solutions/tree/main/2685-count-the-number-of-complete-components/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
@@ -441,6 +444,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0990-satisfiability-of-equality-equations](https://github.com/yashladd/leetcode-solutions/tree/main/0990-satisfiability-of-equality-equations/) | Medium |
 | [1129-shortest-path-with-alternating-colors](https://github.com/yashladd/leetcode-solutions/tree/main/1129-shortest-path-with-alternating-colors/) | Medium |
 | [1136-parallel-courses](https://github.com/yashladd/leetcode-solutions/tree/main/1136-parallel-courses/) | Medium |
+| [2477-minimum-fuel-cost-to-report-to-the-capital](https://github.com/yashladd/leetcode-solutions/tree/main/2477-minimum-fuel-cost-to-report-to-the-capital/) | Medium |
 | [2685-count-the-number-of-complete-components](https://github.com/yashladd/leetcode-solutions/tree/main/2685-count-the-number-of-complete-components/) | Medium |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
