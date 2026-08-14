@@ -423,6 +423,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [0990-satisfiability-of-equality-equations](https://github.com/yashladd/leetcode-solutions/tree/main/0990-satisfiability-of-equality-equations/) | Medium |
 | [1129-shortest-path-with-alternating-colors](https://github.com/yashladd/leetcode-solutions/tree/main/1129-shortest-path-with-alternating-colors/) | Medium |
+| [1136-parallel-courses](https://github.com/yashladd/leetcode-solutions/tree/main/1136-parallel-courses/) | Medium |
 | [2685-count-the-number-of-complete-components](https://github.com/yashladd/leetcode-solutions/tree/main/2685-count-the-number-of-complete-components/) | Medium |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
@@ -495,6 +496,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0207-course-schedule](https://github.com/yashladd/leetcode-solutions/tree/main/0207-course-schedule/) | Medium |
 | [0210-course-schedule-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0210-course-schedule-ii/) | Medium |
+| [1136-parallel-courses](https://github.com/yashladd/leetcode-solutions/tree/main/1136-parallel-courses/) | Medium |
 ## Doubly-Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -562,4 +564,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
+## Directed Acyclic Graph
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1136-parallel-courses](https://github.com/yashladd/leetcode-solutions/tree/main/1136-parallel-courses/) | Medium |
 <!---LeetCode Topics End-->
