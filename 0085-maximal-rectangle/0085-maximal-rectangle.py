@@ -1,28 +1,40 @@
 class Solution:
-    def maximalRectangle(self, a: List[List[str]]) -> int:
-        h = list(map(int, a[0]))
-        n, m = len(a), len(a[0])
-        res = self.largest(h)
-        for r in range(1, n):
-            for c in range(m):
-                h[c] = h[c] + 1 if a[r][c] == "1" else 0
-            res = max(res, self.largest(h))
+    def maximalRectangle(self, A: List[List[str]]) -> int:
+        N, M = len(A), len(A[0])
 
-        return res
 
-    def largest(self, a):
-        n = len(a)
-        stk = []
-        res = 0
-        for r in range(n):
-            l = r
-            while stk and stk[-1][1] > a[r]:
-                l, ph = stk.pop()
-                res = max(res, (r-l) * ph)
-            stk.append((l, a[r]))
+        def lar_rec(arr):
+            n = len(arr)
 
-        while stk:
-            l, h = stk.pop()
-            res = max(res, (n-l) * h)
+            stk = []
+            maxi  =0
+            for r, v in enumerate(arr):
+                l = r
+                while stk and stk[-1][0] > v:
+                    ph, pi = stk.pop()
+                    maxi = max(maxi, ph * (r - pi))
+                    l = pi
 
-        return res 
+                stk.append((v, l))
+
+            while stk:
+                ph, pi = stk.pop()
+                maxi = max(maxi, ph * (n-pi))
+
+            return maxi
+
+
+        prev = list(map(int, A[0]))
+
+        maxi = lar_rec(prev)
+
+        for r in range(1, N):
+            curr = [0] * M
+            for c  in range(M):
+                if A[r][c] == "1":
+                    curr[c] = 1 + prev[c]
+
+            maxi = max(maxi, lar_rec(curr))
+            prev = curr
+
+        return maxi
