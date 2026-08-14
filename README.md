@@ -42,6 +42,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0811-subdomain-visit-count](https://github.com/yashladd/leetcode-solutions/tree/main/0811-subdomain-visit-count/) | Medium |
 | [0815-bus-routes](https://github.com/yashladd/leetcode-solutions/tree/main/0815-bus-routes/) | Hard |
 | [0849-maximize-distance-to-closest-person](https://github.com/yashladd/leetcode-solutions/tree/main/0849-maximize-distance-to-closest-person/) | Medium |
+| [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [0969-pancake-sorting](https://github.com/yashladd/leetcode-solutions/tree/main/0969-pancake-sorting/) | Medium |
 | [0990-satisfiability-of-equality-equations](https://github.com/yashladd/leetcode-solutions/tree/main/0990-satisfiability-of-equality-equations/) | Medium |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
@@ -102,6 +103,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0003-longest-substring-without-repeating-characters](https://github.com/yashladd/leetcode-solutions/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0239-sliding-window-maximum](https://github.com/yashladd/leetcode-solutions/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0658-find-k-closest-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0658-find-k-closest-elements/) | Medium |
+| [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [1100-find-k-length-substrings-with-no-repeated-characters](https://github.com/yashladd/leetcode-solutions/tree/main/1100-find-k-length-substrings-with-no-repeated-characters/) | Medium |
 | [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
@@ -331,6 +333,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
+| [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [0887-super-egg-drop](https://github.com/yashladd/leetcode-solutions/tree/main/0887-super-egg-drop/) | Hard |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/yashladd/leetcode-solutions/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
@@ -439,6 +442,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0658-find-k-closest-elements/) | Medium |
+| [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
 ## Shortest Path
 | Problem Name | Difficulty |
@@ -448,10 +452,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/yashladd/leetcode-solutions/tree/main/0239-sliding-window-maximum/) | Hard |
+| [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 ## Monotonic Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/yashladd/leetcode-solutions/tree/main/0239-sliding-window-maximum/) | Hard |
+| [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 ## Ordered Set
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -464,6 +470,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0525-contiguous-array](https://github.com/yashladd/leetcode-solutions/tree/main/0525-contiguous-array/) | Medium |
 | [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
+| [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2281-sum-of-total-strength-of-wizards](https://github.com/yashladd/leetcode-solutions/tree/main/2281-sum-of-total-strength-of-wizards/) | Hard |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
