@@ -1,12 +1,16 @@
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        n = len(nums)
-        lis = []
-        lis.append(nums[0])
-        for i in range(1, n):
-            if nums[i] > lis[-1]:
-                lis.append(nums[i])
-            else:
-                idx = bisect.bisect_left(lis, nums[i])
-                lis[idx] = nums[i]
-        return len(lis)
+        if not nums:
+            return 0
+            
+        # Initialize a 1D DP array with 1s
+        dp = [1] * len(nums)
+        
+        # Build the DP array
+        for i in range(1, len(nums)):
+            for j in range(i):
+                if nums[i] > nums[j]:
+                    dp[i] = max(dp[i], dp[j] + 1)
+                    
+        # The longest increasing subsequence could end at any index
+        return max(dp)
