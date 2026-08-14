@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/">2477. Minimum Fuel Cost to Report to the Capital</a></h2><h3>Medium</h3><hr><div><p>There is a tree (i.e., a connected, undirected graph with no cycles) structure country network consisting of <code>n</code> cities numbered from <code>0</code> to <code>n - 1</code> and exactly <code>n - 1</code> roads. The capital city is city <code>0</code>. You are given a 2D integer array <code>roads</code> where <code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> denotes that there exists a <strong>bidirectional road</strong> connecting cities <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code>.</p>
+<h2><a href="https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital">2477. Minimum Fuel Cost to Report to the Capital</a></h2><h3>Medium</h3><hr><p>There is a tree (i.e., a connected, undirected graph with no cycles) structure country network consisting of <code>n</code> cities numbered from <code>0</code> to <code>n - 1</code> and exactly <code>n - 1</code> roads. The capital city is city <code>0</code>. You are given a 2D integer array <code>roads</code> where <code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> denotes that there exists a <strong>bidirectional road</strong> connecting cities <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code>.</p>
 
 <p>There is a meeting for the representatives of each city. The meeting is in the capital city.</p>
 
@@ -10,8 +10,9 @@
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2022/09/22/a4c380025e3ff0c379525e96a7d63a3.png" style="width: 303px; height: 332px;">
-<pre><strong>Input:</strong> roads = [[0,1],[0,2],[0,3]], seats = 5
+<img alt="" src="https://assets.leetcode.com/uploads/2022/09/22/a4c380025e3ff0c379525e96a7d63a3.png" style="width: 303px; height: 332px;" />
+<pre>
+<strong>Input:</strong> roads = [[0,1],[0,2],[0,3]], seats = 5
 <strong>Output:</strong> 3
 <strong>Explanation:</strong> 
 - Representative<sub>1</sub> goes directly to the capital with 1 liter of fuel.
@@ -22,8 +23,9 @@ It can be proven that 3 is the minimum number of liters of fuel needed.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2022/11/16/2.png" style="width: 274px; height: 340px;">
-<pre><strong>Input:</strong> roads = [[3,1],[3,2],[1,0],[0,4],[0,5],[4,6]], seats = 2
+<img alt="" src="https://assets.leetcode.com/uploads/2022/11/16/2.png" style="width: 274px; height: 340px;" />
+<pre>
+<strong>Input:</strong> roads = [[3,1],[3,2],[1,0],[0,4],[0,5],[4,6]], seats = 2
 <strong>Output:</strong> 7
 <strong>Explanation:</strong> 
 - Representative<sub>2</sub> goes directly to city 3 with 1 liter of fuel.
@@ -38,8 +40,9 @@ It can be proven that 7 is the minimum number of liters of fuel needed.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2022/09/27/efcf7f7be6830b8763639cfd01b690a.png" style="width: 108px; height: 86px;">
-<pre><strong>Input:</strong> roads = [], seats = 1
+<img alt="" src="https://assets.leetcode.com/uploads/2022/09/27/efcf7f7be6830b8763639cfd01b690a.png" style="width: 108px; height: 86px;" />
+<pre>
+<strong>Input:</strong> roads = [], seats = 1
 <strong>Output:</strong> 0
 <strong>Explanation:</strong> No representatives need to travel to the capital city.
 </pre>
@@ -56,4 +59,3 @@ It can be proven that 7 is the minimum number of liters of fuel needed.
 	<li><code>roads</code> represents a valid tree.</li>
 	<li><code>1 &lt;= seats &lt;= 10<sup>5</sup></code></li>
 </ul>
-</div>
