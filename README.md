@@ -84,6 +84,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0398-random-pick-index](https://github.com/yashladd/leetcode-solutions/tree/main/0398-random-pick-index/) | Medium |
+| [0460-lfu-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0460-lfu-cache/) | Hard |
 | [0525-contiguous-array](https://github.com/yashladd/leetcode-solutions/tree/main/0525-contiguous-array/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 | [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
@@ -227,6 +228,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0061-rotate-list](https://github.com/yashladd/leetcode-solutions/tree/main/0061-rotate-list/) | Medium |
 | [0146-lru-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0146-lru-cache/) | Medium |
 | [0160-intersection-of-two-linked-lists](https://github.com/yashladd/leetcode-solutions/tree/main/0160-intersection-of-two-linked-lists/) | Easy |
+| [0460-lfu-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0460-lfu-cache/) | Hard |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 | [1472-design-browser-history](https://github.com/yashladd/leetcode-solutions/tree/main/1472-design-browser-history/) | Medium |
 ## Design
@@ -237,6 +239,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
+| [0460-lfu-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0460-lfu-cache/) | Hard |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
 | [0715-range-module](https://github.com/yashladd/leetcode-solutions/tree/main/0715-range-module/) | Hard |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
@@ -534,6 +537,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0146-lru-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0146-lru-cache/) | Medium |
+| [0460-lfu-cache](https://github.com/yashladd/leetcode-solutions/tree/main/0460-lfu-cache/) | Hard |
 | [1472-design-browser-history](https://github.com/yashladd/leetcode-solutions/tree/main/1472-design-browser-history/) | Medium |
 ## Bracket Sequences
 | Problem Name | Difficulty |
