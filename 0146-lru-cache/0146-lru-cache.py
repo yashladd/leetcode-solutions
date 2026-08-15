@@ -1,72 +1,81 @@
 from dataclasses import dataclass
+
 @dataclass
 class Node:
     key: int
     val: int
-    next: Optional[Node] = None
-    prev: Optional[Node] = None
+    next: Node | None = None
+    prev: Node | None = None
+
+class LinkedList:
+    def __init__(self):
+        self._tail = Node(-1, -1)
+        self._head = Node(-1, -1)
+        self._tail.next = self._head
+        self._head.prev= self._tail
+
+    def add_front(self, node):
+        self._head.prev.next = node
+        node.prev = self._head.prev
+
+        node.next = self._head
+        self._head.prev = node
+
+    def delete_node(self, node):
+        node.prev.next = node.next
+        node.next.prev = node.prev
+
+        node.prev= None
+        node.next = None
+
+    def remove_last(self):
+        lru_node = self._tail.next
+        self._tail.next = lru_node.next
+        lru_node.next.prev = self._tail
+
+        lru_node.next = None
+        lru_node.prev = None
+
+        return lru_node
 
 
 class LRUCache:
 
     def __init__(self, capacity: int):
-        self._capacity = capacity
-        self._head = Node(-1, -1)
-        self._tail = Node(-1,-1)
-        self._head.next = self._tail
-        self._tail.prev = self._head
-        self._size = 0
-        self._cache = {}
+        self._cap: int = capacity
+        self._store: dict[int, Node] = {}
+        self._ordering: LinkedList = LinkedList()
 
-    def _move_to_end(self, node):
-        prev_node = node.prev
-        next_node = node.next
-        prev_node.next = next_node
-        next_node.prev = prev_node
+    def _key_accessed(self, key, node):
+        self._ordering.delete_node(node)
+        self._ordering.add_front(node)
 
-        tail_prev = self._tail.prev
-        tail_prev.next = node
-        node.prev = tail_prev
-        node.next = self._tail
-        self._tail.prev = node
+    def _evict(self):
+        return self._ordering.remove_last()
         
 
     def get(self, key: int) -> int:
-        if key not in self._cache:
-            return -1
-
-        node = self._cache[key]
-        self._move_to_end(node)
-        return node.val
-
-    def _evict_front(self):
-        node = self._head.next
-        self._head.next = self._head.next.next
-        self._head.next.prev = self._head
-        node.next = None
-        node.prev = None
-        return node
+        node = self._store.get(key)
+        if node is not None:
+            self._key_accessed(key, node)
+            return self._store[key].val;
+        return -1
         
+
     def put(self, key: int, value: int) -> None:
-        if key in self._cache:
-            node = self._cache[key]
+        node = self._store.get(key)
+        if node is not None:
             node.val = value
-            self._move_to_end(node)
-            return 
+            self._key_accessed(key, node)
+        else:
+            if len(self._store) == self._cap:
+                lru_node = self._evict()
+                del self._store[lru_node.key]
 
-        if len(self._cache) == self._capacity:
-            node = self._evict_front()
 
-            del self._cache[node.key]
-
-        node_to_insert = Node(key, value)
-        
-        self._tail.prev.next = node_to_insert
-        node_to_insert.prev = self._tail.prev
-        node_to_insert.next = self._tail
-        self._tail.prev = node_to_insert
-
-        self._cache[key] = node_to_insert
+            node = Node(key, value)
+            self._store[key] = node
+            self._ordering.add_front(node)
 
         
 
