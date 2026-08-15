@@ -4,54 +4,44 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-from enum import Enum, auto
+from enum import Enum
+
 class State(Enum):
-    HAS_CAMERA = auto()
-    SIBLING_COVERS = auto()
-    NEEDS_COVER = auto()
+    NEEDS_COVER = 0
+    HAS_CAMERA = 1
+    PARENT_COVERS = 2
 
+     
 class Solution:
-    """
-       1
-
-     2   3
-
-        4
-      2     5
-     2 
-        1   6   
-    """
     def minCameraCover(self, root: Optional[TreeNode]) -> int:
-        
-        def get_min_cameras(node: Optional[TreeNode]) -> int:
-            if not node:
-                return 0, State.SIBLING_COVERS
 
+        def dfs(node):
+            if not node:
+                return 0, State.PARENT_COVERS
 
             if not node.left and not node.right:
                 return 0, State.NEEDS_COVER
 
-
-            left_cameras, left_state = get_min_cameras(node.left)
-
-            right_cameras, right_state = get_min_cameras(node.right)
+            left_cameras, left_state = dfs(node.left)
+            right_cameras, right_state = dfs(node.right)
 
             if left_state == State.NEEDS_COVER or right_state == State.NEEDS_COVER:
                 return 1 + left_cameras + right_cameras, State.HAS_CAMERA
 
-            if left_state == State.HAS_CAMERA or right_state == State.HAS_CAMERA:
-                return left_cameras + right_cameras, State.SIBLING_COVERS
 
-            
+            if left_state == State.HAS_CAMERA or right_state == State.HAS_CAMERA:
+                return left_cameras + right_cameras, State.PARENT_COVERS
 
             return left_cameras + right_cameras, State.NEEDS_COVER
 
 
-        min_cameras, root_state = get_min_cameras(root)
+        cameras, root_state = dfs(root)
 
         if root_state == State.NEEDS_COVER:
-            min_cameras += 1
+            cameras += 1
 
-        return min_cameras
+        return cameras
 
-            
+
+
+        
