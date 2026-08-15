@@ -90,15 +90,8 @@ class LFUPolicy(EvictionPolicy):
     def evict(self) -> Node:
         dll = self._ordering_at[self._min_freq]
         evicted = dll.remove_last()
-        freq = evicted.freq
-
         if dll.size == 0:
             del self._ordering_at[evicted.freq]
-
-            # while freq + 1 not in self._ordering_at or self._ordering_at[freq + 1].size == 0:
-            #     freq += 1
-            # self._min_freq = freq
-
         return evicted
 
 class GenericCache:
