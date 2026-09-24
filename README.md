@@ -39,6 +39,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 | [0735-asteroid-collision](https://github.com/yashladd/leetcode-solutions/tree/main/0735-asteroid-collision/) | Medium |
+| [0759-employee-free-time](https://github.com/yashladd/leetcode-solutions/tree/main/0759-employee-free-time/) | Hard |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0811-subdomain-visit-count](https://github.com/yashladd/leetcode-solutions/tree/main/0811-subdomain-visit-count/) | Medium |
 | [0815-bus-routes](https://github.com/yashladd/leetcode-solutions/tree/main/0815-bus-routes/) | Hard |
@@ -123,6 +124,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0658-find-k-closest-elements/) | Medium |
 | [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
+| [0759-employee-free-time](https://github.com/yashladd/leetcode-solutions/tree/main/0759-employee-free-time/) | Hard |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 | [0969-pancake-sorting](https://github.com/yashladd/leetcode-solutions/tree/main/0969-pancake-sorting/) | Medium |
 | [1101-the-earliest-moment-when-everyone-become-friends](https://github.com/yashladd/leetcode-solutions/tree/main/1101-the-earliest-moment-when-everyone-become-friends/) | Medium |
@@ -468,6 +470,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0658-find-k-closest-elements/) | Medium |
+| [0759-employee-free-time](https://github.com/yashladd/leetcode-solutions/tree/main/0759-employee-free-time/) | Hard |
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [3408-design-task-manager](https://github.com/yashladd/leetcode-solutions/tree/main/3408-design-task-manager/) | Medium |
 ## Shortest Path
@@ -618,4 +621,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0968-binary-tree-cameras](https://github.com/yashladd/leetcode-solutions/tree/main/0968-binary-tree-cameras/) | Hard |
+## Sweep Line
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0759-employee-free-time](https://github.com/yashladd/leetcode-solutions/tree/main/0759-employee-free-time/) | Hard |
 <!---LeetCode Topics End-->
