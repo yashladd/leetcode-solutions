@@ -615,6 +615,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Directed Acyclic Graph
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0207-course-schedule](https://github.com/yashladd/leetcode-solutions/tree/main/0207-course-schedule/) | Medium |
 | [1136-parallel-courses](https://github.com/yashladd/leetcode-solutions/tree/main/1136-parallel-courses/) | Medium |
 ## Longest Increasing Subsequence
 | Problem Name | Difficulty |
