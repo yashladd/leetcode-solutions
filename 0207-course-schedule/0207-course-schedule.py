@@ -1,29 +1,40 @@
 class Solution:
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        visited = set()
+    def canFinish(self, numCourses: int, prerequisites: list[list[int]]) -> bool:
+        COMPLETED = 1
+        VISITING = 2
+
+
+        visit_status = {}
+
 
         g = defaultdict(list)
-        indegree = [0] * numCourses
+
+
         for u, v in prerequisites:
-            g[u].append(v)
-            indegree[v] += 1
+            g[v].append(u)
 
-        q = deque()
-        for i, v in enumerate(indegree):
-            if v == 0:
-                q.append(i)
-                visited.add(i)
 
-        while q:
-            node = q.popleft()
+        def dfs(node):
+            visit_status[node] = VISITING
 
             for ch in g[node]:
-                indegree[ch] -= 1
-                if indegree[ch] == 0  and ch not in visited:
-                    visited.add(ch)
-                    q.append(ch)
+                if ch in visit_status:
+                    if visit_status[ch] == VISITING:
+                        return True
+                elif dfs(ch):
+                    return True
 
-        return len(visited) == numCourses
+            visit_status[node] = COMPLETED
+
+            return False
+
+        
+        for i in range(numCourses):
+            if i not in visit_status or visit_status[i] != COMPLETED:
+                if dfs(i):
+                    return False
+
+        return True
 
 
         
