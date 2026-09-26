@@ -12,7 +12,7 @@ class Solution:
 
             if b:
                 return max(
-                    -prices[i] + f(i, 0, t),
+                    -prices[i] + f(i+1, 0, t),
                     f(i+1, 1, t)
                 )
             
