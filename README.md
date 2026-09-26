@@ -63,6 +63,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1861-rotating-the-box](https://github.com/yashladd/leetcode-solutions/tree/main/1861-rotating-the-box/) | Medium |
 | [2001-number-of-pairs-of-interchangeable-rectangles](https://github.com/yashladd/leetcode-solutions/tree/main/2001-number-of-pairs-of-interchangeable-rectangles/) | Medium |
 | [2144-minimum-cost-of-buying-candies-with-discount](https://github.com/yashladd/leetcode-solutions/tree/main/2144-minimum-cost-of-buying-candies-with-discount/) | Easy |
+| [2260-minimum-consecutive-cards-to-pick-up](https://github.com/yashladd/leetcode-solutions/tree/main/2260-minimum-consecutive-cards-to-pick-up/) | Medium |
 | [2281-sum-of-total-strength-of-wizards](https://github.com/yashladd/leetcode-solutions/tree/main/2281-sum-of-total-strength-of-wizards/) | Hard |
 | [2560-house-robber-iv](https://github.com/yashladd/leetcode-solutions/tree/main/2560-house-robber-iv/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
@@ -103,6 +104,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1258-synonymous-sentences](https://github.com/yashladd/leetcode-solutions/tree/main/1258-synonymous-sentences/) | Medium |
 | [1740-find-distance-in-a-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/1740-find-distance-in-a-binary-tree/) | Medium |
 | [2001-number-of-pairs-of-interchangeable-rectangles](https://github.com/yashladd/leetcode-solutions/tree/main/2001-number-of-pairs-of-interchangeable-rectangles/) | Medium |
+| [2260-minimum-consecutive-cards-to-pick-up](https://github.com/yashladd/leetcode-solutions/tree/main/2260-minimum-consecutive-cards-to-pick-up/) | Medium |
 | [2384-largest-palindromic-number](https://github.com/yashladd/leetcode-solutions/tree/main/2384-largest-palindromic-number/) | Medium |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/yashladd/leetcode-solutions/tree/main/2385-amount-of-time-for-binary-tree-to-be-infected/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
@@ -117,6 +119,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/yashladd/leetcode-solutions/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [1100-find-k-length-substrings-with-no-repeated-characters](https://github.com/yashladd/leetcode-solutions/tree/main/1100-find-k-length-substrings-with-no-repeated-characters/) | Medium |
 | [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
+| [2260-minimum-consecutive-cards-to-pick-up](https://github.com/yashladd/leetcode-solutions/tree/main/2260-minimum-consecutive-cards-to-pick-up/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
 ## Sorting
