@@ -1,6 +1,8 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
+        dp = [[]]
+
 
         @cache
         def f(i, b, t):
