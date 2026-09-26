@@ -19,7 +19,7 @@ class Solution:
                 )
             
             return max(
-                prices[i] + f(i, 1, t-1),
+                prices[i] + f(i+1, 1, t-1),
                 f(i+1, 0, t)
             )
 
