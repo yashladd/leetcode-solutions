@@ -67,6 +67,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [2144-minimum-cost-of-buying-candies-with-discount](https://github.com/yashladd/leetcode-solutions/tree/main/2144-minimum-cost-of-buying-candies-with-discount/) | Easy |
 | [2260-minimum-consecutive-cards-to-pick-up](https://github.com/yashladd/leetcode-solutions/tree/main/2260-minimum-consecutive-cards-to-pick-up/) | Medium |
 | [2281-sum-of-total-strength-of-wizards](https://github.com/yashladd/leetcode-solutions/tree/main/2281-sum-of-total-strength-of-wizards/) | Hard |
+| [2291-maximum-profit-from-trading-stocks](https://github.com/yashladd/leetcode-solutions/tree/main/2291-maximum-profit-from-trading-stocks/) | Medium |
 | [2560-house-robber-iv](https://github.com/yashladd/leetcode-solutions/tree/main/2560-house-robber-iv/) | Medium |
 | [2747-count-zero-request-servers](https://github.com/yashladd/leetcode-solutions/tree/main/2747-count-zero-request-servers/) | Medium |
 | [3413-maximum-coins-from-k-consecutive-bags](https://github.com/yashladd/leetcode-solutions/tree/main/3413-maximum-coins-from-k-consecutive-bags/) | Medium |
@@ -213,6 +214,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1723-find-minimum-time-to-finish-all-jobs](https://github.com/yashladd/leetcode-solutions/tree/main/1723-find-minimum-time-to-finish-all-jobs/) | Hard |
 | [1871-jump-game-vii](https://github.com/yashladd/leetcode-solutions/tree/main/1871-jump-game-vii/) | Medium |
 | [2086-minimum-number-of-food-buckets-to-feed-the-hamsters](https://github.com/yashladd/leetcode-solutions/tree/main/2086-minimum-number-of-food-buckets-to-feed-the-hamsters/) | Medium |
+| [2291-maximum-profit-from-trading-stocks](https://github.com/yashladd/leetcode-solutions/tree/main/2291-maximum-profit-from-trading-stocks/) | Medium |
 | [2560-house-robber-iv](https://github.com/yashladd/leetcode-solutions/tree/main/2560-house-robber-iv/) | Medium |
 | [3660-jump-game-ix](https://github.com/yashladd/leetcode-solutions/tree/main/3660-jump-game-ix/) | Medium |
 | [3840-house-robber-v](https://github.com/yashladd/leetcode-solutions/tree/main/3840-house-robber-v/) | Medium |
