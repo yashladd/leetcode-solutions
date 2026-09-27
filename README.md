@@ -12,6 +12,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0053-maximum-subarray](https://github.com/yashladd/leetcode-solutions/tree/main/0053-maximum-subarray/) | Medium |
 | [0055-jump-game](https://github.com/yashladd/leetcode-solutions/tree/main/0055-jump-game/) | Medium |
 | [0068-text-justification](https://github.com/yashladd/leetcode-solutions/tree/main/0068-text-justification/) | Hard |
+| [0078-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0078-subsets/) | Medium |
 | [0085-maximal-rectangle](https://github.com/yashladd/leetcode-solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
 | [0123-best-time-to-buy-and-sell-stock-iii](https://github.com/yashladd/leetcode-solutions/tree/main/0123-best-time-to-buy-and-sell-stock-iii/) | Hard |
@@ -239,6 +240,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/yashladd/leetcode-solutions/tree/main/0022-generate-parentheses/) | Medium |
+| [0078-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0078-subsets/) | Medium |
 | [0126-word-ladder-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0126-word-ladder-ii/) | Hard |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
@@ -590,6 +592,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0078-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0078-subsets/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [1723-find-minimum-time-to-finish-all-jobs](https://github.com/yashladd/leetcode-solutions/tree/main/1723-find-minimum-time-to-finish-all-jobs/) | Hard |
 ## Bitmask
