@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0014-longest-common-prefix](https://github.com/yashladd/leetcode-solutions/tree/main/0014-longest-common-prefix/) | Easy |
+| [0040-combination-sum-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0040-combination-sum-ii/) | Medium |
 | [0041-first-missing-positive](https://github.com/yashladd/leetcode-solutions/tree/main/0041-first-missing-positive/) | Hard |
 | [0045-jump-game-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0045-jump-game-ii/) | Medium |
 | [0053-maximum-subarray](https://github.com/yashladd/leetcode-solutions/tree/main/0053-maximum-subarray/) | Medium |
@@ -240,6 +241,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/yashladd/leetcode-solutions/tree/main/0022-generate-parentheses/) | Medium |
+| [0040-combination-sum-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0040-combination-sum-ii/) | Medium |
 | [0078-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0078-subsets/) | Medium |
 | [0126-word-ladder-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0126-word-ladder-ii/) | Hard |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
