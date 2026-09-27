@@ -5,26 +5,28 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        cnt = 0
-        ans = 0
-        def f(r):
-            nonlocal cnt, ans
-            if r:
-                f(r.left)
-                cnt += 1
-                if cnt == k:
+    def kthSmallest(self, root: TreeNode | None, k: int) -> int:
+        cur = root
 
-                    ans = r.val
-                    # return r.val
-                f(r.right)
-        f(root) 
-        return ans
-                
 
+        while cur:
+            if cur.left:
+                le = cur.left
+                while le.right and le.right != cur:
+                    le = le.right
+                if le.right != cur:
+                    le.right = cur
+                    cur = cur.left
+                else:
+                    le.right = None
+                    k -= 1
+                    if not k:
+                        return cur.val
+                    cur = cur.right
+            else:
+                k -= 1
+                if k == 0:
+                    return cur.val
+                cur = cur.right
+        return -1
             
-
-            
-
-
-        
