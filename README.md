@@ -34,6 +34,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0380-insert-delete-getrandom-o1](https://github.com/yashladd/leetcode-solutions/tree/main/0380-insert-delete-getrandom-o1/) | Medium |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/yashladd/leetcode-solutions/tree/main/0381-insert-delete-getrandom-o1-duplicates-allowed/) | Hard |
 | [0403-frog-jump](https://github.com/yashladd/leetcode-solutions/tree/main/0403-frog-jump/) | Hard |
+| [0473-matchsticks-to-square](https://github.com/yashladd/leetcode-solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0494-target-sum](https://github.com/yashladd/leetcode-solutions/tree/main/0494-target-sum/) | Medium |
 | [0498-diagonal-traverse](https://github.com/yashladd/leetcode-solutions/tree/main/0498-diagonal-traverse/) | Medium |
 | [0503-next-greater-element-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0503-next-greater-element-ii/) | Medium |
@@ -212,6 +213,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0221-maximal-square](https://github.com/yashladd/leetcode-solutions/tree/main/0221-maximal-square/) | Medium |
 | [0300-longest-increasing-subsequence](https://github.com/yashladd/leetcode-solutions/tree/main/0300-longest-increasing-subsequence/) | Medium |
 | [0403-frog-jump](https://github.com/yashladd/leetcode-solutions/tree/main/0403-frog-jump/) | Hard |
+| [0473-matchsticks-to-square](https://github.com/yashladd/leetcode-solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0494-target-sum](https://github.com/yashladd/leetcode-solutions/tree/main/0494-target-sum/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
@@ -250,6 +252,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
 | [0212-word-search-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
+| [0473-matchsticks-to-square](https://github.com/yashladd/leetcode-solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0494-target-sum](https://github.com/yashladd/leetcode-solutions/tree/main/0494-target-sum/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [1258-synonymous-sentences](https://github.com/yashladd/leetcode-solutions/tree/main/1258-synonymous-sentences/) | Medium |
@@ -600,11 +603,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0078-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0078-subsets/) | Medium |
+| [0473-matchsticks-to-square](https://github.com/yashladd/leetcode-solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [1723-find-minimum-time-to-finish-all-jobs](https://github.com/yashladd/leetcode-solutions/tree/main/1723-find-minimum-time-to-finish-all-jobs/) | Hard |
 ## Bitmask
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0473-matchsticks-to-square](https://github.com/yashladd/leetcode-solutions/tree/main/0473-matchsticks-to-square/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [1723-find-minimum-time-to-finish-all-jobs](https://github.com/yashladd/leetcode-solutions/tree/main/1723-find-minimum-time-to-finish-all-jobs/) | Hard |
 ## Concurrency
