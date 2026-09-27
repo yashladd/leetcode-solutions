@@ -17,6 +17,8 @@ class Solution:
                     continue
                 if summ + candidates[j] <= target:
                     f(j+1, curr + [candidates[j]], summ + candidates[j])
+                else:
+                    break
 
 
         f(0, [], 0)
