@@ -23,6 +23,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0174-dungeon-game](https://github.com/yashladd/leetcode-solutions/tree/main/0174-dungeon-game/) | Hard |
 | [0189-rotate-array](https://github.com/yashladd/leetcode-solutions/tree/main/0189-rotate-array/) | Medium |
 | [0198-house-robber](https://github.com/yashladd/leetcode-solutions/tree/main/0198-house-robber/) | Medium |
+| [0212-word-search-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0213-house-robber-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0213-house-robber-ii/) | Medium |
 | [0221-maximal-square](https://github.com/yashladd/leetcode-solutions/tree/main/0221-maximal-square/) | Medium |
 | [0239-sliding-window-maximum](https://github.com/yashladd/leetcode-solutions/tree/main/0239-sliding-window-maximum/) | Hard |
@@ -170,6 +171,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0127-word-ladder](https://github.com/yashladd/leetcode-solutions/tree/main/0127-word-ladder/) | Hard |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0212-word-search-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0224-basic-calculator](https://github.com/yashladd/leetcode-solutions/tree/main/0224-basic-calculator/) | Hard |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0424-longest-repeating-character-replacement](https://github.com/yashladd/leetcode-solutions/tree/main/0424-longest-repeating-character-replacement/) | Medium |
@@ -230,6 +232,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0014-longest-common-prefix](https://github.com/yashladd/leetcode-solutions/tree/main/0014-longest-common-prefix/) | Easy |
 | [0139-word-break](https://github.com/yashladd/leetcode-solutions/tree/main/0139-word-break/) | Medium |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0212-word-search-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
 ## Memoization
 | Problem Name | Difficulty |
@@ -245,6 +248,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0078-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0078-subsets/) | Medium |
 | [0126-word-ladder-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0126-word-ladder-ii/) | Hard |
 | [0140-word-break-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0140-word-break-ii/) | Hard |
+| [0212-word-search-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0257-binary-tree-paths](https://github.com/yashladd/leetcode-solutions/tree/main/0257-binary-tree-paths/) | Easy |
 | [0494-target-sum](https://github.com/yashladd/leetcode-solutions/tree/main/0494-target-sum/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
@@ -352,6 +356,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0085-maximal-rectangle](https://github.com/yashladd/leetcode-solutions/tree/main/0085-maximal-rectangle/) | Hard |
 | [0174-dungeon-game](https://github.com/yashladd/leetcode-solutions/tree/main/0174-dungeon-game/) | Hard |
+| [0212-word-search-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0212-word-search-ii/) | Hard |
 | [0221-maximal-square](https://github.com/yashladd/leetcode-solutions/tree/main/0221-maximal-square/) | Medium |
 | [0348-design-tic-tac-toe](https://github.com/yashladd/leetcode-solutions/tree/main/0348-design-tic-tac-toe/) | Medium |
 | [0498-diagonal-traverse](https://github.com/yashladd/leetcode-solutions/tree/main/0498-diagonal-traverse/) | Medium |
