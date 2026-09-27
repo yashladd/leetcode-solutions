@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, isEnd = False):
         self.chars = {}
-        self.isEnd = isEnd
+        self.word = None
         
         
 class Trie:
@@ -13,7 +13,7 @@ class Trie:
                 if ch not in curr.chars:
                     curr.chars[ch] = Node()
                 curr = curr.chars[ch]
-            curr.isEnd = True
+            curr.word = w
             
         
 class Solution:
@@ -23,11 +23,12 @@ class Solution:
         res = []
         root = t.root
         
-        def find(i, j, node, vis, curr):
+        def find(i, j, node):
             if i < 0 or j < 0 or i >= n or j >=m:
                 return 
             
-            if vis[i][j]: return 
+            if board[i][j] == "#":
+                return 
             
             
             char = board[i][j]
@@ -36,24 +37,24 @@ class Solution:
                 return 
             
             
-            vis[i][j]  = 1
+            board[i][j] = "#"
             node = node.chars[char]
-            if node.isEnd:
+            if node.word is not None:
                 # res.append("".join(curr[:]))
-                res.append("".join(curr + [char]))
-                node.isEnd = False
+                res.append(node.word)
+                node.word = None
                 
-            find(i+1, j, node, vis, curr + [char])
-            find(i-1, j, node, vis, curr + [char])
-            find(i, j+1, node, vis, curr + [char])
-            find(i, j-1, node, vis, curr + [char])
+            find(i+1, j, node)
+            find(i-1, j, node)
+            find(i, j+1, node)
+            find(i, j-1, node)
             
-            vis[i][j] = 0
+            board[i][j] = char
             
         for i in range(n):
             for j in range(m):
-                vis = [[0 for _ in range(m)] for _ in range(n)] 
-                find(i, j, root, vis, [])
+                # vis = [[0 for _ in range(m)] for _ in range(n)] 
+                find(i, j, root)
                 
         return res
         
