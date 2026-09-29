@@ -5,12 +5,11 @@ class Solution:
         def inbound(i, j):
             return i >=0 and j >=0 and i < n and j < m
 
-        vis = [[False for _ in range(m)] for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 if grid[i][j] == 2:
                     q.append((i, j, 0))
-                    vis[i][j] = True
+
         mins = 0
         while q:
             siz = len(q)
@@ -19,11 +18,9 @@ class Solution:
                 mins = max(mins, t)
                 for dx, dy in [(0,1), (1,0), (-1,0), (0,-1)]:
                     row, col = r + dx, c + dy
-                    if inbound(row, col) and grid[row][col] == 1\
-                     and not vis[row][col]:
+                    if inbound(row, col) and grid[row][col] == 1:
                         q.append((row, col, t + 1))
                         grid[row][col] = 2
-                        vis[row][col] = True
 
 
         if not all(element in (0, 2) for l in grid for element in l):
