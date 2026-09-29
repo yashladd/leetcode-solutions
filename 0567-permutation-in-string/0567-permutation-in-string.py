@@ -1,34 +1,34 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        if len(s1) > len(s2):
-            return False
+        s1f = Counter(s1)
 
-        s1Count, s2Count = [0] * 26, [0] * 26
-        for i in range(len(s1)):
-            s1Count[ord(s1[i]) - ord('a')] += 1
-            s2Count[ord(s2[i]) - ord('a')] += 1
+        s1_len = len(s1)
 
         matches = 0
-        for i in range(26):
-            matches += (1 if s1Count[i] == s2Count[i] else 0)
+        required = len(s1f)
+        state = defaultdict(int)
+        for r, ch in enumerate(s2):
+            
+            state[ch] += 1
 
-        l = 0
-        for r in range(len(s1), len(s2)):
-            if matches == 26:
+            if ch in s1f and state[ch] == s1f[ch]:
+                matches += 1
+
+            
+
+            if r >= s1_len:
+                prev_char = s2[r-s1_len]
+                state[prev_char] -= 1
+                if prev_char in s1f and state[prev_char]== s1f[prev_char] - 1:
+                    matches -= 1
+
+            if matches == required:
                 return True
 
-            index = ord(s2[r]) - ord('a')
-            s2Count[index] += 1
-            if s1Count[index] == s2Count[index]:
-                matches += 1
-            elif s1Count[index] + 1 == s2Count[index]:
-                matches -= 1
 
-            index = ord(s2[l]) - ord('a')
-            s2Count[index] -= 1
-            if s1Count[index] == s2Count[index]:
-                matches += 1
-            elif s1Count[index] - 1 == s2Count[index]:
-                matches -= 1
-            l += 1
-        return matches == 26
+        return True if required == matches else False
+
+
+
+ 
+        
