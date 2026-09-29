@@ -2,18 +2,15 @@ class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
         q = deque([])
         n, m = len(grid), len(grid[0])
-
         def inbound(i, j):
             return i >=0 and j >=0 and i < n and j < m
 
         vis = [[False for _ in range(m)] for _ in range(n)]
-
         for i in range(n):
             for j in range(m):
                 if grid[i][j] == 2:
                     q.append((i, j, 0))
                     vis[i][j] = True
-
         mins = 0
         while q:
             siz = len(q)
