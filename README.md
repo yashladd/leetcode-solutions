@@ -45,6 +45,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0658-find-k-closest-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0658-find-k-closest-elements/) | Medium |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/yashladd/leetcode-solutions/tree/main/0698-partition-to-k-equal-sum-subsets/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
+| [0721-accounts-merge](https://github.com/yashladd/leetcode-solutions/tree/main/0721-accounts-merge/) | Medium |
 | [0729-my-calendar-i](https://github.com/yashladd/leetcode-solutions/tree/main/0729-my-calendar-i/) | Medium |
 | [0731-my-calendar-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0731-my-calendar-ii/) | Medium |
 | [0735-asteroid-collision](https://github.com/yashladd/leetcode-solutions/tree/main/0735-asteroid-collision/) | Medium |
@@ -104,6 +105,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0525-contiguous-array](https://github.com/yashladd/leetcode-solutions/tree/main/0525-contiguous-array/) | Medium |
 | [0567-permutation-in-string](https://github.com/yashladd/leetcode-solutions/tree/main/0567-permutation-in-string/) | Medium |
 | [0706-design-hashmap](https://github.com/yashladd/leetcode-solutions/tree/main/0706-design-hashmap/) | Easy |
+| [0721-accounts-merge](https://github.com/yashladd/leetcode-solutions/tree/main/0721-accounts-merge/) | Medium |
 | [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
 | [0763-partition-labels](https://github.com/yashladd/leetcode-solutions/tree/main/0763-partition-labels/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
@@ -142,6 +144,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0295-find-median-from-data-stream](https://github.com/yashladd/leetcode-solutions/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0658-find-k-closest-elements](https://github.com/yashladd/leetcode-solutions/tree/main/0658-find-k-closest-elements/) | Medium |
+| [0721-accounts-merge](https://github.com/yashladd/leetcode-solutions/tree/main/0721-accounts-merge/) | Medium |
 | [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
 | [0759-employee-free-time](https://github.com/yashladd/leetcode-solutions/tree/main/0759-employee-free-time/) | Hard |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
@@ -159,6 +162,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0305-number-of-islands-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0305-number-of-islands-ii/) | Hard |
+| [0721-accounts-merge](https://github.com/yashladd/leetcode-solutions/tree/main/0721-accounts-merge/) | Medium |
 | [0990-satisfiability-of-equality-equations](https://github.com/yashladd/leetcode-solutions/tree/main/0990-satisfiability-of-equality-equations/) | Medium |
 | [1101-the-earliest-moment-when-everyone-become-friends](https://github.com/yashladd/leetcode-solutions/tree/main/1101-the-earliest-moment-when-everyone-become-friends/) | Medium |
 | [1258-synonymous-sentences](https://github.com/yashladd/leetcode-solutions/tree/main/1258-synonymous-sentences/) | Medium |
@@ -183,6 +187,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0424-longest-repeating-character-replacement](https://github.com/yashladd/leetcode-solutions/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0443-string-compression](https://github.com/yashladd/leetcode-solutions/tree/main/0443-string-compression/) | Medium |
 | [0567-permutation-in-string](https://github.com/yashladd/leetcode-solutions/tree/main/0567-permutation-in-string/) | Medium |
+| [0721-accounts-merge](https://github.com/yashladd/leetcode-solutions/tree/main/0721-accounts-merge/) | Medium |
 | [0726-number-of-atoms](https://github.com/yashladd/leetcode-solutions/tree/main/0726-number-of-atoms/) | Hard |
 | [0763-partition-labels](https://github.com/yashladd/leetcode-solutions/tree/main/0763-partition-labels/) | Medium |
 | [0792-number-of-matching-subsequences](https://github.com/yashladd/leetcode-solutions/tree/main/0792-number-of-matching-subsequences/) | Medium |
@@ -329,6 +334,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0417-pacific-atlantic-water-flow](https://github.com/yashladd/leetcode-solutions/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
 | [0543-diameter-of-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0543-diameter-of-binary-tree/) | Easy |
+| [0721-accounts-merge](https://github.com/yashladd/leetcode-solutions/tree/main/0721-accounts-merge/) | Medium |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [0968-binary-tree-cameras](https://github.com/yashladd/leetcode-solutions/tree/main/0968-binary-tree-cameras/) | Hard |
 | [0979-distribute-coins-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0979-distribute-coins-in-binary-tree/) | Medium |
@@ -462,6 +468,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0210-course-schedule-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0210-course-schedule-ii/) | Medium |
 | [0417-pacific-atlantic-water-flow](https://github.com/yashladd/leetcode-solutions/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0505-the-maze-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0505-the-maze-ii/) | Medium |
+| [0721-accounts-merge](https://github.com/yashladd/leetcode-solutions/tree/main/0721-accounts-merge/) | Medium |
 | [0815-bus-routes](https://github.com/yashladd/leetcode-solutions/tree/main/0815-bus-routes/) | Hard |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0863-all-nodes-distance-k-in-binary-tree/) | Medium |
 | [0994-rotting-oranges](https://github.com/yashladd/leetcode-solutions/tree/main/0994-rotting-oranges/) | Medium |
