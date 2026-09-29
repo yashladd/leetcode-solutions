@@ -291,6 +291,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0098-validate-binary-search-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0110-balanced-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0110-balanced-binary-tree/) | Easy |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/yashladd/leetcode-solutions/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
@@ -313,6 +314,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0098-validate-binary-search-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0110-balanced-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0110-balanced-binary-tree/) | Easy |
 | [0207-course-schedule](https://github.com/yashladd/leetcode-solutions/tree/main/0207-course-schedule/) | Medium |
 | [0210-course-schedule-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0210-course-schedule-ii/) | Medium |
@@ -339,6 +341,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0098-validate-binary-search-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0110-balanced-binary-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0110-balanced-binary-tree/) | Easy |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/yashladd/leetcode-solutions/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
@@ -483,6 +486,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Binary Search Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0098-validate-binary-search-tree](https://github.com/yashladd/leetcode-solutions/tree/main/0098-validate-binary-search-tree/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/yashladd/leetcode-solutions/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0272-closest-binary-search-tree-value-ii](https://github.com/yashladd/leetcode-solutions/tree/main/0272-closest-binary-search-tree-value-ii/) | Hard |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/yashladd/leetcode-solutions/tree/main/1008-construct-binary-search-tree-from-preorder-traversal/) | Medium |
